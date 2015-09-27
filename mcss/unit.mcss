@@ -1,0 +1,195 @@
+/*icon小图标*/
+$path = 'icon.png';
+[class*=icon-]{background: url('#{$path}') -9999px -9999px no-repeat;}
+//查看
+.icon-eye-hover{$icon(0,-40px,19px,11px);}
+.icon-eye-active{$icon(0,-80px,19px,11px);}
+.icon-eye{$icon(0,0,19px,11px);
+	&:hover{@extend .icon-eye-hover;}
+	&:active{@extend .icon-eye-active;}
+}
+//删除
+.icon-del-hover{$icon(-40px,-40px,13px,15px);}
+.icon-del-active{$icon(-40px,-80px,13px,15px);}
+.icon-del{$icon(-40px,0,13px,15px);
+	&:hover{@extend .icon-del-hover;}
+	&:active{@extend .icon-del-active;}
+}
+//下载
+.icon-download-hover{$icon(-80px,-40px,15px,15px);}
+.icon-download-active{$icon(-80px,-80px,15px,15px);}
+.icon-download{$icon(-80px,0,15px,15px);
+	&:hover{@extend .icon-download-hover;}
+	&:active{@extend .icon-download-active;}
+}
+//上传
+.icon-upload-hover{$icon(-120px,-40px,15px,15px);}
+.icon-upload-active{$icon(-120px,-80px,15px,15px);}
+.icon-upload{$icon(-120px,0px,15px,15px);
+	&:hover{@extend .icon-upload-hover;}
+	&:active{@extend .icon-upload-active;}
+}
+//编辑
+.icon-edit-hover{$icon(-160px,-40px,15px,14px);}
+.icon-edit-active{$icon(-160px,-80px,15px,14px);}
+.icon-edit{$icon(-160px,0,15px,14px);
+	&:hover{@extend .icon-edit-hover;}
+	&:active{@extend .icon-edit-active;}
+}
+//日期周期
+.icon-calendar-hover{$icon(-200px,-40px,27px,25px);}
+.icon-calendar-active{$icon(-200px,-80px,27px,25px);}
+.icon-calendar{$icon(-200px,0px,27px,25px);
+	&:hover{@extend .icon-calendar-hover;}
+	&:active{@extend .icon-calendar-active;}
+}
+
+//执行成功
+.icon-success{$icon(0,-120px,16px,16px);}
+//执行失败
+.icon-error{$icon(-40px,-120px,16px,16px);}
+//未执行
+.icon-unattended{$icon(-80px,-120px,16px,16px);}
+//警告
+.icon-warning{$icon(-120px,-120px,16px,16px);}
+//笑脸
+.icon-smile{$icon(0,-160px,14px,14px);}
+.icon-smile-hover{$icon(-40px,-160px,14px,14px);}
+//单选框
+.icon-radio-check{$icon(0,-200px,14px,16px);}
+.icon-radio-checked{$icon(-20px,-200px,14px,16px);}
+.icon-radio-discheck{$icon(0,-220px,14px,16px);}
+.icon-radio-dischecked{$icon(-20px,-220px,14px,16px);}
+//多选框
+.icon-checkbox-check{$icon(-80px,-200px,14px,16px);}
+.icon-checkbox-checked{$icon(-100px,-200px,14px,16px);}
+.icon-checkbox-discheck{$icon(-100px,-220px,14px,16px);}
+.icon-checkbox-dischecked{$icon(-80px,-220px,14px,16px);}
+//上传文件图标
+.icon-file-hover{$icon(-40px,-260px,40px,32px);}
+.icon-file-active{$icon(-80px,-260px,40px,32px);}
+.icon-file-disabled{$icon(-120px,-260px,40px,32px);}
+.icon-file{$icon(0,-260px,40px,32px);
+	&:hover{@extend .icon-file-hover;}
+	&:active{@extend .icon-file-active;}
+	&:disabled{@extend .icon-file-disabled;}
+}
+//提示
+.icon-tip{$icon(0,-700px,22px,22px);}
+//关闭按钮
+.icon-close-hover{$icon(-40px,-740px,27px,27px);}
+.icon-close-active{$icon(-80px,-740px,27px,27px);}
+.icon-close{$icon(0,-740px,27px,27px);
+	&:hover{@extend .icon-close-hover;}
+	&:active{@extend .icon-close-active;}
+}
+//上一张
+.icon-pre-hover{$icon(-80px,-780px,22px,38px);}
+.icon-pre-active{$icon(-160px,-780px,22px,38px);}
+.icon-pre{$icon(0,-780px,22px,38px);
+	&:hover{@extend .icon-pre-hover;}
+	&:active{@extend .icon-pre-active;}
+}
+//下一张
+.icon-next-hover{$icon(-120px,-780px,22px,38px);}
+.icon-next-active{$icon(-200px,-780px,22px,38px);}
+.icon-next{$icon(-40px,-780px,22px,38px);
+	&:hover{@extend .icon-next-hover;}
+	&:active{@extend .icon-next-active;}
+}
+
+
+//字体大小，0为12px,以2px递增
+.u-fs0{font-size: $fs0;}
+.u-fs1{font-size: $fs1;}
+.u-fs2{font-size: $fs2;}
+.u-fs3{font-size: $fs3;}
+.u-fs4{font-size: $fs4;}
+.u-fs5{font-size: $fs5;}
+.u-fs6{font-size: $fs6;}
+.u-fs7{font-size: $fs7;}
+.u-fs8{font-size: $fs8;}
+.u-fs9{font-size: $fs9;}
+.u-fs10{font-size: $fs10;}
+
+.u-mgt10{margin-top: 10px;}
+.u-mgb10{margin-bottom: 10px;}
+.u-mgl10{margin-left: 10px;}
+.u-mgr10{margin-right: 10px;}
+
+.u-pre,.u-next{width:35px;height:70px;position: absolute;top:50%;margin-top: -35px;}
+.u-pre{background: url('../images/pre.png') no-repeat;left:12px;}
+.u-next{background: url('../images/next.png') no-repeat;right:12px;}
+
+//按钮
+.u-btn,.u-btn-reverse{
+	text-align: center;
+	box-sizing:border-box;
+	border-radius: 2px;
+}
+.u-btn{
+	color:#fff;
+	background-color: $c-base;
+	border:1px solid transparent;
+	&:hover{
+		background-color: $c-hover;
+	}
+	&:active{
+		background-color: $c-active;
+	}
+	&:disabled{
+		background-color: $c-disabled;
+	}
+}
+.u-btn-reverse{
+	color:$c-base;
+	background-color: #fff;
+	border: 1px solid $c-base;
+	&:hover{
+		border-color: $c-hover;
+		color: $c-hover;
+	}
+	&:active{
+		border-color: $c-active;
+		color: $c-active;
+	}
+	&:disabled{
+		border-color: $c-disabled;
+		color: $c-disabled;
+	}
+}
+
+.u-lg-btn{
+	$size($lgBtnWidth,$lgBtnHeight);
+	font-size: $fs2;
+}
+
+.u-md-btn{
+	padding: $mdBtnPadding;
+	font-size: 15px;
+}
+
+.u-sm-btn{
+	padding: $smBtnPadding;
+	font-size: $fs1;
+}
+
+.u-dlg-btn,.u-dlg-graybtn{
+	padding:$dlgBtnPadding;
+	font-size: $fs1;
+}
+
+.u-dlg-graybtn{
+	color:#666;
+	background-color: $cgraybtn-base;
+	&:hover{
+		background-color: $cgraybtn-hover;
+	}
+	&:active{
+		background-color: $cgraybtn-active;
+	}
+	&:disabled{
+		background-color: $cgraybtn-disabled;
+		color:$cf-disabled;
+	}
+}

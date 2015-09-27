@@ -1,0 +1,48 @@
+h1{margin:20px 0 10px;font-size: 16px;}
+xmp{white-space: pre-line;margin:10px 0;font-size: 14px;}
+pre{white-space: normal;}
+.container{width:1200px;margin:10px auto 0;}
+.aside-container{width:260px;float: left;background-color: #F9F9F9;}
+.aside-container > ul > li > a {
+    padding-left: 46px;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+}
+.aside-container li a {
+    line-height: 40px;
+    height: 40px;
+    display: block;
+    padding-left: 60px;
+    font-size: 14px;
+    color: #5C6B76;
+}
+.aside-container li a:hover {
+    color: #6EB4E0;
+}
+.main-container{float:right;width:910px;}
+.component{margin-bottom: 50px;}
+.component h1{font-size: 30px;}
+.m-example{border-radius: 5px;border:1px solid #ccc;background-color: #fff;padding: 45px 15px 15px;position: relative;}
+.m-example:after{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "实例：";
+
+}
+.highlight {
+    padding: 9px 14px;
+    margin-bottom: 14px;
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    border-radius: 4px;
+    margin-top:20px;
+}
+.scroll li{border:1px solid #ccc;}
+.scroll li + li{margin-left: 15px;}
+.scroll li img{display: block;}
