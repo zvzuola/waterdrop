@@ -74,6 +74,11 @@ $path = 'icon.png';
 	&:active{@extend .icon-file-active;}
 	&:disabled{@extend .icon-file-disabled;}
 }
+//箭头
+.icon-arrow-hover{$icon(-20px,-520px,8px,5px);}
+.icon-arrow{$icon(0,-520px,8px,5px);
+	&:hover{@extend .icon-arrow-hover;}
+}
 //提示
 .icon-tip{$icon(0,-700px,22px,22px);}
 //关闭按钮
@@ -82,6 +87,13 @@ $path = 'icon.png';
 .icon-close{$icon(0,-740px,27px,27px);
 	&:hover{@extend .icon-close-hover;}
 	&:active{@extend .icon-close-active;}
+}
+//弹框关闭按钮
+.icon-close-dlg-hover{$icon(-140px,-740px,10px,10px);}
+.icon-close-dlg-active{$icon(-160px,-740px,10px,10px);}
+.icon-close-dlg{$icon(-120px,-740px,10px,10px);
+	&:hover{@extend .icon-close-dlg-hover;}
+	&:active{@extend .icon-close-dlg-active;}
 }
 //上一张
 .icon-pre-hover{$icon(-80px,-780px,22px,38px);}
@@ -99,97 +111,108 @@ $path = 'icon.png';
 }
 
 
-//字体大小，0为12px,以2px递增
+//字体大小
 .u-fs0{font-size: $fs0;}
 .u-fs1{font-size: $fs1;}
 .u-fs2{font-size: $fs2;}
 .u-fs3{font-size: $fs3;}
 .u-fs4{font-size: $fs4;}
-.u-fs5{font-size: $fs5;}
-.u-fs6{font-size: $fs6;}
-.u-fs7{font-size: $fs7;}
-.u-fs8{font-size: $fs8;}
-.u-fs9{font-size: $fs9;}
-.u-fs10{font-size: $fs10;}
+
+//颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
+.u-c-base{color:$c-base;}//主色
+.u-c-hover{color:$c-hover;};
+.u-c-active{color:$c-active;}
+.u-c-disabled{color:$c-disabled;}
+//文字色
+.u-cf-base{color:$cf-base;}//基本文字色
+.u-cf-secondary{color:$cf-secondary;}//次要的文字色
+.u-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
+
 
 .u-mgt10{margin-top: 10px;}
 .u-mgb10{margin-bottom: 10px;}
 .u-mgl10{margin-left: 10px;}
 .u-mgr10{margin-right: 10px;}
 
+.u-mgt30{margin-top: 30px;}
+.u-mgb30{margin-bottom: 30px;}
+.u-mgl30{margin-left: 30px;}
+.u-mgr30{margin-right: 30px;}
+
+
+
 .u-pre,.u-next{width:35px;height:70px;position: absolute;top:50%;margin-top: -35px;}
 .u-pre{background: url('../images/pre.png') no-repeat;left:12px;}
 .u-next{background: url('../images/next.png') no-repeat;right:12px;}
 
 //按钮
-.u-btn,.u-btn-reverse{
+.u-btn,.u-btn-reverse,.u-btn-gray{
 	text-align: center;
-	box-sizing:border-box;
-	border-radius: 2px;
+	border-radius: $btn-border-radius;
 }
 .u-btn{
-	color:#fff;
-	background-color: $c-base;
-	border:1px solid transparent;
+	color:$btn-color;
+	border:1px solid $btn-cb;
+	background-color: $btn-cbg;
 	&:hover{
-		background-color: $c-hover;
+		background-color: $btn-cbg-hover;
 	}
 	&:active{
-		background-color: $c-active;
+		background-color: $btn-cbg-active;
 	}
 	&:disabled{
-		background-color: $c-disabled;
+		background-color: $btn-cbg-disabled;
 	}
 }
 .u-btn-reverse{
-	color:$c-base;
-	background-color: #fff;
-	border: 1px solid $c-base;
+	color:$btn-color-reverse;
+	border: 1px solid $btn-cb-reverse;
+	background-color: $btn-cbg-reverse;
 	&:hover{
-		border-color: $c-hover;
-		color: $c-hover;
+		border-color: $btn-cb-reverse-hover;
+		color: $btn-color-reverse-hover;
 	}
 	&:active{
-		border-color: $c-active;
-		color: $c-active;
+		border-color: $btn-cb-reverse-active;
+		color: $btn-color-reverse-active;
 	}
 	&:disabled{
-		border-color: $c-disabled;
-		color: $c-disabled;
+		border-color: $btn-cb-reverse-disabled;
+		color: $btn-color-reverse-disabled;
 	}
 }
-
-.u-lg-btn{
-	$size($lgBtnWidth,$lgBtnHeight);
-	font-size: $fs2;
-}
-
-.u-md-btn{
-	padding: $mdBtnPadding;
-	font-size: 15px;
-}
-
-.u-sm-btn{
-	padding: $smBtnPadding;
-	font-size: $fs1;
-}
-
-.u-dlg-btn,.u-dlg-graybtn{
-	padding:$dlgBtnPadding;
-	font-size: $fs1;
-}
-
-.u-dlg-graybtn{
-	color:#666;
-	background-color: $cgraybtn-base;
+.u-btn-gray{
+	color:$btn-color-gray;
+	border: 1px solid $btn-cb-gray;
+	background-color: $btn-cbg-gray;
 	&:hover{
-		background-color: $cgraybtn-hover;
+		background-color: $btn-cbg-gray-hover;
 	}
 	&:active{
-		background-color: $cgraybtn-active;
+		background-color: $btn-cbg-gray-active;
 	}
 	&:disabled{
-		background-color: $cgraybtn-disabled;
-		color:$cf-disabled;
+		background-color: $btn-cbg-gray-disabled;
+		color:$btn-color-gray-disabled;
 	}
+}
+.u-btn-lg{
+	font-size: $btn-fs-lg;
+	line-height: $btn-line-height-lg;
+	padding: $btn-padding-lg;
+}
+.u-btn-md{
+	font-size: $btn-fs-md;
+	line-height: $btn-line-height-md;
+	padding: $btn-padding-md;
+}
+.u-btn-sm{
+	font-size: $btn-fs-sm;
+	line-height: $btn-line-height-sm;
+	padding: $btn-padding-sm;
+}
+.u-btn-dlg{
+	font-size: $btn-fs-dlg;
+	line-height: $btn-line-height-dlg;
+	padding: $btn-padding-dlg;
 }

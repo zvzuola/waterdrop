@@ -1,4 +1,9 @@
-@abstract '_config.mcss';
+@import "mass/index";
+@if($config == 0) {
+	@abstract '_config.mcss';
+} @else{
+	@abstract '_config2.mcss';
+}
 @import "base.mcss";
 @import "function.mcss";
 @import "grid.mcss";

@@ -1,7 +1,9 @@
 {
-  "input": "./",  
-  "outport": "../css",
+  "input": "./waterdrop.mcss",  
+  "output": "../css",
   "format": 3,
   "watch": true,
-  "exclude": "(\\\\|\\/)_"
+  "variables": {
+  	"config": "0"
+  }
 }

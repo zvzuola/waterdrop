@@ -58,14 +58,23 @@
             if (this.$element.parent().css('position') == 'static') {
                 this.$element.parent().css('position','relative');
             }
-            var width = this.$target.outerWidth(true),
-                height = this.$target.outerHeight(true),
+            var width = this.$target.outerWidth(true);
+            if(this.$target.hasClass('m-dropdown-menu')||this.$target.hasClass('m-dropdown-menu2')){
+                var targetBorderPaddingWidth = parseInt(this.$target.css('padding-left'))
+                                                + parseInt(this.$target.css('padding-right'))
+                                                + parseInt(this.$target.css('border-left-width'))
+                                                + parseInt(this.$target.css('border-right-width'));
+                this.$target.css('min-width',this.$element.outerWidth()-targetBorderPaddingWidth);
+                width = this.$target.outerWidth(true);
+            }
+            var height = this.$target.outerHeight(true),
                 elementWidth = this.$element.outerWidth(true),
                 elementHeight = this.$element.outerHeight(true),
                 elementPositionTop = this.$element.position().top,
                 elementPositionLeft = this.$element.position().left,
                 top = elementHeight + elementPositionTop,
                 left = elementPositionLeft - (width - elementWidth)/2;
+
                 
             if(this.$target.hasClass('m-popover-bottom')){
                 // 如果超出左边界
@@ -169,7 +178,11 @@
             }
         },
         targetClickHandler: function() {
-            this._targetclick = true;
+            //下拉菜单
+            if(this.$target.hasClass('m-dropdown-menu')||this.$target.hasClass('m-dropdown-menu2'))
+                this._targetclick = false;
+            else
+                this._targetclick = true;
         },
         mouseenterHandler: function() {
             var self = this;
@@ -231,7 +244,7 @@
 		init:function(){
             var self = this;
 			var mdlg=$("<div class='m-dlg'><table class='m-dlgtable'><tr><td class='m-dlgtd'><div class='m-dlgwrap'></div></td></tr></table></div>");
-			var head=$("<div class='m-dlghead'><span class='u-dlg-title'>"+this.opts.title+"</span><b class='icon-close'></b></div>");
+			var head=$("<div class='m-dlghead'><span class='u-dlg-title'>"+this.opts.title+"</span><b class='icon-close-dlg'></b></div>");
 			var foot=$("<div class='m-dlgfoot'></div>");
 			var body=$('<div />').addClass('m-dlgbody').append(this.$element.show());
 			var buttons = this.opts.buttons;
@@ -242,12 +255,12 @@
                     props.click = function() {
                         click.apply( self.$element[ 0 ], arguments );
                     };
-					$( "<button></button>",props).addClass('u-btn u-dlg-btn').appendTo(foot);
+					$( "<button></button>",props).addClass('u-btn u-btn-dlg').appendTo(foot);
 				});
 			}
 			mdlg.find('.m-dlgwrap').css({'width':this.opts.width,'min-width':this.opts.minWidth}).append(head).append(body).append(foot);
 			$('body').append(mdlg);
-			mdlg.find('.icon-close').on('click', function(event) {
+			mdlg.find('.icon-close-dlg').on('click', function(event) {
 				event.preventDefault();
                 self.close();
 			});
@@ -263,7 +276,7 @@
 	};
 	
 	$.fn.extend({
-		dialog:function(options){
+		wdDialog:function(options){
     			return $(this).each(function() {
                 var plugin_dialog = $.data(this, 'plugin_dialog');
                 if (!plugin_dialog) {
@@ -325,7 +338,7 @@
                     _this.addClass('f-cb').css({'overflow':'hidden','height':ulHeight});
                     _this.find('ul li').addClass('f-fl f-tac');
                     // 获取li的width;
-                    bannerWidth = _this.find("ul li").outerWidth(true);
+                    bannerWidth = _this.find("ul li").eq(1).outerWidth(true);
                     // 滚动图片的个数
                     switcherNum = _this.find("ul li").size();
                     // 如果当前没有截图，隐藏展示区域
@@ -335,7 +348,7 @@
                         _this.removeClass('f-dn');
                     }
                     // 为容器设置相对定位
-                    if (_this.css('position') != 'absolute' && _this.css('position') != 'fixed') {
+                    if (_this.css('position') == 'static') {
                         _this.css({position: 'relative'});
                     }
                     // ul宽度

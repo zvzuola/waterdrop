@@ -1,60 +1,63 @@
 //tab组件
 .m-tab,.m-tab2,.m-subtab2,.m-subtab3{
-		border-bottom: 1px solid $cb-base;font-size: $fs1;margin-bottom: -1px;
+		border-bottom: 1px solid $tab-cb-current;margin-bottom: -1px;
 		li{
-			background-color: $cbg-base;color:$cf-base;float:left;border:1px solid $cb-base;text-align: center;margin-bottom:-1px;
+			background-color: $tab-cbg;color:$tab-color;float:left;border:1px solid $tab-cb;text-align: center;margin-bottom:-1px;
 			+ li{margin-left:-1px;}
-			a{$square(100%);display: block;color:$cf-base;}
+			a{display: block;color:$tab-color;padding:0 15px;
+				&:hover{color:$tab-color-hover;}
+			}
+			&:hover{color:$tab-color-hover;}
 		}
 		li.z-crt{
-			background-color: #fff;border-bottom: 1px solid #fff;
-			a{color: $c-base;}
+			border-bottom: 1px solid #fff;
+			a{color: $tab-color-current;}
 		}
 		li.z-dis{
-			a{color:$cf-disabled;}
+			a{color:$tab-color-disabled;}
 		}
 		$clearfix();
 }
 .m-tab{
-	font-size: $fs2;
-	li{$size(108px,38px);line-height:38px;}
-	li.z-crt{height:36px;line-height: 36px;border-top:3px solid $c-base;}
+	font-size: $fs3;
+	li{height:38px;line-height:38px;}
+	li.z-crt{height:36px;line-height: 36px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
 }
 .m-tab2{
-	li{$size(82px,34px);line-height:34px;}
-	li.z-crt{height:32px;line-height: 32px;border-top:3px solid $c-base;}
+	font-size: $fs2;
+	li{height:34px;line-height:34px;}
+	li.z-crt{height:32px;line-height: 32px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
 }
 .m-subtab2{
-	li{$size(102px,38px);line-height:38px;background-color: $cbg-secondary;border: 1px solid $cb-secondary;}
+	font-size: $fs2;
+	border-bottom: 1px solid $tab-cb-secondary;
+	li{height:38px;line-height:38px;}
+	li.z-crt{border-left:1px solid $tab-cb-secondary;border-right:1px solid $tab-cb-secondary;border-top:1px solid $tab-cb-secondary;border-radius:3px;}
 }
 .m-subtab3{
-	border-bottom: 1px solid $cb-third;
-	li{$size(98px,34px);line-height:34px;background-color: $cbg-third;border: 1px solid $cb-third;}
+	font-size: $fs1;
+	border-bottom: 1px solid $tab-cb-third;
+	li{height:34px;line-height:34px;}
+	li.z-crt{border-left:1px solid $tab-cb-third;border-right:1px solid $tab-cb-third;border-top:1px solid $tab-cb-third;border-radius:3px;}
 }
 
 //下拉列表
 .m-dropdown{position: relative;font-size: $fs1;}
 .m-dropdown-trigger{cursor: pointer;}
 .m-dropdown-menu,.m-dropdown-menu2{
-	background-color: $cbg-secondary;
-	border: 1px solid $cb-third;
-	color:$cf-base;
+	background-color: $dropdown-cbg;
+	border: 1px solid $dropdown-cb;
+	color:$dropdown-color;
 	position: absolute;
 	display: none;
 	z-index: 999;
 	li{
-		a{padding:9px 12px;display: block;color:$cf-base;}
-		a:hover{background-color: $c-base;color:#fff;}
+		a{padding:9px 12px;display: block;color:$dropdown-color;}
+		a:hover{background-color: $dropdown-cbg-hover;color:$dropdown-color-hover;}
 	}
 }
 .m-dropdown-menu2{
 	background-color: #fff;
-	border: 1px solid $cb-base;
-	box-shadow: 0px 2px 4px 0px $cb-base;
-	li{
-		a{padding:8px 10px;}
-		&.z-dis{a{cursor: default;color:$cf-disabled;}}
-	}
 }
 
 
@@ -64,15 +67,15 @@
 		float:left;
 		margin-left: -1px;
 		a{
-			$square(34px);
+			$size(34px);
 			line-height: 34px;
 			position: relative;
 			text-align: center;
 			font-size: $fs1;
 			display: block;
-			color: $cf-base;
+			color: $pagination-color;
 			text-decoration: none;
-			background-color: #fff;
+			background-color: $pagination-cbg;
 		}
 		&.dotted{display: block;padding: 7px 6px;}
 		&.previous,&.next{a{padding: 0px 13px;width:auto;cursor: pointer;}}
@@ -84,23 +87,23 @@
 .m-pagination-mini{
 	li{
 		&:hover,&.z-crt,&.z-crt:hover{
-			a{color: $c-base;}
+			a{color: $pagination-color-hover;}
 		}
 		&.z-dis,&.z-dis:hover{
-			a{color:$cf-disabled;cursor: default;}
+			a{color:$pagination-color-disabled;cursor: default;}
 		}
 	}
 }
 .m-pagination{
 	li{
-		a{border: 1px solid $cb-secondary;}
+		a{border: 1px solid $pagination-cb;}
 		&.z-crt,&.z-crt:hover{
-			a{background-color: $c-base;color:#fff;border: 1px solid $c-base;z-index: 2;}
+			a{color:$pagination-color-current;border: 1px solid $pagination-cb-current;background-color: $pagination-cbg-current;z-index: 2;}
 		}
 		&.z-dis,&.z-dis:hover{
-			a{border: 1px solid $cb-secondary;color:$cf-disabled;cursor: default;}
+			a{border: 1px solid $pagination-cb-disabled;color:$pagination-color-disabled;cursor: default;}
 		}
-		&:hover{a{border: 1px solid $c-base;color:$c-base;z-index: 2;}}
+		&:hover{a{border: 1px solid $pagination-cb-hover;color:$pagination-color-hover;z-index: 2;}}
 	}
 }
 
@@ -173,7 +176,7 @@
 	.m-popover-inner{
 		padding:7px;
 		width:auto;
-		border: 1px solid $cb-secondary;
+		border: 1px solid $popover-cb;
 		font-size: 13px;
 		border-radius: 4px;
 		box-shadow: 0 0 11px 0 #c4c4c4;
@@ -185,7 +188,7 @@
 	.m-popover-arrow{
 		border: 6px solid transparent;
 		border-left-width: 0px;
-		border-right-color: $cb-secondary;
+		border-right-color: $popover-cb;
 		top:50%;
 		left:1px;
 		margin-top: -6px;
@@ -204,7 +207,7 @@
 	.m-popover-arrow{
 		border: 6px solid transparent;
 		border-right-width: 0px;
-		border-left-color: $cb-secondary;
+		border-left-color: $popover-cb;
 		top:50%;
 		right:1px;
 		margin-top: -6px;
@@ -223,7 +226,7 @@
 	.m-popover-arrow{
 		border: 6px solid transparent;
 		border-bottom-width: 0px;
-		border-top-color: $cb-secondary;
+		border-top-color: $popover-cb;
 		left:50%;
 		bottom:1px;
 		margin-left: -6px;
@@ -242,7 +245,7 @@
 	.m-popover-arrow{
 		border: 6px solid transparent;
 		border-top-width: 0px;
-		border-bottom-color: $cb-secondary;
+		border-bottom-color: $popover-cb;
 		left:50%;
 		top:1px;
 		margin-left: -6px;
@@ -258,13 +261,13 @@
 }
 //表格组件
 .m-table{
-    width: 100%;max-width: 100%;font-size: $fs1;border-top: 1px solid $cb-third;border-bottom: 1px solid $cb-third;
+    width: 100%;max-width: 100%;font-size: $fs1;border-top: 1px solid $table-cb;border-bottom: 1px solid $table-cb;background-color: $table-cbg;
     td{
-    	height:50px;padding: 0 10px;box-sizing:border-box;
+    	height:50px;padding: $table-cell-padding;box-sizing:border-box;
     }
     thead{
-    	tr{
-    		td{border-bottom:2px solid $cb-third;}
+    	tr:last-child{
+    		td{border-bottom:2px solid $table-cb;}
     	}
     }
     
@@ -274,7 +277,7 @@
 	tbody{
     	tr{
     		&:nth-child(2n){
-    			background-color: $cbg-secondary;
+    			background-color: $table-cbg-hover;
     		}
     	}
     }
@@ -283,9 +286,8 @@
 .m-table-hover{
 	tbody{
 		tr{
-			border-bottom:1px solid $cb-third;
-			background-color: transparent;
-			&:hover{background-color: $cbg-secondary;}
+			border-bottom:1px solid $table-cb;
+			&:hover{background-color: $table-cbg-hover;}
 		}
 	}
 }
@@ -298,9 +300,9 @@
 			width: 100%;height: 100%;vertical-align: middle;
 			.m-dlgwrap{
 				position: relative;margin:0 auto;background: #fff;box-shadow: $dlg-shadow;width:$dlg-width;border-radius: $dlg-radius;
-				.m-dlghead{position:relative;padding-left:20px;background-color: $cbg-secondary;border-bottom: 1px solid $cb-third;color:$cf-secondary;
+				.m-dlghead{position:relative;padding-left:20px;background-color: $cbg-secondary;border-bottom: 1px solid $cb-gray;color:$cf-secondary;
 					.u-dlg-title{height:30px;line-height:30px;}
-					.icon-close{position: absolute;right: 15px;}
+					.icon-close-dlg{position: absolute;right: 15px;margin-top:10px;}
 				}
 				.m-dlgbody{padding:30px 20px;}
 				.m-dlgfoot{padding:0px 20px 15px;text-align: right;

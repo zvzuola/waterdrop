@@ -43,6 +43,7 @@ pre{white-space: normal;}
     border-radius: 4px;
     margin-top:20px;
 }
+.scroll{width:846px;margin: 0 auto;}
 .scroll li{border:1px solid #ccc;}
 .scroll li + li{margin-left: 15px;}
 .scroll li img{display: block;}

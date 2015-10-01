@@ -1,0 +1,9 @@
+{
+  "input": "./waterdrop.mcss",  
+  "output": "../css2",
+  "format": 3,
+  "watch": true,
+  "variables": {
+  	"config": "1"
+  }
+}

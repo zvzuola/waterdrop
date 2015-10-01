@@ -1,40 +1,37 @@
-@abstract '_prefix.mcss';
-/*配置信息，在mcss文件顶部用@abstract调用，但不会被解析成css*/
-/* 字体 */
-$ff-arial = arial,'simsun';
-/*$ff-yahei = "Helvetica","Arial",'Microsoft YaHei','微软雅黑','宋体',helvetica,'Hiragino Sans GB';*/
+// 字体
 $ff-yahei = "Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-$ff-simsun = 'simsun',arial;
 
-//文字大小 
+// 字号
 $fs0 = 12px;
 $fs1 = 13px;
-$fs2 = 16px;
-$fs3 = 18px;
-$fs4 = 20px;
-$fs5 = 22px;
-$fs6 = 24px;
-$fs7 = 26px;
-$fs8 = 28px;
-$fs9 = 30px;
-$fs10 = 32px;
-$fs11 = 34px;
-$fs12 = 36px;
+$fs2 = 14px;
+$fs3 = 15px;
+$fs4 = 18px;
+
+
+/*Globels------------------------------------------------------------------------------------------------------------------*/
 
 //颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
-$c-base = #15a0f5;//主色
-$c-hover = #44b3f7;
-$c-active = #1498e9;
-$c-disabled = #b9e3fc;
+$c-base = #37b1fc;//主色
+$c-hover = #5fc1fd;
+$c-active = #34a8ef;
+$c-disabled = #afe0fe;
 //文字色
-$cf-base = #333;//基本文字色
+$cf-title = #333; //标题文字
+$cf-base = #666;//绝大部分用的是这个颜色，重要文字信息
 $cf-secondary = #999;//次要的文字色
-$cf-disabled = #b3b3b3;//状态为不可选时的文字颜色
+$cf-disabled = #b3b3b3;//文字不可点击 | 输入框选择框的提示文字
+$cf-link = #6a8ba6; //文字链接
+$cf-link-hover = #7faacd;
+$cf-link-active = #628099;
 
 //边框或线条色
-$cb-base = #ccc;//基本边框色
+/*$cb-base = #ccc;//基本边框色
 $cb-secondary = #d9d9d9;//二级标签，二级内容的边框
-$cb-third = #e5e5e5;//三级标签，三级内容的边框
+$cb-third = #e5e5e5;//三级标签，三级内容的边框*/
+$cb-gray = #e5e5e5;//90%   出现在二级内容的边框,分割线
+$cb-dark = #dbdbdb;//86%   出现在一级标签，最高级内容的边框，分页等处
+$cb-light= #ebebeb;//92%   出现在列表
 
 //背景色
 $cbg-base = #ededed;//基本背景色，一级标签，折叠面板
@@ -43,27 +40,94 @@ $cbg-third=#f7f7f7;//三级标签
 
 //状态类的颜色
 $cz-success = #53a6e6;//成功
-$cz-progress = #00c460;//进行中
-$cz-error = #ff6d7a;//失败
-$cz-notready = #fca000;//未执行
+$cz-info = #00c460;//进行中，提示
+$cz-danger = #ff6d7a;//失败
+$cz-warning = #fca000;//未执行，警告
 
-//大按钮宽高
-$lgBtnWidth = 130px;
-$lgBtnHeight = 36px;
-//中按钮padding
-$mdBtnPadding = 9px 19px;
-//小按钮padding
-$smBtnPadding = 7px 13px;
-//弹框中的按钮
-$dlgBtnPadding = 6px 17px;
+//tab
+$tab-color = $cf-title;
+$tab-color-current = $c-base;
+$tab-color-hover = $tab-color-current;
+$tab-color-disabled = $cf-disabled;
+$tab-cb = transparent;
+$tab-cb-secondary = $cb-gray;
+$tab-cb-third = $cb-light;
+$tab-cb-current = $cb-dark;
+$tab-cb-top-current = $c-base;
+$tab-cbg = transparent;
 
-$cgraybtn-base = #d9d9d9;
-$cgraybtn-hover = #e5e5e5;
-$cgraybtn-active = #ccc;
-$cgraybtn-disabled = #e5e5e5;
+//dropdown
+$dropdown-color = $cf-base;
+$dropdown-color-hover = #fff;
+$dropdown-cb = $cb-gray;
+$dropdown-cbg = $cbg-secondary;
+$dropdown-cbg-hover = $c-base;
 
-//弹框基本样式
+//pagination
+$pagination-color = $cf-base;
+$pagination-color-current = #fff;
+$pagination-color-hover = $c-hover;
+$pagination-color-disabled = $cf-disabled;
+$pagination-cb = $cb-dark;
+$pagination-cb-current = $c-base;
+$pagination-cb-hover = $c-hover;
+$pagination-cb-disabled = $cb-light;
+$pagination-cbg = #fff;
+$pagination-cbg-current = $c-base;
+
+//popover
+$popover-cb = $cb-dark;
+
+//dialog
 $dlg-width = 335px;
 $dlg-shadow = 0px 0px 2px 1px #ccc;
 $dlg-radius = 2px;
 
+//table
+$table-cell-padding = 0 10px;//单元格padding
+$table-cbg = transparent;//表格背景色
+$table-cbg-hover =  #f2f4f5;
+$table-cb = $cb-gray;//边框色
+
+//button
+$btn-border-radius = 2px;
+
+$btn-color = #fff;
+$btn-color-reverse = $c-base;
+$btn-color-reverse-hover = $c-hover;
+$btn-color-reverse-active = $c-active;
+$btn-color-reverse-disabled = $c-disabled;
+$btn-color-gray = $cf-base;
+$btn-color-gray-disabled = $cf-disabled;
+
+$btn-cb = transparent;
+$btn-cb-reverse = $btn-color-reverse;
+$btn-cb-reverse-hover = $c-hover;
+$btn-cb-reverse-active = $c-active;
+$btn-cb-reverse-disabled = $c-disabled;
+$btn-cb-gray = transparent;
+
+$btn-cbg = $c-base;
+$btn-cbg-hover = $c-hover;
+$btn-cbg-active = $c-active;
+$btn-cbg-disabled = $c-disabled;
+$btn-cbg-gray = #d9d9d9;
+$btn-cbg-gray-hover = #e5e5e5;
+$btn-cbg-gray-active = #ccc;
+$btn-cbg-gray-disabled = #e5e5e5;
+$btn-cbg-reverse = #fff;
+
+$btn-line-height-lg = 1.57;
+$btn-line-height-md = 1.57;
+$btn-line-height-sm = 1.57;
+$btn-line-height-dlg = 1.7;
+
+$btn-padding-lg = 5px 21px;
+$btn-padding-md = 4px 20px;
+$btn-padding-sm = 4px 20px;
+$btn-padding-dlg = 2px 14px;
+
+$btn-fs-lg = $fs3;
+$btn-fs-md = $fs2;
+$btn-fs-sm = $fs2;
+$btn-fs-dlg = $fs1;

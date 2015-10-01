@@ -20,7 +20,7 @@ body,textarea,input,button,select,keygen,legend{font:$fs0/1.14 $ff-yahei;color:$
 body{cursor:default;$user-select:'none';}
 input::-ms-clear,input::-ms-reveal{display:none;}
 button{border:0;box-sizing:content-box;}
-a,a:link,a:visited{color:$c-base;}
-a:hover{color:$c-hover;}
-a:active{color:$c-active;}
+a,a:link,a:visited{color:$cf-link;}
+a:hover{color:$cf-link-hover;}
+a:active{color:$cf-link-active;}
 button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
