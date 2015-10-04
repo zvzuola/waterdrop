@@ -24,3 +24,8 @@ a,a:link,a:visited{color:$cf-link;}
 a:hover{color:$cf-link-hover;}
 a:active{color:$cf-link-active;}
 button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
+input[type="text"]:focus, textarea.u-txtarea:focus {
+    border-color: $cz-success;
+    /*box-shadow: 0px 0px 5px 1px rgba(0, 200, 0, 0.5);*/
+    -moz-appearance: none;
+}

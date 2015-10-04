@@ -1,5 +1,5 @@
 //tab组件
-.m-tab,.m-tab2,.m-subtab2,.m-subtab3{
+.wdm-tab,.wdm-tab2,.wdm-subtab2,.wdm-subtab3{
 		border-bottom: 1px solid $tab-cb-current;margin-bottom: -1px;
 		li{
 			background-color: $tab-cbg;color:$tab-color;float:left;border:1px solid $tab-cb;text-align: center;margin-bottom:-1px;
@@ -18,23 +18,23 @@
 		}
 		$clearfix();
 }
-.m-tab{
+.wdm-tab{
 	font-size: $fs3;
 	li{height:38px;line-height:38px;}
 	li.z-crt{height:36px;line-height: 36px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
 }
-.m-tab2{
+.wdm-tab2{
 	font-size: $fs2;
 	li{height:34px;line-height:34px;}
 	li.z-crt{height:32px;line-height: 32px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
 }
-.m-subtab2{
+.wdm-subtab2{
 	font-size: $fs2;
 	border-bottom: 1px solid $tab-cb-secondary;
 	li{height:38px;line-height:38px;}
 	li.z-crt{border-left:1px solid $tab-cb-secondary;border-right:1px solid $tab-cb-secondary;border-top:1px solid $tab-cb-secondary;border-radius:3px;}
 }
-.m-subtab3{
+.wdm-subtab3{
 	font-size: $fs1;
 	border-bottom: 1px solid $tab-cb-third;
 	li{height:34px;line-height:34px;}
@@ -42,9 +42,9 @@
 }
 
 //下拉列表
-.m-dropdown{position: relative;font-size: $fs1;}
-.m-dropdown-trigger{cursor: pointer;}
-.m-dropdown-menu,.m-dropdown-menu2{
+.wdm-dropdown{position: relative;font-size: $fs1;}
+.wdm-dropdown-trigger{cursor: pointer;}
+.wdm-dropdown-menu,.wdm-dropdown-menu2{
 	background-color: $dropdown-cbg;
 	border: 1px solid $dropdown-cb;
 	color:$dropdown-color;
@@ -56,13 +56,41 @@
 		a:hover{background-color: $dropdown-cbg-hover;color:$dropdown-color-hover;}
 	}
 }
-.m-dropdown-menu2{
+.wdm-dropdown-menu2{
 	background-color: #fff;
 }
 
+//选择器
+.wdm-select-dropdown{position: relative;font-size: $fs1;}
+.wdm-select-dropdown-trigger,.wdm-select-dropdown-menu{
+	background-color: $select-dropdown-cbg;
+	border-radius: $select-dropdown-border-radius;
+	border:1px solid $select-dropdown-cb;
+	color:$select-dropdown-color;
+}
+.wdm-select-dropdown-trigger{
+	cursor: pointer;
+	position: relative;
+	font-size: $fs1;
+	padding: $select-dropdown-padding;
+	height: $select-dropdown-height;
+	line-height: $select-dropdown-height;
+	.icon-menu-down{margin-left:10px;position: absolute;top:50%;right:10px;margin-top:-3px;}
+}
+.wdm-select-dropdown-menu{
+	box-shadow: $select-dropdown-box-shadow;
+	margin-top: $select-dropdown-margin-top;
+	position: absolute;
+	display: none;
+	z-index: 999;
+	li{
+		a{padding: $select-dropdown-padding; height: $select-dropdown-height;line-height: $select-dropdown-height;display: block;color:$select-dropdown-color;}
+		a:hover{background-color: $select-dropdown-cbg-hover;color:$select-dropdown-color-hover;}
+	}
+}
 
 //分页
-.m-pagination,.m-pagination-mini{
+.wdm-pagination,.wdm-pagination-mini{
 	li{
 		float:left;
 		margin-left: -1px;
@@ -84,7 +112,7 @@
 	}
 	$clearfix();
 }
-.m-pagination-mini{
+.wdm-pagination-mini{
 	li{
 		&:hover,&.z-crt,&.z-crt:hover{
 			a{color: $pagination-color-hover;}
@@ -94,7 +122,7 @@
 		}
 	}
 }
-.m-pagination{
+.wdm-pagination{
 	li{
 		a{border: 1px solid $pagination-cb;}
 		&.z-crt,&.z-crt:hover{
@@ -108,7 +136,7 @@
 }
 
 //单选框
-.m-radio{
+.wdm-radio{
 	font-size: $fs1;
 	input[type='radio']{
 		display: none;
@@ -137,7 +165,7 @@
 }
 
 //多选框
-.m-checkbox{
+.wdm-checkbox{
 	font-size: $fs1;
 	input[type='checkbox']{
 		display: none;
@@ -165,15 +193,15 @@
 }
 
 //气泡弹框
-.m-popover{
+.wdm-popover{
 	position: absolute;display: none;z-index:999;white-space: nowrap;
-	.m-popover-arrow,.m-popover-arrow:after{
+	.wdm-popover-arrow,.wdm-popover-arrow:after{
 		position: absolute;
 		display: block;
 		width: 0px;
 		height: 0px;
 	}
-	.m-popover-inner{
+	.wdm-popover-inner{
 		padding:7px;
 		width:auto;
 		border: 1px solid $popover-cb;
@@ -183,9 +211,9 @@
 		background-color: #fff;
 	}
 }
-.m-popover-right{
+.wdm-popover-right{
 	padding-left: 6px;
-	.m-popover-arrow{
+	.wdm-popover-arrow{
 		border: 6px solid transparent;
 		border-left-width: 0px;
 		border-right-color: $popover-cb;
@@ -202,9 +230,9 @@
 		}
 	}
 }
-.m-popover-left{
+.wdm-popover-left{
 	padding-right: 6px;
-	.m-popover-arrow{
+	.wdm-popover-arrow{
 		border: 6px solid transparent;
 		border-right-width: 0px;
 		border-left-color: $popover-cb;
@@ -221,9 +249,9 @@
 		}
 	}
 }
-.m-popover-top{
+.wdm-popover-top{
 	padding-bottom: 6px;
-	.m-popover-arrow{
+	.wdm-popover-arrow{
 		border: 6px solid transparent;
 		border-bottom-width: 0px;
 		border-top-color: $popover-cb;
@@ -240,9 +268,9 @@
 		}
 	}
 }
-.m-popover-bottom{
+.wdm-popover-bottom{
 	padding-top: 6px;
-	.m-popover-arrow{
+	.wdm-popover-arrow{
 		border: 6px solid transparent;
 		border-top-width: 0px;
 		border-bottom-color: $popover-cb;
@@ -260,7 +288,7 @@
 	}
 }
 //表格组件
-.m-table{
+.wdm-table{
     width: 100%;max-width: 100%;font-size: $fs1;border-top: 1px solid $table-cb;border-bottom: 1px solid $table-cb;background-color: $table-cbg;
     td{
     	height:50px;padding: $table-cell-padding;box-sizing:border-box;
@@ -273,7 +301,7 @@
     
 }
 // 带条纹的表格
-.m-table-striped{
+.wdm-table-striped{
 	tbody{
     	tr{
     		&:nth-child(2n){
@@ -283,7 +311,7 @@
     }
 }
 // 鼠标悬停
-.m-table-hover{
+.wdm-table-hover{
 	tbody{
 		tr{
 			border-bottom:1px solid $table-cb;
@@ -292,23 +320,106 @@
 	}
 }
 //弹出框
-.m-dlg{
+.wdm-dlg{
 	position: fixed;top: 0;left: 0;width: 100%;height: 100%;font-size: $fs1;z-index: 999;background-color: rgba(0,0,0,0.3);overflow: auto;
-	.m-dlgtable{
+	.wdm-dlgtable{
 		table-layout: fixed;width: 100%;height: 100%;
-		.m-dlgtd{
+		.wdm-dlgtd{
 			width: 100%;height: 100%;vertical-align: middle;
-			.m-dlgwrap{
+			.wdm-dlgwrap{
 				position: relative;margin:0 auto;background: #fff;box-shadow: $dlg-shadow;width:$dlg-width;border-radius: $dlg-radius;
-				.m-dlghead{position:relative;padding-left:20px;background-color: $cbg-secondary;border-bottom: 1px solid $cb-gray;color:$cf-secondary;
-					.u-dlg-title{height:30px;line-height:30px;}
+				.wdm-dlghead{position:relative;padding-left:20px;background-color: $cbg-secondary;border-bottom: 1px solid $cb-gray;color:$cf-secondary;
+					.wdu-dlg-title{height:30px;line-height:30px;}
 					.icon-close-dlg{position: absolute;right: 15px;margin-top:10px;}
 				}
-				.m-dlgbody{padding:30px 20px;}
-				.m-dlgfoot{padding:0px 20px 15px;text-align: right;
+				.wdm-dlgbody{padding:30px 20px;}
+				.wdm-dlgfoot{padding:0px 20px 15px;text-align: right;
 					button + button{margin-left: 8px;}
 				}
 			}
 		}
 	}
+}
+
+//表单
+.wdm-form-item{
+	position: relative;
+	height: auto;
+	margin-bottom: 10px;
+	$clearfix();
+	.icon-tip{display: none;}
+	.wdu-form-tip-text{color: $cz-info;}
+	&.z-warning{
+		.wdu-form-tip-text{color: $cz-warning;}
+		.wdu-form-input{border: 1px solid $cz-warning;}
+		.icon-tip{@extend .icon-warning;}
+	}
+	&.z-danger{
+		.wdu-form-tip-text{color: $cz-danger;}
+		.wdu-form-input{border: 1px solid $cz-danger;}
+		.icon-tip{@extend .icon-danger;}
+	}
+	&.z-info{
+		.wdu-form-tip-text{color: $cz-info;}
+		.wdu-form-input{border: 1px solid $cz-info;}
+		.icon-tip{@extend .icon-info;}
+	}
+	&.z-success{
+		.wdu-form-tip-text{color: $cz-success;display: none;}
+		/*.wdu-form-input{border: 1px solid $cz-success;}*/
+		.icon-tip{@extend .icon-success;}
+	}
+}
+.wdm-file-item{
+	float: left;
+	position: relative;
+	text-align: right;
+	.wdu-form-input{
+		background-color: transparent;
+		position: relative;
+		z-index: 2;
+	}
+	.wdu-progress{
+		z-index: 1;
+		position: absolute;
+		width:0%;
+		height:30px;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		background-color: $cbg-base;
+	}
+	.wdu-progress-text{
+		z-index: 3;
+		position: absolute;
+		height: 32px;
+		line-height: 32px;
+		right: 10px;
+	}
+	+ [class*=icon-file]{float: left;margin-left: 10px;}
+}
+.wdu-form-label{
+	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;
+}
+.wdu-form-input{
+	border: 1px solid $input-cb;
+	padding: $input-padding;
+	height: $input-height;
+	line-height: $input-height;
+	border-radius: $input-border-radius;
+	font-size: $input-fs;
+	float:left;
+}
+.wdm-form-tip{
+	float: left;margin-left: 10px;height:30px;line-height: 30px;font-size: $fs1;
+	[class*=icon-]{vertical-align: middle;margin-right: 5px;}
+}
+.wdu-btn-search{
+	float:left;
+	position: relative;
+	z-index: 2;
+	padding:7px 8px;
+	margin-left: -1px;
+	border-radius: 0 2px 2px 0;
+	.icon-search{display: block;}
+	.icon-search-white{display: block;}
 }

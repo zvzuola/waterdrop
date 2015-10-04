@@ -59,7 +59,7 @@
                 this.$element.parent().css('position','relative');
             }
             var width = this.$target.outerWidth(true);
-            if(this.$target.hasClass('m-dropdown-menu')||this.$target.hasClass('m-dropdown-menu2')){
+            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2')||this.$target.hasClass('wdm-select-dropdown-menu')){
                 var targetBorderPaddingWidth = parseInt(this.$target.css('padding-left'))
                                                 + parseInt(this.$target.css('padding-right'))
                                                 + parseInt(this.$target.css('border-left-width'))
@@ -75,60 +75,62 @@
                 top = elementHeight + elementPositionTop,
                 left = elementPositionLeft - (width - elementWidth)/2;
 
+            if(this.$target.hasClass('wdm-select-dropdown-menu'))
+                left = elementPositionLeft;
                 
-            if(this.$target.hasClass('m-popover-bottom')){
+            if(this.$target.hasClass('wdm-popover-bottom')){
                 // 如果超出左边界
                 if(this.$element.offset().left < (width - elementWidth)/2){
                     left = elementPositionLeft;
-                    this.$target.find('.m-popover-arrow').css('left',elementWidth/2);
+                    this.$target.find('.wdm-popover-arrow').css('left',elementWidth/2);
                 }
                 // 如果超出右边界
                 if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
                     left = elementPositionLeft - (width - elementWidth);
-                    this.$target.find('.m-popover-arrow').css('left',width - elementWidth/2);
+                    this.$target.find('.wdm-popover-arrow').css('left',width - elementWidth/2);
                 }
             }
 
-            if(this.$target.hasClass('m-popover-top')){
+            if(this.$target.hasClass('wdm-popover-top')){
                 top = elementPositionTop - height;
                 // 如果超出左边界
                 if(this.$element.offset().left < (width - elementWidth)/2){
                     left = elementPositionLeft;
-                    this.$target.find('.m-popover-arrow').css('left',elementWidth/2);
+                    this.$target.find('.wdm-popover-arrow').css('left',elementWidth/2);
                 }
                 // 如果超出右边界
                 if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
                     left = elementPositionLeft - (width - elementWidth);
-                    this.$target.find('.m-popover-arrow').css('left',width - elementWidth/2);
+                    this.$target.find('.wdm-popover-arrow').css('left',width - elementWidth/2);
                 }
             }
 
-            if(this.$target.hasClass('m-popover-left')){
+            if(this.$target.hasClass('wdm-popover-left')){
                 left = elementPositionLeft - width;
                 top = elementPositionTop - (height - elementHeight)/2;
                 // 如果超出上边界
                 if(this.$element.offset().top < (height - elementHeight)/2){
                     top = elementPositionTop;
-                    this.$target.find('.m-popover-arrow').css('top',elementHeight/2);
+                    this.$target.find('.wdm-popover-arrow').css('top',elementHeight/2);
                 }
                 // 如果超出下边界
                 if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
                     top = elementPositionTop - (height - elementHeight);
-                    this.$target.find('.m-popover-arrow').css('top',height - elementHeight/2);
+                    this.$target.find('.wdm-popover-arrow').css('top',height - elementHeight/2);
                 }
             }
-            if(this.$target.hasClass('m-popover-right')){
+            if(this.$target.hasClass('wdm-popover-right')){
                 left = elementPositionLeft + elementWidth;
                 top = elementPositionTop - (height - elementHeight)/2;
                 // 如果超出上边界
                 if(this.$element.offset().top < (height - elementHeight)/2){
                     top = elementPositionTop;
-                    this.$target.find('.m-popover-arrow').css('top',elementHeight/2);
+                    this.$target.find('.wdm-popover-arrow').css('top',elementHeight/2);
                 }
                 // 如果超出下边界
                 if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
                     top = elementPositionTop - (height - elementHeight);
-                    this.$target.find('.m-popover-arrow').css('top',height - elementHeight/2);
+                    this.$target.find('.wdm-popover-arrow').css('top',height - elementHeight/2);
                 }
             }
 
@@ -179,7 +181,7 @@
         },
         targetClickHandler: function() {
             //下拉菜单
-            if(this.$target.hasClass('m-dropdown-menu')||this.$target.hasClass('m-dropdown-menu2'))
+            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2')||this.$target.hasClass('wdm-select-dropdown-menu'))
                 this._targetclick = false;
             else
                 this._targetclick = true;
@@ -243,10 +245,10 @@
 	wd_dialog.prototype = {
 		init:function(){
             var self = this;
-			var mdlg=$("<div class='m-dlg'><table class='m-dlgtable'><tr><td class='m-dlgtd'><div class='m-dlgwrap'></div></td></tr></table></div>");
-			var head=$("<div class='m-dlghead'><span class='u-dlg-title'>"+this.opts.title+"</span><b class='icon-close-dlg'></b></div>");
-			var foot=$("<div class='m-dlgfoot'></div>");
-			var body=$('<div />').addClass('m-dlgbody').append(this.$element.show());
+			var mdlg=$("<div class='wdm-dlg'><table class='wdm-dlgtable'><tr><td class='wdm-dlgtd'><div class='wdm-dlgwrap'></div></td></tr></table></div>");
+			var head=$("<div class='wdm-dlghead'><span class='wdu-dlg-title'>"+this.opts.title+"</span><b class='icon-close-dlg'></b></div>");
+			var foot=$("<div class='wdm-dlgfoot'></div>");
+			var body=$('<div />').addClass('wdm-dlgbody').append(this.$element.show());
 			var buttons = this.opts.buttons;
 			if(buttons!=null){
 				$.each( buttons, function( name, props ) {
@@ -255,10 +257,10 @@
                     props.click = function() {
                         click.apply( self.$element[ 0 ], arguments );
                     };
-					$( "<button></button>",props).addClass('u-btn u-btn-dlg').appendTo(foot);
+					$( "<button></button>",props).addClass('wdu-btn wdu-btn-dlg').appendTo(foot);
 				});
 			}
-			mdlg.find('.m-dlgwrap').css({'width':this.opts.width,'min-width':this.opts.minWidth}).append(head).append(body).append(foot);
+			mdlg.find('.wdm-dlgwrap').css({'width':this.opts.width,'min-width':this.opts.minWidth}).append(head).append(body).append(foot);
 			$('body').append(mdlg);
 			mdlg.find('.icon-close-dlg').on('click', function(event) {
 				event.preventDefault();
@@ -266,7 +268,7 @@
 			});
 		},
         close:function(){
-            var parent = this.$element.parents('.m-dlg');
+            var parent = this.$element.parents('.wdm-dlg');
             this.$element.hide().appendTo('body');
             parent.remove();
 		},
@@ -332,8 +334,8 @@
                 
 
                 function init(){
-                    $(settings.preBtn).addClass('u-pre');
-                    $(settings.nextBtn).addClass('u-next');
+                    $(settings.preBtn).addClass('wdu-pre');
+                    $(settings.nextBtn).addClass('wdu-next');
                     var ulHeight = _this.find('ul li').outerHeight(true);
                     _this.addClass('f-cb').css({'overflow':'hidden','height':ulHeight});
                     _this.find('ul li').addClass('f-fl f-tac');
@@ -396,17 +398,17 @@
                 if(settings.layer){
                     _this.on('click.layer','li img',function(){
                         var tempIndex=$(this).parent().index();
-                        var mask=$("<div class='m-dlg m-dlg-layer'><table class='m-dlgtable'><tr><td class='m-dlgtd'></td></tr></table></div>");
+                        var mask=$("<div class='wdm-dlg wdm-dlg-layer'><table class='wdm-dlgtable'><tr><td class='wdm-dlgtd'></td></tr></table></div>");
                         var layerdiv=$("<div></div>",{id:'dlgScroll'}).css(layerProps);
                         var li=_this.find('ul').html();
                         var ul=$("<ul class='f-cb'></ul>").append(li);
                         ul.find('li').css('width',layerProps.width);
                         layerdiv.append(ul).append("<div id='layerPreBtn'></div><div id='layerNextBtn'></div>");
-                        mask.find('.m-dlgtd').append(layerdiv);
+                        mask.find('.wdm-dlgtd').append(layerdiv);
                         $('body').append(mask);
                         $('#dlgScroll').startScroll({preBtn:'#layerPreBtn',nextBtn:'#layerNextBtn',perNum:1,index:tempIndex});
                         mask.find('li img').off('click.layer');
-                        $('.m-dlg-layer').on('click',function(e){
+                        $('.wdm-dlg-layer').on('click',function(e){
                             var e=e||window.event;
                             var src=e.target||e.srcElement;
                             if(src.id=='layerNextBtn'||src.id=='layerPreBtn')

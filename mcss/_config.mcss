@@ -1,3 +1,6 @@
+
+
+/*Globels------------------------------------------------------------------------------------------------------------------*/
 // 字体
 $ff-yahei = "Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 
@@ -8,14 +11,12 @@ $fs2 = 14px;
 $fs3 = 15px;
 $fs4 = 18px;
 
-
-/*Globels------------------------------------------------------------------------------------------------------------------*/
-
 //颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
 $c-base = #37b1fc;//主色
 $c-hover = #5fc1fd;
 $c-active = #34a8ef;
 $c-disabled = #afe0fe;
+
 //文字色
 $cf-title = #333; //标题文字
 $cf-base = #666;//绝大部分用的是这个颜色，重要文字信息
@@ -35,8 +36,13 @@ $cb-light= #ebebeb;//92%   出现在列表
 
 //背景色
 $cbg-base = #ededed;//基本背景色，一级标签，折叠面板
-$cbg-secondary = #f2f2f2;//二级标签
+$cbg-secondary = #f5f5f5;//二级标签
 $cbg-third=#f7f7f7;//三级标签
+
+$cbg-success = #e6f9ef;
+$cbg-info = #edf6fc;
+$cbg-danger = #fff0f1;
+$cbg-warning = #fff5e5;
 
 //状态类的颜色
 $cz-success = #53a6e6;//成功
@@ -62,6 +68,18 @@ $dropdown-color-hover = #fff;
 $dropdown-cb = $cb-gray;
 $dropdown-cbg = $cbg-secondary;
 $dropdown-cbg-hover = $c-base;
+
+//select-dropdown
+$select-dropdown-color = $cf-base;
+$select-dropdown-color-hover = #fff;
+$select-dropdown-cb = #d9d9d9;
+$select-dropdown-cbg = #fff;
+$select-dropdown-cbg-hover = $c-base;
+$select-dropdown-border-radius = 2px;
+$select-dropdown-box-shadow = 0 3px 6px 0 #ccc;
+$select-dropdown-padding = 0 30px 0 10px;
+$select-dropdown-height = 32px;
+$select-dropdown-margin-top = 5px;
 
 //pagination
 $pagination-color = $cf-base;
@@ -123,11 +141,18 @@ $btn-line-height-sm = 1.57;
 $btn-line-height-dlg = 1.7;
 
 $btn-padding-lg = 5px 21px;
-$btn-padding-md = 4px 20px;
-$btn-padding-sm = 4px 20px;
+$btn-padding-md = 4px 19px;
+$btn-padding-sm = 4px 19px;
 $btn-padding-dlg = 2px 14px;
 
 $btn-fs-lg = $fs3;
 $btn-fs-md = $fs2;
 $btn-fs-sm = $fs2;
 $btn-fs-dlg = $fs1;
+
+//input
+$input-fs = $fs1;
+$input-cb = #d9d9d9;
+$input-border-radius = 2px;
+$input-height = 20px;
+$input-padding = 5px 10px;

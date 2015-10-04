@@ -2,9 +2,9 @@
 $path = 'icon.png';
 [class*=icon-]{background: url('#{$path}') -9999px -9999px no-repeat;}
 //查看
-.icon-eye-hover{$icon(0,-40px,19px,11px);}
-.icon-eye-active{$icon(0,-80px,19px,11px);}
-.icon-eye{$icon(0,0,19px,11px);
+.icon-eye-hover{$icon(0,-40px,17px,11px);}
+.icon-eye-active{$icon(0,-80px,17px,11px);}
+.icon-eye{$icon(0,0,17px,11px);
 	&:hover{@extend .icon-eye-hover;}
 	&:active{@extend .icon-eye-active;}
 }
@@ -16,40 +16,56 @@ $path = 'icon.png';
 	&:active{@extend .icon-del-active;}
 }
 //下载
-.icon-download-hover{$icon(-80px,-40px,15px,15px);}
-.icon-download-active{$icon(-80px,-80px,15px,15px);}
-.icon-download{$icon(-80px,0,15px,15px);
+.icon-download-hover{$icon(-80px,-40px,18px,14px);}
+.icon-download-active{$icon(-80px,-80px,18px,14px);}
+.icon-download{$icon(-80px,0,18px,14px);
 	&:hover{@extend .icon-download-hover;}
 	&:active{@extend .icon-download-active;}
 }
 //上传
-.icon-upload-hover{$icon(-120px,-40px,15px,15px);}
-.icon-upload-active{$icon(-120px,-80px,15px,15px);}
-.icon-upload{$icon(-120px,0px,15px,15px);
+.icon-upload-hover{$icon(-120px,-40px,18px,14px);}
+.icon-upload-active{$icon(-120px,-80px,18px,14px);}
+.icon-upload{$icon(-120px,0px,18px,14px);
 	&:hover{@extend .icon-upload-hover;}
 	&:active{@extend .icon-upload-active;}
 }
 //编辑
-.icon-edit-hover{$icon(-160px,-40px,15px,14px);}
-.icon-edit-active{$icon(-160px,-80px,15px,14px);}
-.icon-edit{$icon(-160px,0,15px,14px);
+.icon-edit-hover{$icon(-160px,-40px,14px,15px);}
+.icon-edit-active{$icon(-160px,-80px,14px,15px);}
+.icon-edit{$icon(-160px,0,14px,15px);
 	&:hover{@extend .icon-edit-hover;}
 	&:active{@extend .icon-edit-active;}
 }
 //日期周期
-.icon-calendar-hover{$icon(-200px,-40px,27px,25px);}
-.icon-calendar-active{$icon(-200px,-80px,27px,25px);}
-.icon-calendar{$icon(-200px,0px,27px,25px);
+.icon-calendar-hover{$icon(-200px,-40px,24px,22px);}
+.icon-calendar-active{$icon(-200px,-80px,24px,22px);}
+.icon-calendar{$icon(-200px,0px,24px,22px);
 	&:hover{@extend .icon-calendar-hover;}
 	&:active{@extend .icon-calendar-active;}
+}
+
+//下载2
+.icon-download2-hover{$icon(-240px,-40px,13px,15px);}
+.icon-download2-active{$icon(-240px,-80px,13px,15px);}
+.icon-download2{$icon(-240px,0,13px,15px);
+	&:hover{@extend .icon-download-hover;}
+	&:active{@extend .icon-download-active;}
+}
+
+//分享
+.icon-share-hover{$icon(-280px,-40px,15px,15px);}
+.icon-share-active{$icon(-280px,-80px,15px,15px);}
+.icon-share{$icon(-280px,0,15px,15px);
+	&:hover{@extend .icon-download-hover;}
+	&:active{@extend .icon-download-active;}
 }
 
 //执行成功
 .icon-success{$icon(0,-120px,16px,16px);}
 //执行失败
-.icon-error{$icon(-40px,-120px,16px,16px);}
+.icon-danger{$icon(-40px,-120px,16px,16px);}
 //未执行
-.icon-unattended{$icon(-80px,-120px,16px,16px);}
+.icon-info{$icon(-80px,-120px,16px,16px);}
 //警告
 .icon-warning{$icon(-120px,-120px,16px,16px);}
 //笑脸
@@ -66,9 +82,9 @@ $path = 'icon.png';
 .icon-checkbox-discheck{$icon(-100px,-220px,14px,16px);}
 .icon-checkbox-dischecked{$icon(-80px,-220px,14px,16px);}
 //上传文件图标
-.icon-file-hover{$icon(-40px,-260px,40px,32px);}
-.icon-file-active{$icon(-80px,-260px,40px,32px);}
-.icon-file-disabled{$icon(-120px,-260px,40px,32px);}
+.icon-file-hover{$icon(-80px,-260px,40px,32px);}
+.icon-file-active{$icon(-160px,-260px,40px,32px);}
+.icon-file-disabled{$icon(-240px,-260px,40px,32px);}
 .icon-file{$icon(0,-260px,40px,32px);
 	&:hover{@extend .icon-file-hover;}
 	&:active{@extend .icon-file-active;}
@@ -79,8 +95,18 @@ $path = 'icon.png';
 .icon-arrow{$icon(0,-520px,8px,5px);
 	&:hover{@extend .icon-arrow-hover;}
 }
+//菜单箭头
+.icon-menu-down{$icon(-40px,-520px,9px,6px);}
+.icon-menu-up{$icon(-60px,-520px,9px,6px);}
+.icon-menu-right{$icon(-80px,-520px,6px,10px);}
+
 //提示
 .icon-tip{$icon(0,-700px,22px,22px);}
+
+//搜索放大镜
+.icon-search-white{$icon(-30px,-700px,14px,16px);}
+.icon-search{$icon(-50px,-700px,14px,16px);}
+
 //关闭按钮
 .icon-close-hover{$icon(-40px,-740px,27px,27px);}
 .icon-close-active{$icon(-80px,-740px,27px,27px);}
@@ -112,45 +138,45 @@ $path = 'icon.png';
 
 
 //字体大小
-.u-fs0{font-size: $fs0;}
-.u-fs1{font-size: $fs1;}
-.u-fs2{font-size: $fs2;}
-.u-fs3{font-size: $fs3;}
-.u-fs4{font-size: $fs4;}
+.wdu-fs0{font-size: $fs0;}
+.wdu-fs1{font-size: $fs1;}
+.wdu-fs2{font-size: $fs2;}
+.wdu-fs3{font-size: $fs3;}
+.wdu-fs4{font-size: $fs4;}
 
 //颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
-.u-c-base{color:$c-base;}//主色
-.u-c-hover{color:$c-hover;};
-.u-c-active{color:$c-active;}
-.u-c-disabled{color:$c-disabled;}
+.wdu-c-base{color:$c-base;}//主色
+.wdu-c-hover{color:$c-hover;};
+.wdu-c-active{color:$c-active;}
+.wdu-c-disabled{color:$c-disabled;}
 //文字色
-.u-cf-base{color:$cf-base;}//基本文字色
-.u-cf-secondary{color:$cf-secondary;}//次要的文字色
-.u-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
+.wdu-cf-base{color:$cf-base;}//基本文字色
+.wdu-cf-secondary{color:$cf-secondary;}//次要的文字色
+.wdu-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
 
 
-.u-mgt10{margin-top: 10px;}
-.u-mgb10{margin-bottom: 10px;}
-.u-mgl10{margin-left: 10px;}
-.u-mgr10{margin-right: 10px;}
+.wdu-mgt10{margin-top: 10px;}
+.wdu-mgb10{margin-bottom: 10px;}
+.wdu-mgl10{margin-left: 10px;}
+.wdu-mgr10{margin-right: 10px;}
 
-.u-mgt30{margin-top: 30px;}
-.u-mgb30{margin-bottom: 30px;}
-.u-mgl30{margin-left: 30px;}
-.u-mgr30{margin-right: 30px;}
+.wdu-mgt30{margin-top: 30px;}
+.wdu-mgb30{margin-bottom: 30px;}
+.wdu-mgl30{margin-left: 30px;}
+.wdu-mgr30{margin-right: 30px;}
 
 
 
-.u-pre,.u-next{width:35px;height:70px;position: absolute;top:50%;margin-top: -35px;}
-.u-pre{background: url('../images/pre.png') no-repeat;left:12px;}
-.u-next{background: url('../images/next.png') no-repeat;right:12px;}
+.wdu-pre,.wdu-next{width:35px;height:70px;position: absolute;top:50%;margin-top: -35px;}
+.wdu-pre{background: url('../images/pre.png') no-repeat;left:12px;}
+.wdu-next{background: url('../images/next.png') no-repeat;right:12px;}
 
 //按钮
-.u-btn,.u-btn-reverse,.u-btn-gray{
+.wdu-btn,.wdu-btn-reverse,.wdu-btn-gray{
 	text-align: center;
 	border-radius: $btn-border-radius;
 }
-.u-btn{
+.wdu-btn{
 	color:$btn-color;
 	border:1px solid $btn-cb;
 	background-color: $btn-cbg;
@@ -164,7 +190,7 @@ $path = 'icon.png';
 		background-color: $btn-cbg-disabled;
 	}
 }
-.u-btn-reverse{
+.wdu-btn-reverse{
 	color:$btn-color-reverse;
 	border: 1px solid $btn-cb-reverse;
 	background-color: $btn-cbg-reverse;
@@ -181,7 +207,7 @@ $path = 'icon.png';
 		color: $btn-color-reverse-disabled;
 	}
 }
-.u-btn-gray{
+.wdu-btn-gray{
 	color:$btn-color-gray;
 	border: 1px solid $btn-cb-gray;
 	background-color: $btn-cbg-gray;
@@ -196,22 +222,22 @@ $path = 'icon.png';
 		color:$btn-color-gray-disabled;
 	}
 }
-.u-btn-lg{
+.wdu-btn-lg{
 	font-size: $btn-fs-lg;
 	line-height: $btn-line-height-lg;
 	padding: $btn-padding-lg;
 }
-.u-btn-md{
+.wdu-btn-md{
 	font-size: $btn-fs-md;
 	line-height: $btn-line-height-md;
 	padding: $btn-padding-md;
 }
-.u-btn-sm{
+.wdu-btn-sm{
 	font-size: $btn-fs-sm;
 	line-height: $btn-line-height-sm;
 	padding: $btn-padding-sm;
 }
-.u-btn-dlg{
+.wdu-btn-dlg{
 	font-size: $btn-fs-dlg;
 	line-height: $btn-line-height-dlg;
 	padding: $btn-padding-dlg;
