@@ -86,6 +86,10 @@ input[type="text"]:focus,textarea.u-txtarea:focus{border-color:#53a6e6;-moz-appe
 .icon-danger,.wdm-form-item.z-danger .icon-tip{background-position:-40px -120px;width:16px;height:16px;display:inline-block;}
 .icon-info,.wdm-form-item.z-info .icon-tip{background-position:-80px -120px;width:16px;height:16px;display:inline-block;}
 .icon-warning,.wdm-form-item.z-warning .icon-tip{background-position:-120px -120px;width:16px;height:16px;display:inline-block;}
+.icon-validate-success{background-position:-150px -120px;width:14px;height:14px;display:inline-block;}
+.icon-validate-danger{background-position:-170px -120px;width:14px;height:14px;display:inline-block;}
+.icon-validate-waning{background-position:-190px -120px;width:14px;height:14px;display:inline-block;}
+.icon-validate-info{background-position:-210px -120px;width:14px;height:14px;display:inline-block;}
 .icon-smile{background-position:0 -160px;width:14px;height:14px;display:inline-block;}
 .icon-smile-hover{background-position:-40px -160px;width:14px;height:14px;display:inline-block;}
 .icon-radio-check,.wdm-radio input[type='radio'] +.icon-radio{background-position:0 -200px;width:14px;height:16px;display:inline-block;}
@@ -114,12 +118,26 @@ input[type="text"]:focus,textarea.u-txtarea:focus{border-color:#53a6e6;-moz-appe
 .icon-close-dlg-hover,.icon-close-dlg:hover{background-position:-140px -740px;width:10px;height:10px;display:inline-block;}
 .icon-close-dlg-active,.icon-close-dlg:active{background-position:-160px -740px;width:10px;height:10px;display:inline-block;}
 .icon-close-dlg{background-position:-120px -740px;width:10px;height:10px;display:inline-block;}
+.icon-close-sm{background-position:-180px -740px;width:5px;height:5px;display:inline-block;}
 .icon-pre-hover,.icon-pre:hover{background-position:-80px -780px;width:22px;height:38px;display:inline-block;}
 .icon-pre-active,.icon-pre:active{background-position:-160px -780px;width:22px;height:38px;display:inline-block;}
 .icon-pre{background-position:0 -780px;width:22px;height:38px;display:inline-block;}
 .icon-next-hover,.icon-next:hover{background-position:-120px -780px;width:22px;height:38px;display:inline-block;}
 .icon-next-active,.icon-next:active{background-position:-200px -780px;width:22px;height:38px;display:inline-block;}
 .icon-next{background-position:-40px -780px;width:22px;height:38px;display:inline-block;}
+.icon-close2-hover,.icon-close2:hover{background-position:-30px -830px;width:22px;height:22px;display:inline-block;}
+.icon-close2-active,.icon-close2:active{background-position:-60px -830px;width:22px;height:22px;display:inline-block;}
+.icon-close2{background-position:0 -830px;width:22px;height:22px;display:inline-block;}
+.icon-pre2-hover,.icon-pre2:hover,.icon-next2:hover{background-position:-170px -830px;width:23px;height:38px;display:inline-block;}
+.icon-pre2-active,.icon-pre2:active,.icon-next2:active{background-position:-240px -830px;width:23px;height:38px;display:inline-block;}
+.icon-pre2{background-position:-100px -830px;width:23px;height:38px;display:inline-block;}
+.icon-next2-hover{background-position:-200px -830px;width:23px;height:38px;display:inline-block;}
+.icon-next2-active{background-position:-270px -830px;width:23px;height:38px;display:inline-block;}
+.icon-next2{background-position:-130px -830px;width:23px;height:38px;display:inline-block;}
+.icon-win{background-position:0 -880px;width:13px;height:15px;display:inline-block;}
+.icon-android{background-position:-20px -880px;width:15px;height:16px;display:inline-block;}
+.icon-mac{background-position:-40px -880px;width:14px;height:16px;display:inline-block;}
+.icon-phone{background-position:-60px -880px;width:11px;height:17px;display:inline-block;}
 .wdu-fs0{font-size:12px;}
 .wdu-fs1{font-size:13px;}
 .wdu-fs2{font-size:14px;}

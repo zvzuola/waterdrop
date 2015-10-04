@@ -68,6 +68,13 @@ $path = 'icon.png';
 .icon-info{$icon(-80px,-120px,16px,16px);}
 //警告
 .icon-warning{$icon(-120px,-120px,16px,16px);}
+
+//校验
+.icon-validate-success{$icon(-150px,-120px,14px,14px);}
+.icon-validate-danger{$icon(-170px,-120px,14px,14px);}
+.icon-validate-waning{$icon(-190px,-120px,14px,14px);}
+.icon-validate-info{$icon(-210px,-120px,14px,14px);}
+
 //笑脸
 .icon-smile{$icon(0,-160px,14px,14px);}
 .icon-smile-hover{$icon(-40px,-160px,14px,14px);}
@@ -121,6 +128,7 @@ $path = 'icon.png';
 	&:hover{@extend .icon-close-dlg-hover;}
 	&:active{@extend .icon-close-dlg-active;}
 }
+.icon-close-sm{$icon(-180px,-740px,5px,5px);}
 //上一张
 .icon-pre-hover{$icon(-80px,-780px,22px,38px);}
 .icon-pre-active{$icon(-160px,-780px,22px,38px);}
@@ -136,6 +144,31 @@ $path = 'icon.png';
 	&:active{@extend .icon-next-active;}
 }
 
+.icon-close2-hover{$icon(-30px,-830px,22px,22px);}
+.icon-close2-active{$icon(-60px,-830px,22px,22px);}
+.icon-close2{$icon(0,-830px,22px,22px);
+	&:hover{@extend .icon-close2-hover;}
+	&:active{@extend .icon-close2-active;}
+}
+
+.icon-pre2-hover{$icon(-170px,-830px,23px,38px);}
+.icon-pre2-active{$icon(-240px,-830px,23px,38px);}
+.icon-pre2{$icon(-100px,-830px,23px,38px);
+	&:hover{@extend .icon-pre2-hover;}
+	&:active{@extend .icon-pre2-active;}
+}
+
+.icon-next2-hover{$icon(-200px,-830px,23px,38px);}
+.icon-next2-active{$icon(-270px,-830px,23px,38px);}
+.icon-next2{$icon(-130px,-830px,23px,38px);
+	&:hover{@extend .icon-pre2-hover;}
+	&:active{@extend .icon-pre2-active;}
+}
+
+.icon-win{$icon(0,-880px,13px,15px);}
+.icon-android{$icon(-20px,-880px,15px,16px);}
+.icon-mac{$icon(-40px,-880px,14px,16px);}
+.icon-phone{$icon(-60px,-880px,11px,17px);}
 
 //字体大小
 .wdu-fs0{font-size: $fs0;}
@@ -164,12 +197,6 @@ $path = 'icon.png';
 .wdu-mgb30{margin-bottom: 30px;}
 .wdu-mgl30{margin-left: 30px;}
 .wdu-mgr30{margin-right: 30px;}
-
-
-
-.wdu-pre,.wdu-next{width:35px;height:70px;position: absolute;top:50%;margin-top: -35px;}
-.wdu-pre{background: url('../images/pre.png') no-repeat;left:12px;}
-.wdu-next{background: url('../images/next.png') no-repeat;right:12px;}
 
 //按钮
 .wdu-btn,.wdu-btn-reverse,.wdu-btn-gray{

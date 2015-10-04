@@ -44,6 +44,9 @@ pre{white-space: normal;}
     margin-top:20px;
 }
 .scroll{width:846px;margin: 0 auto;}
+.scroll .icon-pre,.scroll .icon-next{position: absolute;top:50%;transform:translateY(-50%);}
+.scroll .icon-pre{left:12px;}
+.scroll .icon-next{right:12px;}
 .scroll li{border:1px solid #ccc;}
 .scroll li + li{margin-left: 15px;}
 .scroll li img{display: block;}

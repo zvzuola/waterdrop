@@ -334,8 +334,8 @@
                 
 
                 function init(){
-                    $(settings.preBtn).addClass('wdu-pre');
-                    $(settings.nextBtn).addClass('wdu-next');
+                    $(settings.preBtn).addClass('icon-pre');
+                    $(settings.nextBtn).addClass('icon-next');
                     var ulHeight = _this.find('ul li').outerHeight(true);
                     _this.addClass('f-cb').css({'overflow':'hidden','height':ulHeight});
                     _this.find('ul li').addClass('f-fl f-tac');
