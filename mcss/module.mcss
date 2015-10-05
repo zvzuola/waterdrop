@@ -1,10 +1,11 @@
 //tab组件
 .wdm-tab,.wdm-tab2,.wdm-subtab2,.wdm-subtab3{
-		border-bottom: 1px solid $tab-cb-current;margin-bottom: -1px;
+		margin-bottom: -1px;
 		li{
-			background-color: $tab-cbg;color:$tab-color;float:left;border:1px solid $tab-cb;text-align: center;margin-bottom:-1px;
+			color:$tab-color;background-color: transparent;float:left;border:1px solid transparent;text-align: center;margin-bottom:-1px;
 			+ li{margin-left:-1px;}
-			a{display: block;color:$tab-color;padding:0 15px;
+			a{
+				display: block;color:$tab-color;padding:0 15px;
 				&:hover{color:$tab-color-hover;}
 			}
 			&:hover{color:$tab-color-hover;}
@@ -19,30 +20,32 @@
 		$clearfix();
 }
 .wdm-tab{
-	font-size: $fs3;
+	font-size: $tab-fs-first;
+	border-bottom: 1px solid $tab-cb-first;
 	li{height:38px;line-height:38px;}
-	li.z-crt{height:36px;line-height: 36px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
+	li.z-crt{height:36px;line-height: 36px;border-left:1px solid $tab-cb-first;border-right:1px solid $tab-cb-first;border-top:3px solid $tab-cb-top-current;}
 }
 .wdm-tab2{
-	font-size: $fs2;
+	font-size: $tab-fs-first2;
+	border-bottom: 1px solid $tab-cb-first2;
 	li{height:34px;line-height:34px;}
-	li.z-crt{height:32px;line-height: 32px;border-left:1px solid $tab-cb-current;border-right:1px solid $tab-cb-current;border-top:3px solid $tab-cb-top-current;}
+	li.z-crt{height:32px;line-height: 32px;border-left:1px solid $tab-cb-first2;border-right:1px solid $tab-cb-first2;border-top:3px solid $tab-cb-top-current;}
 }
 .wdm-subtab2{
-	font-size: $fs2;
+	font-size: $tab-fs-secondary;
 	border-bottom: 1px solid $tab-cb-secondary;
 	li{height:38px;line-height:38px;}
-	li.z-crt{border-left:1px solid $tab-cb-secondary;border-right:1px solid $tab-cb-secondary;border-top:1px solid $tab-cb-secondary;border-radius:3px;}
+	li.z-crt{border-left:1px solid $tab-cb-secondary;border-right:1px solid $tab-cb-secondary;border-top:1px solid $tab-cb-secondary;border-radius:$tab-border-radius;}
 }
 .wdm-subtab3{
-	font-size: $fs1;
+	font-size: $tab-fs-third;
 	border-bottom: 1px solid $tab-cb-third;
 	li{height:34px;line-height:34px;}
-	li.z-crt{border-left:1px solid $tab-cb-third;border-right:1px solid $tab-cb-third;border-top:1px solid $tab-cb-third;border-radius:3px;}
+	li.z-crt{border-left:1px solid $tab-cb-third;border-right:1px solid $tab-cb-third;border-top:1px solid $tab-cb-third;border-radius:$tab-border-radius;}
 }
 
-//下拉列表
-.wdm-dropdown{position: relative;font-size: $fs1;}
+//下拉菜单
+.wdm-dropdown{position: relative;font-size: $dropdown-fs;}
 .wdm-dropdown-trigger{cursor: pointer;}
 .wdm-dropdown-menu,.wdm-dropdown-menu2{
 	background-color: $dropdown-cbg;
@@ -61,7 +64,7 @@
 }
 
 //选择器
-.wdm-select-dropdown{position: relative;font-size: $fs1;}
+.wdm-select-dropdown{position: relative;font-size: $select-dropdown-fs;}
 .wdm-select-dropdown-trigger,.wdm-select-dropdown-menu{
 	background-color: $select-dropdown-cbg;
 	border-radius: $select-dropdown-border-radius;
@@ -71,11 +74,12 @@
 .wdm-select-dropdown-trigger{
 	cursor: pointer;
 	position: relative;
-	font-size: $fs1;
+	font-size: $select-dropdown-fs;
 	padding: $select-dropdown-padding;
 	height: $select-dropdown-height;
 	line-height: $select-dropdown-height;
-	.icon-menu-down{margin-left:10px;position: absolute;top:50%;right:10px;margin-top:-3px;}
+	.icon-menu-down{margin-left:10px;position: absolute;top:50%;right:10px;margin-top:-3px;$transition:all .5s;}
+	&.wd-open{.icon-menu-down{$transform:rotate(180deg);$transition:all .5s;}}
 }
 .wdm-select-dropdown-menu{
 	box-shadow: $select-dropdown-box-shadow;
@@ -99,7 +103,7 @@
 			line-height: 34px;
 			position: relative;
 			text-align: center;
-			font-size: $fs1;
+			font-size: $pagination-fs;
 			display: block;
 			color: $pagination-color;
 			text-decoration: none;
@@ -289,7 +293,7 @@
 }
 //表格组件
 .wdm-table{
-    width: 100%;max-width: 100%;font-size: $fs1;border-top: 1px solid $table-cb;border-bottom: 1px solid $table-cb;background-color: $table-cbg;
+    width: 100%;max-width: 100%;font-size: $table-fs;border-top: 1px solid $table-cb;border-bottom: 1px solid $table-cb;background-color: $table-cbg;
     td{
     	height:50px;padding: $table-cell-padding;box-sizing:border-box;
     }
@@ -328,7 +332,7 @@
 			width: 100%;height: 100%;vertical-align: middle;
 			.wdm-dlgwrap{
 				position: relative;margin:0 auto;background: #fff;box-shadow: $dlg-shadow;width:$dlg-width;border-radius: $dlg-radius;
-				.wdm-dlghead{position:relative;padding-left:20px;background-color: $cbg-secondary;border-bottom: 1px solid $cb-gray;color:$cf-secondary;
+				.wdm-dlghead{position:relative;padding-left:20px;background-color: $dlg-cbg;border-bottom: 1px solid $dlg-cb;color:$dlg-color;
 					.wdu-dlg-title{height:30px;line-height:30px;}
 					.icon-close-dlg{position: absolute;right: 15px;margin-top:10px;}
 				}
@@ -339,6 +343,42 @@
 			}
 		}
 	}
+}
+//全局提醒
+.wdm-success,.wdm-danger,.wdm-info,.wdm-warning{
+	padding:15px;border-radius: 2px;box-shadow:0px 0px 11px  0px #c4c4c4;font-size:$fs2;
+	[class*=icon-]{vertical-align: middle;margin-right: 5px;}
+}
+
+//面包屑导航
+.wdu-breadcrumb,.wdu-breadcrumb2,.wdu-breadcrumb3,.wdu-breadcrumb4{
+	 > li{float: left; font-size: $fs0;
+		&:first-child{border-left: 2px solid #989898;padding-left:5px;}
+		+ li::before {
+			margin: 0 5px;
+	    	content: "";
+	    	background: url('#{$path}') -9999px -9999px no-repeat;
+	    	$icon(-80px,-520px,6px,10px);
+		}
+	}
+	$clearfix();
+}
+
+.wdu-breadcrumb2{
+	 > li{float: left; font-size: $fs2; color: $cf-title;
+	 	&:first-child{border-left: 2px solid $c-base;}
+	 }
+}
+
+.wdu-breadcrumb3{
+	 > li{float: left; font-size: $fs3; color: $cf-title;
+	 	&:first-child{border-left: 2px solid $c-base;}
+	 }
+}
+
+.wdu-breadcrumb4{
+	 > li{float: left; font-size: $fs1; color: $cf-title;
+	 }
 }
 
 //表单
@@ -352,22 +392,22 @@
 	&.z-warning{
 		.wdu-form-tip-text{color: $cz-warning;}
 		.wdu-form-input{border: 1px solid $cz-warning;}
-		.icon-tip{@extend .icon-warning;}
+		.icon-tip{@extend .icon-validate-warning;}
 	}
 	&.z-danger{
 		.wdu-form-tip-text{color: $cz-danger;}
 		.wdu-form-input{border: 1px solid $cz-danger;}
-		.icon-tip{@extend .icon-danger;}
+		.icon-tip{@extend .icon-validate-danger;}
 	}
 	&.z-info{
 		.wdu-form-tip-text{color: $cz-info;}
 		.wdu-form-input{border: 1px solid $cz-info;}
-		.icon-tip{@extend .icon-info;}
+		.icon-tip{@extend .icon-validate-info;}
 	}
 	&.z-success{
 		.wdu-form-tip-text{color: $cz-success;display: none;}
 		/*.wdu-form-input{border: 1px solid $cz-success;}*/
-		.icon-tip{@extend .icon-success;}
+		.icon-tip{@extend .icon-validate-success;}
 	}
 }
 .wdm-file-item{
@@ -411,7 +451,7 @@
 }
 .wdm-form-tip{
 	float: left;margin-left: 10px;height:30px;line-height: 30px;font-size: $fs1;
-	[class*=icon-]{vertical-align: middle;margin-right: 5px;}
+	[class*=icon-]{vertical-align: middle;margin-right: 5px;margin-top: -2px;}
 }
 .wdu-btn-search{
 	float:left;

@@ -72,7 +72,7 @@ $path = 'icon.png';
 //校验
 .icon-validate-success{$icon(-150px,-120px,14px,14px);}
 .icon-validate-danger{$icon(-170px,-120px,14px,14px);}
-.icon-validate-waning{$icon(-190px,-120px,14px,14px);}
+.icon-validate-warning{$icon(-190px,-120px,14px,14px);}
 .icon-validate-info{$icon(-210px,-120px,14px,14px);}
 
 //笑脸
@@ -128,7 +128,8 @@ $path = 'icon.png';
 	&:hover{@extend .icon-close-dlg-hover;}
 	&:active{@extend .icon-close-dlg-active;}
 }
-.icon-close-sm{$icon(-180px,-740px,5px,5px);}
+.icon-error{$icon(-180px,-740px,5px,5px);}
+.icon-correct{$icon(-190px,-740px,9px,7px);}
 //上一张
 .icon-pre-hover{$icon(-80px,-780px,22px,38px);}
 .icon-pre-active{$icon(-160px,-780px,22px,38px);}
@@ -186,7 +187,11 @@ $path = 'icon.png';
 .wdu-cf-base{color:$cf-base;}//基本文字色
 .wdu-cf-secondary{color:$cf-secondary;}//次要的文字色
 .wdu-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
-
+//状态背景色
+.wdu-cbg-success{background-color: $cbg-success;}
+.wdu-cbg-danger{background-color: $cbg-danger;}
+.wdu-cbg-info{background-color: $cbg-info;}
+.wdu-cbg-warning{background-color: $cbg-warning;}
 
 .wdu-mgt10{margin-top: 10px;}
 .wdu-mgb10{margin-bottom: 10px;}

@@ -151,11 +151,13 @@
                 event.preventDefault();
                 event.stopPropagation();
             }
+            this.$element.removeClass('wd-open');
             this.$target.hide();
         },
         show: function() {
             var $target = this.getTarget();
             this.hideAll();
+            this.$element.addClass('wd-open');
             $target.show();
             //为body绑定事件不能放在init中，只能放在这里根据不同元素的显示来绑定相应的事件
             $(document).off('click.plugin_popover').on('click.plugin_popover', $.proxy(this.bodyClickHandler, this));
