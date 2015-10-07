@@ -63,36 +63,6 @@
 	background-color: #fff;
 }
 
-//选择器
-.wdm-select-dropdown{position: relative;font-size: $select-dropdown-fs;}
-.wdm-select-dropdown-trigger,.wdm-select-dropdown-menu{
-	background-color: $select-dropdown-cbg;
-	border-radius: $select-dropdown-border-radius;
-	border:1px solid $select-dropdown-cb;
-	color:$select-dropdown-color;
-}
-.wdm-select-dropdown-trigger{
-	cursor: pointer;
-	position: relative;
-	font-size: $select-dropdown-fs;
-	padding: $select-dropdown-padding;
-	height: $select-dropdown-height;
-	line-height: $select-dropdown-height;
-	.icon-menu-down{margin-left:10px;position: absolute;top:50%;right:10px;margin-top:-3px;$transition:all .5s;}
-	&.wd-open{.icon-menu-down{$transform:rotate(180deg);$transition:all .5s;}}
-}
-.wdm-select-dropdown-menu{
-	box-shadow: $select-dropdown-box-shadow;
-	margin-top: $select-dropdown-margin-top;
-	position: absolute;
-	display: none;
-	z-index: 999;
-	li{
-		a{padding: $select-dropdown-padding; height: $select-dropdown-height;line-height: $select-dropdown-height;display: block;color:$select-dropdown-color;}
-		a:hover{background-color: $select-dropdown-cbg-hover;color:$select-dropdown-color-hover;}
-	}
-}
-
 //分页
 .wdm-pagination,.wdm-pagination-mini{
 	li{
@@ -391,17 +361,17 @@
 	.wdu-form-tip-text{color: $cz-info;}
 	&.z-warning{
 		.wdu-form-tip-text{color: $cz-warning;}
-		.wdu-form-input{border: 1px solid $cz-warning;}
+		.wdu-form-input,.wdu-form-textarea{border: 1px solid $cz-warning;}
 		.icon-tip{@extend .icon-validate-warning;}
 	}
 	&.z-danger{
 		.wdu-form-tip-text{color: $cz-danger;}
-		.wdu-form-input{border: 1px solid $cz-danger;}
+		.wdu-form-input,.wdu-form-textarea{border: 1px solid $cz-danger;}
 		.icon-tip{@extend .icon-validate-danger;}
 	}
 	&.z-info{
 		.wdu-form-tip-text{color: $cz-info;}
-		.wdu-form-input{border: 1px solid $cz-info;}
+		.wdu-form-input,.wdu-form-textarea{border: 1px solid $cz-info;}
 		.icon-tip{@extend .icon-validate-info;}
 	}
 	&.z-success{
@@ -438,7 +408,7 @@
 	+ [class*=icon-file]{float: left;margin-left: 10px;}
 }
 .wdu-form-label{
-	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;
+	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;text-align: right;
 }
 .wdu-form-input{
 	border: 1px solid $input-cb;
@@ -447,6 +417,15 @@
 	line-height: $input-height;
 	border-radius: $input-border-radius;
 	font-size: $input-fs;
+	float:left;
+}
+.wdu-form-textarea{
+	border: 1px solid $textarea-cb;
+	padding: $textarea-padding;
+	min-height: $textarea-height;
+	line-height: $textarea-height;
+	border-radius: $textarea-border-radius;
+	font-size: $textarea-fs;
 	float:left;
 }
 .wdm-form-tip{
@@ -462,4 +441,68 @@
 	border-radius: 0 2px 2px 0;
 	.icon-search{display: block;}
 	.icon-search-white{display: block;}
+}
+
+//选择器
+.wdm-select-container,.wdm-select {
+	background-color: $select-cbg;
+	border-radius: $select-border-radius;
+	border:1px solid $select-cb;
+	color:$select-color;
+}
+.wdm-select-container {
+	cursor: pointer;
+	position: relative;
+	font-size: $select-fs;
+	padding: $select-padding;
+	height: $select-height;
+	line-height: $select-height;
+	display:inline-block;
+	outline:none;
+	box-shadow:none;
+	text-align:left;
+	white-space: nowrap;
+	select {
+	   display:none;
+	}
+	&:after {
+		background: url('#{$path}') -9999px -9999px no-repeat;
+		$icon(-40px,-520px,9px,6px);
+		position:absolute;
+	   	content:'';
+	   	right:10px;
+	   	top: 50%;
+	   	margin-top:-3px;
+	   	$transition: all .5s;
+	}
+	&.wd-open:after {
+		$transform: rotate(180deg);
+		$transition: all .5s;
+	}
+}
+.wdm-select {
+	left: -1px;
+	max-height:256px;
+	overflow-y: auto;
+   	box-shadow: $select-box-shadow;
+	margin-top: $select-margin-top;
+	position: absolute;
+	display: none;
+	z-index: 999;
+	li{
+		padding: 0 50px 0 10px; height: $select-height;line-height: $select-height;display: block;color:$select-color;cursor: pointer;white-space: nowrap;position: relative;
+		&:hover{background-color: $select-cbg-hover;color:$select-color-hover;}
+		&.z-crt:after{
+			background: url('#{$path}') -9999px -9999px no-repeat;
+			$icon(-190px,-740px,9px,7px);
+			position:absolute;
+		   	content:'';
+		   	right:10px;
+		   	top: 50%;
+		   	margin-top:-3px;
+		   	&:hover{
+		   		$icon(-190px,-740px,9px,7px);
+		   	}
+		}
+	}
 }

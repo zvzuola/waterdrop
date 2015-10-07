@@ -12,6 +12,7 @@
 			<ul>
 				<li><a href="#labels">标签</a></li>
 				<li><a href="#dropdowns">下拉菜单</a></li>
+				<li><a href="#selects">选择器</a></li>
 				<li><a href="#paginations">分页</a></li>
 				<li><a href="#radios">单选框</a></li>
 				<li><a href="#checkboxs">多选框</a></li>
@@ -20,6 +21,10 @@
 				<li><a href="#buttons">按钮</a></li>
 				<li><a href="#dates">日期选择器</a></li>
 				<li><a href="#dialogs">弹出框</a></li>
+				<li><a href="#scroll">图片滚动</a></li>
+				<li><a href="#globaltips">全局提示</a></li>
+				<li><a href="#breads">面包屑导航</a></li>
+				<li><a href="#forms">表单</a></li>
 			</ul>
 		</aside>
 		<section class='main-container'>
@@ -111,7 +116,7 @@
 			</section>
 			<section class='component' id='dropdowns'>
 				<div>
-					<h1>下拉列表</h1>
+					<h1>下拉菜单</h1>
 					<div class='m-example'>
 						<div class='wdm-dropdown'>
 							<button class='wdu-btn wdu-btn-md wdm-dropdown-trigger' id='wdm-dropdown-trigger'>下拉菜单</button>
@@ -135,13 +140,12 @@
 										</ul>
 									</div>
 								</xmp>
-								$('.wdm-dropdown-trigger').popover();
 							</pre>
 						</div>
 					</div>
 				</div>
 				<div>
-					<h1>下拉列表</h1>
+					<h1>下拉菜单</h1>
 					<div class='m-example'>
 						<div class='wdm-dropdown'>
 							<button class='wdu-btn wdu-btn-sm wdm-dropdown-trigger' id='wdm-dropdown-trigger2' data-trigger='click'>下拉菜单</button>
@@ -165,33 +169,32 @@
 										</ul>
 									</div>
 								</xmp>
-								$('.wdm-dropdown-trigger').popover();
 							</pre>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class='component' id='dropdowns'>
-				<div>
-					<h1>选择器</h1>
-					<div class='m-example'>
-						<div class='wdm-select-dropdown'>
-							<button class='wdm-select-dropdown-trigger'>下拉选择器<b class='icon-menu-down'></b></button>
-							<ul class='wdm-select-dropdown-menu wd-target'>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-							</ul>
-						</div>
-						<div class='highlight'>
-							<pre>
-								<xmp>
-									
-								</xmp>
-								$('.wdm-select-dropdown-trigger').popover();
-							</pre>
-						</div>
+			<section class='component' id='selects'>
+				<h1>选择器</h1>
+				<div class='m-example'>
+					<select id='selectdemo' autocomplete='off'> 
+				        <option>Choose Language Language</option>
+				        <option value="english">English</option>
+				        <option value="spanish" selected>Spanish</option>
+				        <option value="french">French</option>
+				    </select>
+					<div class='highlight'>
+						<pre>
+							<xmp>
+								<select id='selectdemo'> 
+							        <option value disabled selected>Choose Language</option>
+							        <option value="english">English</option>
+							        <option value="spanish">Spanish</option>
+							        <option value="french">French</option>
+							    </select>
+							    $('#selectdemo').wdDropdown();
+							</xmp>
+						</pre>
 					</div>
 				</div>
 			</section>
@@ -479,7 +482,7 @@
 									</div>
 								</span>
 							</xmp>
-							$('#down').popover({trigger:'hover'});
+							$('#down').wdPopover({trigger:'hover'});
 						</pre>
 					</div>
 				</div>
@@ -588,32 +591,32 @@
 							        </div>
 							    </div>
 
-				        	$('#dialog').wdDialog({
-				    			title:'测试',
-				    			buttons: {
-									"cancel":{
-										text: "取消",
-										class: 'wdu-btn-graydlg',
-										// disabled:'true',
-										click: function() {
-											$( this ).dialog( "close" );
-										}
-									} ,
-									"confirm":{
-										text: "确认",
-										click: function() {
-											$( this ).dialog( "close" );
+					        	$('#dialog').wdDialog({
+					    			title:'测试',
+					    			buttons: {
+										"cancel":{
+											text: "取消",
+											class: 'wdu-btn-dlg wdu-btn-gray',
+											// disabled:'true',
+											click: function() {
+												$( this ).wdDialog( "close" );
+											}
+										} ,
+										"confirm":{
+											text: "确认",
+											click: function() {
+												$( this ).wdDialog( "close" );
+											}
 										}
 									}
-								}
-				    		});
+					    		});
 				        	</xmp>
 				        </pre>
 				    </div>
 	        	</div>
 	        </section>
 			
-			<section class='component'>
+			<section class='component' id='scroll'>
 				<h1>图片滚动</h1>
 				<div class='m-example'>
 	        		<div class='scroll'>
@@ -650,7 +653,7 @@
 	        	</div>
 	        </section>
 
-	        <section class='component'>
+	        <section class='component' id='globaltips'>
 				<h1>全局提示</h1>
 				<div class='m-example'>
 	        		<div class='wdm-success wdu-mgt30'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
@@ -666,14 +669,21 @@
 	        		<div class='highlight'>
 			         	<pre>
 				         	<xmp>
-				         		
+				         		<div class='wdm-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+				        		<div class='wdm-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+				        		<div class='wdm-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+				        		<div class='wdm-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
+				        		<div class='wdm-success wdu-cbg-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+				        		<div class='wdm-danger wdu-cbg-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+				        		<div class='wdm-info wdu-cbg-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+				        		<div class='wdm-warning wdu-cbg-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
 				         	</xmp>
 				        </pre>
 				    </div>
 	        	</div>
 	        </section>
 
-	        <section class='component'>
+	        <section class='component' id='breads'>
 				<h1>面包屑导航</h1>
 				<div class='m-example'>
 	        		<ul class='wdu-breadcrumb wdu-mgt30'>
@@ -700,14 +710,18 @@
 	        		<div class='highlight'>
 			         	<pre>
 				         	<xmp>
-				         		
+				         		<ul class='wdu-breadcrumb wdu-mgt30'>
+				        			<li><a href="#">我是标题</a></li>
+				        			<li><a href="#">我是标题</a></li>
+				        			<li>我是标题</li>
+				        		</ul>
 				         	</xmp>
 				        </pre>
 				    </div>
 	        	</div>
 	        </section>
 
-	        <section class='component'>
+	        <section class='component' id='forms'>
 				<h1>表单</h1>
 				<div class='m-example'>
 	        		<form onsubmit='return false;'>
@@ -724,6 +738,12 @@
 	        			<div class='wdm-form-item z-success'>
 	        				<label class='wdu-form-label'>姓名：</label>
 	        				<input class='wdu-form-input' type='text'/>
+	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
+	        			</div>
+
+	        			<div class='wdm-form-item z-danger'>
+	        				<label class='wdu-form-label'>邮件列表：</label>
+	        				<textarea class='wdu-form-textarea'></textarea>
 	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
 	        			</div>
 
@@ -783,11 +803,10 @@
     <script type="text/javascript" src="../dest/waterdrop.min.js"></script>
     <script type="text/javascript">
     	$(document).ready(function() {
-		    $('#popover').popover();
-		    $('#left,#right,#top,#down').popover({trigger:'hover'});
-		    $('.wdm-dropdown-trigger').popover();
+		    $('#popover').wdPopover();
+		    $('#selectdemo').wdDropdown();
+		    $('#left,#right,#top,#down').wdPopover({trigger:'hover'});
 		    $('.aside-container').scrollFixed();
-		    $('.wdm-select-dropdown-trigger').popover();
 		});
     	$('#datepicker-example1').Zebra_DatePicker();
     	$('#dialogBtn').click(function(event) {
@@ -813,6 +832,15 @@
     		
     	});
     	$('.scroll').startScroll({'per_num':3,'layer':true,'isContinue':true,'auto':true});
+
+		$('.wdm-form-textarea').keyup(function(event) {
+			/* Act on the event */
+			var str = $(this).val();
+			var lastcode = str[str.length-1];
+			if(lastcode==' '||lastcode==';'||lastcode==','||lastcode=='，'){
+				$('<span>').text(str).appendTo($(this));
+			}
+		});
 
     </script>
 </body>

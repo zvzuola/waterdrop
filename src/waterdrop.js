@@ -51,7 +51,7 @@
         },
         hideAll: function() {
             for (var i = 0; i < popovers.length; i++) {
-                popovers[i].popover('hide');
+                popovers[i].wdPopover('hide');
             }
         },
         setPosition: function(){
@@ -59,7 +59,7 @@
                 this.$element.parent().css('position','relative');
             }
             var width = this.$target.outerWidth(true);
-            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2')||this.$target.hasClass('wdm-select-dropdown-menu')){
+            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2')){
                 var targetBorderPaddingWidth = parseInt(this.$target.css('padding-left'))
                                                 + parseInt(this.$target.css('padding-right'))
                                                 + parseInt(this.$target.css('border-left-width'))
@@ -74,9 +74,6 @@
                 elementPositionLeft = this.$element.position().left,
                 top = elementHeight + elementPositionTop,
                 left = elementPositionLeft - (width - elementWidth)/2;
-
-            if(this.$target.hasClass('wdm-select-dropdown-menu'))
-                left = elementPositionLeft;
                 
             if(this.$target.hasClass('wdm-popover-bottom')){
                 // 如果超出左边界
@@ -183,7 +180,7 @@
         },
         targetClickHandler: function() {
             //下拉菜单
-            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2')||this.$target.hasClass('wdm-select-dropdown-menu'))
+            if(this.$target.hasClass('wdm-dropdown-menu')||this.$target.hasClass('wdm-dropdown-menu2'))
                 this._targetclick = false;
             else
                 this._targetclick = true;
@@ -213,7 +210,7 @@
             return this.$target;
         }
     }
-    $.fn.popover=function(options){
+    $.fn.wdPopover=function(options){
         return $(this).each(function() {
             var popoverData = $.data(this, 'plugin_popover');
             if (!popoverData) {
@@ -504,3 +501,105 @@
         }
     });
 })(jQuery);
+
+//此方法借鉴网上的...
+;(function ($) {
+   var $container = $('<div class="wdm-select-container"><span class="selected"></span></div>');
+   var $list = $('<ul class="wdm-select" style="display:none;"></ul>');
+   $.fn.wdDropdown = function (options) { 
+      var $els = $(this); 
+      $els.hide();
+      //Go through each select and create Dropdown
+      $els.each(function(index,value) {
+         //Clone Containers and List Objects
+         var $currentContainer = $container.clone();
+         var $currentList = $list.clone();
+         //Pull out Select Info and Copy it Over to our New Structure
+         var $el = $(value);
+         var $options = $el.find('option'); 
+         var selectText = $el.find('option:selected').addClass('z-crt').text() || $($options[0]).addClass('z-crt').text();
+         //Insert Container into DOM
+         $el.after($currentContainer);
+         //Move select into Container
+         $el.appendTo($currentContainer); 
+         //Insert our Shell List
+         $currentList.appendTo($currentContainer);
+         //Copy over Options into List
+         $options.each(function (index, value) {
+            var $option = $(value);
+            var $wrapper = $("<li></li>");
+            var attributes = $option.prop("attributes"); 
+            $wrapper.prop("attributes", attributes);
+            //Copy over teh attributes
+            $.each(attributes, function(index, attribute) {
+               $wrapper.attr(attribute.name, attribute.value);
+            });
+            $wrapper.append($option.text());
+
+            //Add it to our list
+            $currentList.append($wrapper); 
+         });
+         //Set the currently selected Default
+         $currentContainer.find('.selected').text(selectText);
+         $currentContainer.css({'width':$currentList.outerWidth(),'box-sizing':'border-box'});
+
+
+         //Behaviorals
+         $currentContainer.on("click.wdm.select", function() {
+            //When the Click on our "select" dropdown box
+            var $sel = $(this);
+            //Close all other boxes
+            var targets = $.grep($('.wdm-select-container'), function (e) {
+               return ! $sel.is($(e));
+            });
+            $(targets).find('ul').hide();
+            //Toggle our Box
+            $sel.find('ul').toggle();
+            $sel.toggleClass('wd-open');
+         });
+         $currentContainer.on("click.wdm.option", "li", function(e) { 
+            //Dont Trigger General Select
+            e.stopPropagation();
+            //Update Selected Text
+            var $li = $(this); 
+            var $currentContainer = $li.parents('.wdm-select-container');
+            var $currentlySelected = $currentContainer.find('span.selected');
+            $li.addClass('z-crt').siblings('li').removeClass('z-crt');
+            $currentlySelected.text($li.text());
+            //Toggle our Dropdown
+            $li.parents('ul').toggle();
+            $li.parents('.wdm-select-container').toggleClass('wd-open');
+            //Set Select Selected
+            var $select = $currentContainer.find('select');
+            $select.val($li.attr('value')).change(); //Make sure you trigger the change event
+         }); 
+         //If an element is added after init
+         $el.on("DOMNodeInserted", function (e) {
+            //Add to List if it's an Option Tag
+            var $option =  $(e.target); 
+            if ($option.is('option')) {
+               var $wrapper = $("<li></li>");
+               var attributes = $option.prop("attributes"); 
+               $wrapper.prop("attributes", attributes);
+               $.each(attributes, function(index, attribute) {
+                  $wrapper.attr(attribute.name, attribute.value);
+               }); 
+               $wrapper.append($option.text());
+               $currentList.append($wrapper); 
+            }   
+         });
+         //If an element is removed after init
+         $el.on("DOMNodeRemoved", function (e) {
+            //Remove from List if it's Option Tag
+            var $option =  $(e.target);
+            if ($option.is('option')) {
+               $currentList.find("li:contains('"+$option.text()+"')").remove();
+            }
+         });
+      });
+   }
+})(jQuery);
+
+$(function(){
+    $('.wdm-dropdown-trigger').wdPopover();//下拉菜单
+});

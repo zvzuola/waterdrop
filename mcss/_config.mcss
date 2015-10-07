@@ -70,17 +70,17 @@ $dropdown-cbg = $cbg-secondary;
 $dropdown-cbg-hover = $c-base;
 
 //select-dropdown
-$select-dropdown-fs = $fs1;
-$select-dropdown-color = $cf-base;
-$select-dropdown-color-hover = #fff;
-$select-dropdown-cb = #d9d9d9;
-$select-dropdown-cbg = #fff;
-$select-dropdown-cbg-hover = $c-base;
-$select-dropdown-border-radius = 2px;
-$select-dropdown-box-shadow = 0 3px 6px 0 #ccc;
-$select-dropdown-padding = 0 30px 0 10px;
-$select-dropdown-height = 32px;
-$select-dropdown-margin-top = 5px;
+$select-fs = $fs1;
+$select-color = $cf-base;
+$select-color-hover = #fff;
+$select-cb = #d9d9d9;
+$select-cbg = #fff;
+$select-cbg-hover = $c-base;
+$select-border-radius = 2px;
+$select-box-shadow = 0 3px 6px 0 #ccc;
+$select-padding = 0 30px 0 10px;
+$select-height = 32px;
+$select-margin-top = 5px;
 
 //pagination
 $pagination-fs = $fs1;
@@ -108,10 +108,10 @@ $dlg-radius = 2px;
 
 //table
 $table-fs = $fs1;
-$table-cb = $cb-gray;//边框色
-$table-cbg = transparent;//表格背景色
+$table-cb = $cb-gray;							//边框色
+$table-cbg = transparent;						//表格背景色
 $table-cbg-hover =  #f2f4f5;
-$table-cell-padding = 0 10px;//单元格padding
+$table-cell-padding = 0 10px;					//单元格padding
 
 //button
 $btn-fs-lg = $fs3;
@@ -162,3 +162,9 @@ $input-cb = #d9d9d9;
 $input-border-radius = 2px;
 $input-height = 20px;
 $input-padding = 5px 10px;
+//textarea  默认情况下与input样式相同
+$textarea-fs = $input-fs;
+$textarea-cb = $input-cb;
+$textarea-border-radius = $input-border-radius;
+$textarea-height = $input-height;
+$textarea-padding = $input-padding;
