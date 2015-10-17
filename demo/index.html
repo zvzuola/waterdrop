@@ -7,794 +7,940 @@
 	<link rel="stylesheet" href="../css/demo.css">
 </head>
 <body>
-	<div class='container f-cb'>
-		<aside class='aside-container'>
-			<ul>
-				<li><a href="#labels">标签</a></li>
-				<li><a href="#dropdowns">下拉菜单</a></li>
-				<li><a href="#selects">选择器</a></li>
-				<li><a href="#paginations">分页</a></li>
-				<li><a href="#radios">单选框</a></li>
-				<li><a href="#checkboxs">多选框</a></li>
-				<li><a href="#tables">表格</a></li>
-				<li><a href="#popovers">气泡弹框</a></li>
-				<li><a href="#buttons">按钮</a></li>
-				<li><a href="#dates">日期选择器</a></li>
-				<li><a href="#dialogs">弹出框</a></li>
-				<li><a href="#scroll">图片滚动</a></li>
-				<li><a href="#globaltips">全局提示</a></li>
-				<li><a href="#breads">面包屑导航</a></li>
-				<li><a href="#forms">表单</a></li>
-			</ul>
-		</aside>
-		<section class='main-container'>
-			<section class='component' id='labels'>
-				<h1>一级标签</h1>
-				<div class='m-example'>
-					<ul class='wdm-tab'>
-						<li class='z-crt'><a href="">选项卡一</a></li>
-						<li><a href="">选项卡二</a></li>
-						<li class='z-dis'><a href="">选项卡三</a></li>
-						<li><a href="">选项卡四</a></li>
+	<div class="wdg-hd f-cb wd-fadein">
+		<div class="wdg-doc f-cb">
+			<img class="f-fl" src="../images/logo.png">
+			<!-- <div class="m-nav1 f-cb">
+				<ul >
+					<li><a>移动测试中心</a></li>
+					<li class="j-cart"><a href="2.2.html">云测平台</a></li>
+					<li><a>众测平台</a></li>
+					<li><a>渠道发布平台</a></li>
+					<li><a>开发者服务</a></li>
+					<li><a><b class="u-icon-pos1"></b></a></li>
+				</ul>
+			</div>
+			<div class="m-link">
+				<a href="">登录</a>
+			</div> -->
+		</div>
+	</div>
+	<div class='wdg-bd'>
+		<!-- <div class="m-nav2 f-cb">
+			<div class="mdbox">
+				<ul class="fst">
+					<li><a>首页</a></li>
+					<li class="j-cart"><a>测试服务</a></li>
+					<li>
+						<a>测试结果<b class="u-icon-arrow-down"></b></a>
+						<div class="m-choose2 f-dn">
+							<p>基础兼容性测试</p>
+							<p>基础兼容性测试</p>
+							<p>基础兼容性测试</p>
+							<p>基础兼容性测试兼容性测试</p>
+							<p>基础兼容性测试</p>
+						</div>
+					</li>
+					<li><a class="disabled">移动设备</a></li>
+					<li><a class="disabled">管理</a></li>
+				</ul>
+			</div>
+		</div> -->
+		<div class='wdg-doc'>
+			<aside class='aside-container wd-fadein-right'>
+				<ul>
+					<li><a href="#icons">图标</a></li>
+					<li><a href="#labels">标签</a></li>
+					<li><a href="#dropdowns">下拉菜单</a></li>
+					<li><a href="#dropdowns-btn">下拉式按钮</a></li>
+					<li><a href="#selects">选择器</a></li>
+					<li><a href="#paginations">分页</a></li>
+					<li><a href="#radios">单选框</a></li>
+					<li><a href="#checkboxs">多选框</a></li>
+					<li><a href="#tables">表格</a></li>
+					<li><a href="#popovers">气泡弹框</a></li>
+					<li><a href="#buttons">按钮</a></li>
+					<li><a href="#dates">日期选择器</a></li>
+					<li><a href="#dialogs">弹出框</a></li>
+					<li><a href="#scroll">图片滚动</a></li>
+					<li><a href="#globaltips">全局提示</a></li>
+					<li><a href="#breads">面包屑导航</a></li>
+					<li><a href="#forms">表单</a></li>
+				</ul>
+			</aside>
+			<section class='main-container wd-fadein-left'>
+				<section class='component' id='icons'>
+					<h1>小图标</h1>
+					<p class='u-desc'>网站公用的一些小图标，如箭头，删除，上传，下载等</p>
+					<ul class='m-icons wdu-fs1'>
+						<li><span><b class='icon-eye'></b></span><p>icon-eye</p></li>
+						<li><span><b class='icon-del'></b></span><p>icon-del</p></li>
+						<li><span><b class='icon-download'></b></span><p>icon-download</p></li>
+						<li><span><b class='icon-upload'></b></span><p>icon-upload</p></li>
+						<li><span><b class='icon-edit'></b></span><p>icon-edit</p></li>
+						<li><span><b class='icon-calendar'></b></span><p>icon-calendar</p></li>
+						<li><span><b class='icon-download2'></b></span><p>icon-download2</p></li>
+						<li><span><b class='icon-share'></b></span><p>icon-share</p></li>
+						<li><span><b class='icon-help'></b></span><p>icon-help</p></li>
+						<li><span><b class='icon-success'></b></span><p>icon-success</p></li>
+						<li><span><b class='icon-danger'></b></span><p>icon-danger</p></li>
+						<li><span><b class='icon-info'></b></span><p>icon-info</p></li>
+						<li><span><b class='icon-validate-success'></b></span><p>icon-validate-success</p></li>
+						<li><span><b class='icon-validate-danger'></b></span><p>icon-validate-danger</p></li>
+						<li><span><b class='icon-validate-warning'></b></span><p>icon-validate-warning</p></li>
+						<li><span><b class='icon-validate-info'></b></span><p>icon-validate-info</p></li>
+						<li><span><b class='icon-smile'></b></span><p>icon-smile</p></li>
+						<li><span><b class='icon-smile-hover'></b></span><p>icon-smile-hover</p></li>
+						<li><span><b class='icon-radio-check'></b></span><p>icon-radio-check</p></li>
+						<li><span><b class='icon-radio-checked'></b></span><p>icon-radio-checked</p></li>
+						<li><span><b class='icon-radio-discheck'></b></span><p>icon-radio-discheck</p></li>
+						<li><span><b class='icon-radio-dischecked'></b></span><p>icon-radio-dischecked</p></li>
+						<li><span><b class='icon-checkbox-check'></b></span><p>icon-checkbox-check</p></li>
+
 					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class='wdm-tab'>
-									<li class='z-crt'><a href="">选项卡一</a></li>
-									<li><a href="">选项卡二</a></li>
-									<li class='z-dis'><a href="">选项卡三</a></li>
-									<li><a href="">选项卡四</a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-				<h1>一级标签2</h1>
-				<div class='m-example'>
-					<ul class='wdm-tab2'>
-						<li class='z-crt'><a href="">选项卡一</a></li>
-						<li><a href="">选项卡二</a></li>
-						<li class='z-dis'><a href="">选项卡三</a></li>
-						<li><a href="">选项卡四</a></li>
-					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class='wdm-tab2'>
-									<li class='z-crt'><a href="">选项卡一</a></li>
-									<li><a href="">选项卡二</a></li>
-									<li class='z-dis'><a href="">选项卡三</a></li>
-									<li><a href="">选项卡四</a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-				<h1>二级标签</h1>
-				<div class='m-example'>
-					<ul class='wdm-subtab2'>
-						<li class='z-crt'><a href="">选项卡一</a></li>
-						<li><a href="">选项卡二</a></li>
-						<li class='z-dis'><a href="">选项卡三</a></li>
-						<li><a href="">选项卡四</a></li>
-					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class='wdm-subtab2'>
-									<li class='z-crt'><a href="">选项卡一</a></li>
-									<li><a href="">选项卡二</a></li>
-									<li class='z-dis'><a href="">选项卡三</a></li>
-									<li><a href="">选项卡四</a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-				<h1>三级标签</h1>
-				<div class='m-example'>
-					<ul class='wdm-subtab3'>
-						<li class='z-crt'><a href="">选项卡一</a></li>
-						<li><a href="">选项卡二</a></li>
-						<li class='z-dis'><a href="">选项卡三</a></li>
-						<li><a href="">选项卡四</a></li>
-					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class='wdm-subtab3'>
-									<li class='z-crt'><a href="">选项卡一</a></li>
-									<li><a href="">选项卡二</a></li>
-									<li class='z-dis'><a href="">选项卡三</a></li>
-									<li><a href="">选项卡四</a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			</section>
-			<section class='component' id='dropdowns'>
-				<div>
-					<h1>下拉菜单</h1>
+					
+				</section>
+				<section class='component' id='labels'>
+					<h1>标签</h1>
+					<p class='u-desc'>选项卡切换组件。</p>
+					<h3>一级标签</h3>
+					<p class='u-desc'>class为wdm-tab</p>
 					<div class='m-example'>
-						<div class='wdm-dropdown'>
-							<button class='wdu-btn wdu-btn-md wdm-dropdown-trigger' id='wdm-dropdown-trigger'>下拉菜单</button>
-							<ul class='wdm-dropdown-menu wd-target'>
-								<li><a href="javascript:;">hello</a></li>
-								<li><a href="javascript:;">second</a></li>
-								<li><a href="javascript:;">third</a></li>
-								<li><a href="javascript:;">fourth</a></li>
-							</ul>
+						<ul class='wdm-tab'>
+							<li class='z-crt'><a href="#one">选项卡一</a></li>
+							<li><a href="#two">选项卡二</a></li>
+							<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+							<li><a href="#four">选项卡四</a></li>
+						</ul>
+						<div class='wdu-pd20'>
+							<p id='one'>我是选项卡一</p>
+							<p id='two' class='f-dn'>我是选项卡二</p>
+							<p id='four' class='f-dn'>我是选项卡四</p>
 						</div>
 						<div class='highlight'>
 							<pre>
 								<xmp>
-									<div class='wdm-dropdown'>
-										<button class='wdu-btn wdu-btn-md wdm-dropdown-trigger' id='wdm-dropdown-trigger'>下拉菜单</button>
-										<ul class='wdm-dropdown-menu wd-target'>
-											<li><a href="javascript:;">hello,worldworldworld</a></li>
-											<li><a href="javascript:;">second</a></li>
-											<li><a href="javascript:;">third</a></li>
-											<li><a href="javascript:;">fourth</a></li>
-										</ul>
+									<ul class='wdm-tab'>
+										<li class='z-crt'><a href="#one">选项卡一</a></li>
+										<li><a href="#two">选项卡二</a></li>
+										<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+										<li><a href="#four">选项卡四</a></li>
+									</ul>
+									<div class='wdu-pd20'>
+										<p id='one'>我是选项卡一</p>
+										<p id='two' class='f-dn'>我是选项卡二</p>
+										<p id='four' class='f-dn'>我是选项卡四</p>
 									</div>
 								</xmp>
 							</pre>
 						</div>
 					</div>
-				</div>
-				<div>
-					<h1>下拉菜单</h1>
+					<h3>一级标签2</h3>
+					<p class='u-desc'>在.wdm-tab的基础上添加 .wdm-tab2</p>
 					<div class='m-example'>
-						<div class='wdm-dropdown'>
-							<button class='wdu-btn wdu-btn-sm wdm-dropdown-trigger' id='wdm-dropdown-trigger2' data-trigger='click'>下拉菜单</button>
-							<ul class='wdm-dropdown-menu2 wd-target'>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-								<li><a href="javascript:;">hello,world</a></li>
-							</ul>
-						</div>
+						<ul class='wdm-tab wdm-tab2'>
+							<li class='z-crt'><a href="javascript:;">Android</a></li>
+							<li><a href="javascript:;">选项卡二</a></li>
+							<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+							<li><a href="javascript:;">选项卡四</a></li>
+						</ul>
 						<div class='highlight'>
 							<pre>
 								<xmp>
-									<div class='wdm-dropdown'>
-										<button class='wdu-btn wdu-btn-sm wdm-dropdown-trigger' id='wdm-dropdown-trigger2' data-trigger='click'>下拉菜单</button>
-										<ul class='wdm-dropdown-menu2 wd-target'>
-											<li><a href="javascript:;">hello,world</a></li>
-											<li><a href="javascript:;">hello,world</a></li>
-											<li><a href="javascript:;">hello,world</a></li>
-											<li><a href="javascript:;">hello,world</a></li>
-										</ul>
-									</div>
+									<ul class='wdm-tab2'>
+										<li class='z-crt'><a href="javascript:;">选项卡一</a></li>
+										<li><a href="javascript:;">选项卡二</a></li>
+										<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+										<li><a href="javascript:;">选项卡四</a></li>
+									</ul>
 								</xmp>
 							</pre>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section class='component' id='selects'>
-				<h1>选择器</h1>
-				<div class='m-example'>
-					<select id='selectdemo' autocomplete='off'> 
-				        <option>Choose Language Language</option>
-				        <option value="english">English</option>
-				        <option value="spanish" selected>Spanish</option>
-				        <option value="french">French</option>
-				    </select>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<select id='selectdemo'> 
-							        <option value disabled selected>Choose Language</option>
-							        <option value="english">English</option>
-							        <option value="spanish">Spanish</option>
-							        <option value="french">French</option>
-							    </select>
-							    $('#selectdemo').wdDropdown();
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			</section>
-			<section class='component' id='paginations'>
-			 	<h1>分页</h1>
-			 	<div class='m-example'>
-					<ul class="wdm-pagination">
-						<li class='previous z-dis'><a>< 上一页</a></li>
-						<li class='z-crt'><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li class='next'><a>下一页 ></a></li>
-					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class="wdm-pagination">
-									<li class='previous z-dis'><a>< 上一页</a></li>
-									<li class='z-crt'><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li class='next'><a>下一页 ></a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-
-			 	<h1>迷你分页</h1>
-			 	<div class='m-example'>
-					<ul class="wdm-pagination-mini">
-						<li class='previous'><a>上一页</a></li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li class='z-crt'><a href="#">5</a></li>
-						<li class='next z-dis'><a>下一页</a></li>
-					</ul>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<ul class="wdm-pagination-mini">
-									<li class='previous'><a>上一页</a></li>
-									<li><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li class='z-crt'><a href="#">5</a></li>
-									<li class='next z-dis'><a>下一页</a></li>
-								</ul>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			 	<h1>分页</h1>
-			 	<div class='m-example'>
-					<ul class="wdm-pagination">
-						<li class='previous'><a>< 上一页</a></li>
-						<li><a href="#">1</a></li>
-						<li class='z-crt'><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-						<li class='next'><a>下一页 ></a></li>
-					</ul>
-					<pre>
-
-					</pre>
-				</div>
-				<h1>分页</h1>
-				<div class='m-example'>
-					<ul class="wdm-pagination">
-						<li class='previous z-dis'><a>< 上一页</a></li>
-						<li class='z-crt'><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
-						<li class='next'><a>下一页 ></a></li>
-					</ul>
-				</div>
-				<h1>分页</h1>
-				<div class='m-example'>
-					<ul class="wdm-pagination">
-						<li class='previous z-dis'><a>< 上一页</a></li>
-						<li class='z-crt'><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class='dotted'>...</li>
-						<li><a href="#">10</a></li>
-						<li><a href="#">11</a></li>
-						<li class='next'><a>下一页 ></a></li>
-					</ul>
-				</div>
-				<h1>迷你分页</h1>
-				<div class='m-example'>
-					<ul class="wdm-pagination-mini">
-						<li class='previous z-dis'><a>上一页</a></li>
-						<li class='z-crt'><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class='dotted'>...</li>
-						<li><a href="#">10</a></li>
-						<li><a href="#">11</a></li>
-						<li class='next'><a>下一页</a></li>
-					</ul>
-				</div>
-			</section>
-			<section class='component' id='radios'>
-				<h1>单选框</h1>
-				<div class='m-example'>
-					<label class='wdm-radio'><input type="radio"><b class='icon-radio'></b>我是单选框</label>
-					<label class='wdm-radio'><input type="radio" checked><b class='icon-radio'></b>我是单选框</label>
-					<label class='wdm-radio'><input type="radio" checked disabled><b class='icon-radio'></b>我是单选框</label>
-					<label class='wdm-radio'><input type="radio" disabled><b class='icon-radio'></b>我是单选框</label>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<label class='wdm-radio'><input type="radio"><b class='icon-radio'></b>我是单选框</label>
-								<label class='wdm-radio'><input type="radio" checked><b class='icon-radio'></b>我是单选框</label>
-								<label class='wdm-radio'><input type="radio" checked disabled><b class='icon-radio'></b>我是单选框</label>
-								<label class='wdm-radio'><input type="radio" disabled><b class='icon-radio'></b>我是单选框</label>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			</section>
-			<section class='component' id='checkboxs'>
-				<h1>多选框</h1>
-				<div class='m-example'>
-					<label class='wdm-checkbox'><input type="checkbox"><b class='icon-checkbox'></b>我是多选框</label>
-					<label class='wdm-checkbox'><input type="checkbox" checked><b class='icon-checkbox'></b>我是多选框</label>
-					<label class='wdm-checkbox'><input type="checkbox" checked disabled><b class='icon-checkbox'></b>我是多选框</label>
-					<label class='wdm-checkbox'><input type="checkbox" disabled><b class='icon-checkbox'></b>我是多选框</label>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<label class='wdm-checkbox'><input type="checkbox"><b class='icon-checkbox'></b>我是多选框</label>
-								<label class='wdm-checkbox'><input type="checkbox" checked><b class='icon-checkbox'></b>我是多选框</label>
-								<label class='wdm-checkbox'><input type="checkbox" checked disabled><b class='icon-checkbox'></b>我是多选框</label>
-								<label class='wdm-checkbox'><input type="checkbox" disabled><b class='icon-checkbox'></b>我是多选框</label>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			</section>
-
-			<section class='component' id='tables'>
-				<!-- <p>为任意 table 标签添加 .wdm-table 类可以为其赋予基本的样式 — 左右8px的内补（padding）</p> -->
-				<h1>基本表格</h1>
-				<div class='m-example'>
-					<table class='wdm-table'>
-						<thead><tr><td>firstname</td><td>lastname</td><td>username</td></tr></thead>
-						<tbody>
-							<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
-						</tbody>
-					</table>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<table class='wdm-table'></table>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-				
-				<h1>条纹状表格</h1>
-				<div class='m-example'>
-					<table class='wdm-table wdm-table-striped'>
-						<thead><tr><td>firstname</td><td>lastname</td><td>username</td></tr></thead>
-						<tbody>
-							<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
-							<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
-							<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
-						</tbody>
-					</table>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<table class='wdm-table wdm-table-striped'></table>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-				
-				<h1>鼠标悬停</h1>
-				<div class='m-example'>
-					<table class='wdm-table wdm-table-hover'>
-						<thead><tr><td></td></tr></thead>
-						<tbody>
-							<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
-							<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
-							<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
-							<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
-						</tbody>
-					</table>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<table class='wdm-table wdm-table-hover'></table>
-							</xmp>
-						</pre>
-					</div>
-				</div>
-			</section>
-			<section class='component' id='popovers'>
-				<h1>气泡卡片</h1>
-				<div class='m-example'>
-					<span>
-						<a id ='down'>向下</a>
-						<div class='wdm-popover wdm-popover-bottom wd-target'>
-							<div class='wdm-popover-arrow'></div>
-							<div class='wdm-popover-inner'>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-							</div>
+					<h3>二级标签</h3>
+					<p class='u-desc'>在.wdm-tab的基础上添加 .wdm-tab-secondary</p>
+					<div class='m-example'>
+						<ul class='wdm-tab wdm-tab-secondary'>
+							<li class='z-crt'><a href="javascript:;">选项卡一</a></li>
+							<li><a href="javascript:;">选项卡二</a></li>
+							<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+							<li><a href="javascript:;">选项卡四</a></li>
+						</ul>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<ul class='wdm-tab wdm-tab-secondary'>
+										<li class='z-crt'><a href="javascript:;">选项卡一</a></li>
+										<li><a href="javascript:;">选项卡二</a></li>
+										<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+										<li><a href="javascript:;">选项卡四</a></li>
+									</ul>
+								</xmp>
+							</pre>
 						</div>
-					</span>
-					<span>
-						<a id ='top'>向上</a>
-						<div class='wdm-popover wdm-popover-top wd-target'>
-							<div class='wdm-popover-arrow'></div>
-							<div class='wdm-popover-inner'>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-							</div>
+					</div>
+					<h3>三级标签</h3>
+					<p class='u-desc'>在.wdm-tab的基础上添加 .wdm-tab-third</p>
+					<div class='m-example'>
+						<ul class='wdm-tab wdm-tab-third'>
+							<li class='z-crt'><a href="javascript:;">选项卡一</a></li>
+							<li><a href="javascript:;">选项卡二</a></li>
+							<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+							<li><a href="javascript:;">选项卡四</a></li>
+						</ul>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<ul class='wdm-tab wdm-tab-third'>
+										<li class='z-crt'><a href="javascript:;">选项卡一</a></li>
+										<li><a href="javascript:;">选项卡二</a></li>
+										<li class='z-dis'><a href="javascript:;">选项卡三</a></li>
+										<li><a href="javascript:;">选项卡四</a></li>
+									</ul>
+								</xmp>
+							</pre>
 						</div>
-					</span>
-					<span>
-						<a id ='left'>向左</a>
-						<div class='wdm-popover wdm-popover-left wd-target'>
-							<div class='wdm-popover-arrow'></div>
-							<div class='wdm-popover-inner'>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-							</div>
-						</div>
-					</span>
-					<span>
-						<a id ='right'>向右</a>
-						<div class='wdm-popover wdm-popover-right wd-target'>
-							<div class='wdm-popover-arrow'></div>
-							<div class='wdm-popover-inner'>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-								<p>我是一段失败说明</p>
-							</div>
-						</div>
-					</span>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<span>
-									<a id ='down'>向下</a>
-									<div class='wdm-popover wdm-popover-bottom wd-target'>
-										<div class='wdm-popover-arrow'></div>
-										<div class='wdm-popover-inner'>
-											<p>我是一段失败说明</p>
-											<p>我是一段失败说明</p>
-											<p>我是一段失败说明</p>
-											<p>我是一段失败说明</p>
-										</div>
-									</div>
-								</span>
-							</xmp>
-							$('#down').wdPopover({trigger:'hover'});
-						</pre>
 					</div>
-				</div>
-			</section>
-			<section class='component' id='buttons'>
-				<h1>按钮</h1>
-				<div class='m-example'>
-					<div class='wdu-mgb10'>
-						<span>大按钮：</span>
-						<button class='wdu-btn wdu-btn-lg'>开始测试</button>
-						<button class='wdu-btn-reverse wdu-btn-lg'>开始测试</button>
-						<button class='wdu-btn wdu-btn-lg' disabled>开始测试</button>
-						<button class='wdu-btn-reverse wdu-btn-lg' disabled>开始测试</button>
-					</div>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<button class='wdu-btn wdu-btn-lg'>开始测试</button>
-								<button class='wdu-btn-reverse wdu-btn-lg'>开始测试</button>
-								<button class='wdu-btn wdu-btn-lg' disabled>开始测试</button>
-								<button class='wdu-btn-reverse wdu-btn-lg' disabled>开始测试</button>
-							</xmp>
-						</pre>
-					</div>
-					<div class='wdu-mgb10'>
-						<span>中等按钮：</span>
-						<button class='wdu-btn wdu-btn-md'>开始测试</button>
-						<button class='wdu-btn-reverse wdu-btn-md'>开始测试</button>
-						<button class='wdu-btn wdu-btn-md' disabled>开始测试</button>
-						<button class='wdu-btn-reverse wdu-btn-md' disabled>开始测试</button>
-					</div>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<button class='wdu-btn wdu-btn-md'>开始测试</button>
-								<button class='wdu-btn-reverse wdu-btn-md'>开始测试</button>
-								<button class='wdu-btn wdu-btn-md' disabled>开始测试</button>
-								<button class='wdu-btn-reverse wdu-btn-md' disabled>开始测试</button>
-							</xmp>
-						</pre>
-					</div>
-					<div class='wdu-mgb10'>
-						<span>小按钮：</span>
-						<button class='wdu-btn wdu-btn-sm'>添加测试类别</button>
-						<button class='wdu-btn-reverse wdu-btn-sm'>开始测试</button>
-						<button class='wdu-btn wdu-btn-sm' disabled>添加测试类别</button>
-						<button class='wdu-btn-reverse wdu-btn-sm' disabled>开始测试</button>
-					</div>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<button class='wdu-btn wdu-btn-sm'>添加测试类别</button>
-								<button class='wdu-btn-reverse wdu-btn-sm'>开始测试</button>
-								<button class='wdu-btn wdu-btn-sm' disabled>添加测试类别</button>
-								<button class='wdu-btn-reverse wdu-btn-sm' disabled>开始测试</button>
-							</xmp>
-						</pre>
-					</div>
+				</section>
+				<section class='component' id='dropdowns'>
+					<h1>下拉菜单</h1>
 					<div>
-						<span>弹框按钮：</span>
-						<button class='wdu-btn wdu-btn-dlg'>确认</button>
-						<button class='wdu-btn wdu-btn-dlg' disabled>确认</button>
-						<button class='wdu-btn-gray wdu-btn-dlg'>取消</button>
-						<button class='wdu-btn-gray wdu-btn-dlg' disabled>取消</button>
+						<div class='m-example'>
+							<div class='wdm-dropdown wd-open' style='height:150px;'>
+								<ul class='wd-dropdown-menu wd-target'>
+									<li><a href="javascript:;">hellohello</a></li>
+									<li><a href="javascript:;">secondhello</a></li>
+									<li><a href="javascript:;">thirdhello</a></li>
+									<li><a href="javascript:;">fourthhello</a></li>
+								</ul>
+							</div>
+							
+							<div class='highlight'>
+								<pre>
+									<xmp>
+										<div class='wdm-dropdown'>
+											<button class='wdu-btn wdu-btn-md wd-dropdown-trigger'>下拉式按钮</button>
+											<ul class='wd-dropdown-menu wd-target'>
+												<li><a href="javascript:;">hello,worldworldworld</a></li>
+												<li><a href="javascript:;">second</a></li>
+												<li><a href="javascript:;">third</a></li>
+												<li><a href="javascript:;">fourth</a></li>
+											</ul>
+										</div>
+									</xmp>
+								</pre>
+							</div>
+						</div>
 					</div>
-					<div class='highlight'>
-						<pre>
-							<xmp>
-								<button class='wdu-btn wdu-btn-dlg'>确认</button>
-								<button class='wdu-btn wdu-btn-dlg' disabled>确认</button>
-								<button class='wdu-btn-gray wdu-btn-dlg'>取消</button>
-								<button class='wdu-btn-gray wdu-btn-dlg' disabled>取消</button>
-							</xmp>
-						</pre>
+				</section>
+				<section class='component' id='dropdowns-btn'>
+					<h1>下拉式按钮</h1>
+					<p class='u-desc'>
+						下拉式按钮有两类：.wdm-dropdown 和.wdm-dropdown2，默认为点击弹出菜单，可通过在.wd-dropdown-trigger上添加属性data-trigger='hover'改变弹出方式。
+					</p>
+					<div>
+						<div class='m-example'>
+							<span class='wdm-dropdown'>
+								<button class='wdu-btn wdu-btn-md wd-dropdown-trigger'>下拉式按钮</button>
+								<ul class='wd-dropdown-menu wd-target'>
+									<li><a href="javascript:;">hello</a></li>
+									<li><a href="javascript:;">second</a></li>
+									<li><a href="javascript:;">third</a></li>
+									<li><a href="javascript:;">fourth</a></li>
+								</ul>
+							</span>
+							<span class='wdm-dropdown wdm-dropdown2'>
+								<button class='wdu-btn wdu-btn-md wd-dropdown-trigger' data-trigger='hover'>鼠标移入</button>
+								<ul class='wd-dropdown-menu wd-target'>
+									<li><a href="javascript:;">hello,worldworld</a></li>
+									<li><a href="javascript:;">hello,world</a></li>
+									<li><a href="javascript:;">hello,world</a></li>
+									<li><a href="javascript:;">hello,world</a></li>
+								</ul>
+							</span>
+							<div class='highlight'>
+								<pre>
+									<xmp>
+										<div class='wdm-dropdown'>
+											<button class='wdu-btn wdu-btn-md wd-dropdown-trigger'>下拉式按钮</button>
+											<ul class='wd-dropdown-menu wd-target'>
+												<li><a href="javascript:;">hello,worldworldworld</a></li>
+												<li><a href="javascript:;">second</a></li>
+												<li><a href="javascript:;">third</a></li>
+												<li><a href="javascript:;">fourth</a></li>
+											</ul>
+										</div>
+									</xmp>
+								</pre>
+							</div>
+						</div>
 					</div>
-				</div>
-			</section>
-			<section class='component' id='dates'>
-				<h1>日期选择器</h1>
-				<div class='m-example'>
-			        <form action="javascript:void(0)" method="post">
-			        <div>
-			            <input id="datepicker-example1" type="text" style='padding:5px;'>
-			        </div>
-			        </form>
-			        <div class='highlight'>
-			         	<pre>
-				         	<code>
-				        	$('#datepicker-example1').Zebra_DatePicker();
-				        	</code>
-				        </pre>
-				    </div>
-			    </div>
-		    </section>
-		    <section class='component' id='dialogs'>
-				<h1>弹出框</h1>
-				<div class='m-example'>
-	        		<button class='wdu-btn wdu-btn-md' id='dialogBtn'>弹出框</button>
-	        		<div class='highlight'>
-			         	<pre>
-				         	<xmp>
-				         		<div id='dialog' class='wdu-fs3 f-dn'>
-							    	<div style='padding-left:32px;position:relative;line-height:24px;'>
-							    	<b class='icon-tip' style='position:absolute;left:0'></b>
-							        <p> 删除该测试任务之后，您将无法收到相关信息，请确认！</p>
-							        </div>
-							    </div>
+				</section>
+				<section class='component' id='selects'>
+					<h1>选择器</h1>
+					<p class='u-desc'>使用方法：$('select').wdDropdown();</p>
+					<div class='m-example'>
+						<select id='selectdemo' autocomplete='off' class='selectdemo'> 
+					        <option disabled>Choose Language </option>
+					        <option >Choose Language Language</option>
+					        <option value="english">English</option>
+					        <option value="spanish" selected>Spanish</option>
+					        <option value="french">French</option>
+					    </select>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<select id='selectdemo' autocomplete='off' class='selectdemo'> 
+								        <option disabled>Choose Language </option>
+								        <option >Choose Language Language</option>
+								        <option value="english">English</option>
+								        <option value="spanish" selected>Spanish</option>
+								        <option value="french">French</option>
+								    </select>
+								    $('#selectdemo').wdDropdown();
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='paginations'>
+				 	<h1>分页</h1>
+				 	<div class='m-example'>
+						<ul class="wdm-pagination wdu-mgb10">
+							<li class='previous z-dis'><a>上一页</a></li>
+							<li class='z-crt'><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class='next'><a>下一页</a></li>
+						</ul>
+						<ul class="wdm-pagination wdu-mgb10">
+							<li class='previous'><a>上一页</a></li>
+							<li><a href="#">1</a></li>
+							<li class='z-crt'><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li class='next'><a>下一页</a></li>
+						</ul>
+						<ul class="wdm-pagination wdu-mgb10">
+							<li class='previous z-dis'><a>上一页</a></li>
+							<li class='z-crt'><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li class='next'><a>下一页</a></li>
+						</ul>
+						<ul class="wdm-pagination wdu-mgb10">
+							<li class='previous z-dis'><a>上一页</a></li>
+							<li class='z-crt'><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li class='dotted'>...</li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">11</a></li>
+							<li class='next'><a>下一页</a></li>
+						</ul>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<ul class="wdm-pagination">
+										<li class='previous z-dis'><a>上一页</a></li>
+										<li class='z-crt'><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li class='next'><a>下一页</a></li>
+									</ul>
+								</xmp>
+							</pre>
+						</div>
+					</div>
 
-					        	$('#dialog').wdDialog({
-					    			title:'测试',
-					    			buttons: {
-										"cancel":{
-											text: "取消",
-											class: 'wdu-btn-dlg wdu-btn-gray',
-											// disabled:'true',
-											click: function() {
-												$( this ).wdDialog( "close" );
-											}
-										} ,
-										"confirm":{
-											text: "确认",
-											click: function() {
-												$( this ).wdDialog( "close" );
+				 	<h1>迷你分页</h1>
+				 	<div class='m-example'>
+						<ul class="wdm-pagination wdm-pagination-mini">
+							<li class='previous'><a>上一页</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li class='z-crt'><a href="#">5</a></li>
+							<li class='next z-dis'><a>下一页</a></li>
+						</ul>
+						<ul class="wdm-pagination wdm-pagination-mini">
+							<li class='previous z-dis'><a>上一页</a></li>
+							<li class='z-crt'><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li class='dotted'>...</li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">11</a></li>
+							<li class='next'><a>下一页</a></li>
+						</ul>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<ul class="wdm-pagination wdm-pagination-mini">
+										<li class='previous'><a>上一页</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li class='z-crt'><a href="#">5</a></li>
+										<li class='next z-dis'><a>下一页</a></li>
+									</ul>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='radios'>
+					<h1>单选框</h1>
+					<div class='m-example'>
+						<label class='wdm-radio'><input type="radio"><b class='icon-radio'></b>我是单选框</label>
+						<label class='wdm-radio'><input type="radio" checked><b class='icon-radio'></b>我是单选框</label>
+						<label class='wdm-radio'><input type="radio" checked disabled><b class='icon-radio'></b>我是单选框</label>
+						<label class='wdm-radio'><input type="radio" disabled><b class='icon-radio'></b>我是单选框</label>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<label class='wdm-radio'><input type="radio"><b class='icon-radio'></b>我是单选框</label>
+									<label class='wdm-radio'><input type="radio" checked><b class='icon-radio'></b>我是单选框</label>
+									<label class='wdm-radio'><input type="radio" checked disabled><b class='icon-radio'></b>我是单选框</label>
+									<label class='wdm-radio'><input type="radio" disabled><b class='icon-radio'></b>我是单选框</label>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='checkboxs'>
+					<h1>多选框</h1>
+					<div class='m-example'>
+						<label class='wdm-checkbox'><input type="checkbox"><b class='icon-checkbox'></b>我是多选框</label>
+						<label class='wdm-checkbox'><input type="checkbox" checked><b class='icon-checkbox'></b>我是多选框</label>
+						<label class='wdm-checkbox'><input type="checkbox" checked disabled><b class='icon-checkbox'></b>我是多选框</label>
+						<label class='wdm-checkbox'><input type="checkbox" disabled><b class='icon-checkbox'></b>我是多选框</label>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<label class='wdm-checkbox'><input type="checkbox"><b class='icon-checkbox'></b>我是多选框</label>
+									<label class='wdm-checkbox'><input type="checkbox" checked><b class='icon-checkbox'></b>我是多选框</label>
+									<label class='wdm-checkbox'><input type="checkbox" checked disabled><b class='icon-checkbox'></b>我是多选框</label>
+									<label class='wdm-checkbox'><input type="checkbox" disabled><b class='icon-checkbox'></b>我是多选框</label>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<section class='component' id='tables'>
+					<!-- <p>为任意 table 标签添加 .wdm-table 类可以为其赋予基本的样式 — 左右8px的内补（padding）</p> -->
+					<h1>基本表格</h1>
+					<div class='m-example'>
+						<table class='wdm-table'>
+							<thead><tr><td>firstname</td><td>lastname</td><td>username</td></tr></thead>
+							<tbody>
+								<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
+								<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
+							</tbody>
+						</table>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<table class='wdm-table'></table>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+					
+					<h1>条纹状表格</h1>
+					<div class='m-example'>
+						<table class='wdm-table wdm-table-striped'>
+							<thead><tr><td>firstname</td><td>lastname</td><td>username</td></tr></thead>
+							<tbody>
+								<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
+								<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
+								<tr><td>firstname</td><td>lastname</td><td>username</td></tr>
+							</tbody>
+						</table>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<table class='wdm-table wdm-table-striped'></table>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+					
+					<h1>鼠标悬停</h1>
+					<div class='m-example'>
+						<table class='wdm-table wdm-table-hover'>
+							<thead><tr><td></td></tr></thead>
+							<tbody>
+								<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
+								<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
+								<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
+								<tr><td><label class='wdm-radio'><input type='radio'><b class='icon-radio'></b>1</label></td></tr>
+							</tbody>
+						</table>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<table class='wdm-table wdm-table-hover'></table>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='popovers'>
+					<h1>气泡卡片</h1>
+					<div class='m-example'>
+						<span>
+							<a id ='down'>向下</a>
+							<div class='wdm-popover wdm-popover-bottom wd-target'>
+								<div class='wd-popover-arrow'></div>
+								<div class='wd-popover-inner'>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+								</div>
+							</div>
+						</span>
+						<span>
+							<a id ='top'>向上</a>
+							<div class='wdm-popover wdm-popover-top wd-target'>
+								<div class='wd-popover-arrow'></div>
+								<div class='wd-popover-inner'>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+								</div>
+							</div>
+						</span>
+						<span>
+							<a id ='left'>向左</a>
+							<div class='wdm-popover wdm-popover-left wd-target'>
+								<div class='wd-popover-arrow'></div>
+								<div class='wd-popover-inner'>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+								</div>
+							</div>
+						</span>
+						<span>
+							<a id ='right'>向右</a>
+							<div class='wdm-popover wdm-popover-right wd-target'>
+								<div class='wd-popover-arrow'></div>
+								<div class='wd-popover-inner'>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+									<p>我是一段失败说明</p>
+								</div>
+							</div>
+						</span>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<span>
+										<a id ='down'>向下</a>
+										<div class='wdm-popover wdm-popover-bottom wd-target'>
+											<div class='wd-popover-arrow'></div>
+											<div class='wd-popover-inner'>
+												<p>我是一段失败说明</p>
+												<p>我是一段失败说明</p>
+												<p>我是一段失败说明</p>
+												<p>我是一段失败说明</p>
+											</div>
+										</div>
+									</span>
+								</xmp>
+								$('#down').wdPopover({trigger:'hover'});
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='buttons'>
+					<h1>按钮</h1>
+					<div class='m-example'>
+						<div class='wdu-mgb10'>
+							<span>大按钮：</span>
+							<button class='wdu-btn wdu-btn-lg'>开始测试</button>
+							<button class='wdu-btn-reverse wdu-btn-lg'>开始测试</button>
+							<button class='wdu-btn wdu-btn-lg' disabled>开始测试</button>
+							<button class='wdu-btn-reverse wdu-btn-lg' disabled>开始测试</button>
+						</div>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<button class='wdu-btn wdu-btn-lg'>开始测试</button>
+									<button class='wdu-btn-reverse wdu-btn-lg'>开始测试</button>
+									<button class='wdu-btn wdu-btn-lg' disabled>开始测试</button>
+									<button class='wdu-btn-reverse wdu-btn-lg' disabled>开始测试</button>
+								</xmp>
+							</pre>
+						</div>
+						<div class='wdu-mgb10'>
+							<span>中等按钮：</span>
+							<button class='wdu-btn wdu-btn-md'>开测试</button>
+							<button class='wdu-btn-reverse wdu-btn-md'>开始试</button>
+							<button class='wdu-btn wdu-btn-md' disabled>开始测试</button>
+							<button class='wdu-btn-reverse wdu-btn-md' disabled>开始测试</button>
+						</div>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<button class='wdu-btn wdu-btn-md'>开始测试</button>
+									<button class='wdu-btn-reverse wdu-btn-md'>开始测试</button>
+									<button class='wdu-btn wdu-btn-md' disabled>开始测试</button>
+									<button class='wdu-btn-reverse wdu-btn-md' disabled>开始测试</button>
+								</xmp>
+							</pre>
+						</div>
+						
+						<div>
+							<span>弹框按钮：</span>
+							<button class='wdu-btn wdu-btn-dlg'>确认</button>
+							<button class='wdu-btn wdu-btn-dlg' disabled>确认</button>
+							<button class='wdu-btn-gray wdu-btn-dlg'>取消</button>
+							<button class='wdu-btn-gray wdu-btn-dlg' disabled>取消</button>
+						</div>
+						<div class='highlight'>
+							<pre>
+								<xmp>
+									<button class='wdu-btn wdu-btn-dlg'>确认</button>
+									<button class='wdu-btn wdu-btn-dlg' disabled>确认</button>
+									<button class='wdu-btn-gray wdu-btn-dlg'>取消</button>
+									<button class='wdu-btn-gray wdu-btn-dlg' disabled>取消</button>
+								</xmp>
+							</pre>
+						</div>
+					</div>
+				</section>
+				<section class='component' id='dates'>
+					<h1>日期选择器</h1>
+					<div class='m-example'>
+				        <form action="javascript:void(0)" method="post">
+				        <div>
+				            <input id="datepicker-example1" type="text" style='padding:5px;'>
+				        </div>
+				        </form>
+				        <div class='highlight'>
+				         	<pre>
+					         	<code>
+					        	$('#datepicker-example1').datetimepicker();
+					        	</code>
+					        </pre>
+					    </div>
+				    </div>
+			    </section>
+			    <section class='component' id='dialogs'>
+					<h1>弹出框</h1>
+					<div class='m-example'>
+		        		<button class='wdu-btn wdu-btn-md' id='dialogBtn'>弹出框</button>
+		        		<div class='highlight'>
+				         	<pre>
+					         	<xmp>
+					         		<div id='dialog' class='wdu-fs3 f-dn'>
+								    	<div style='padding-left:32px;position:relative;line-height:24px;'>
+								    	<b class='icon-tip' style='position:absolute;left:0'></b>
+								        <p> 删除该测试任务之后，您将无法收到相关信息，请确认！</p>
+								        </div>
+								    </div>
+
+						        	$('#dialog').wdDialog({
+						    			title:'测试',
+						    			buttons: {
+											"cancel":{
+												text: "取消",
+												class: 'wdu-btn-dlg wdu-btn-gray',
+												// disabled:'true',
+												click: function() {
+													$( this ).wdDialog( "close" );
+												}
+											} ,
+											"confirm":{
+												text: "确认",
+												click: function() {
+													$( this ).wdDialog( "close" );
+												}
 											}
 										}
-									}
-					    		});
-				        	</xmp>
-				        </pre>
-				    </div>
-	        	</div>
+						    		});
+					        	</xmp>
+					        </pre>
+					    </div>
+		        	</div>
+		        </section>
+				
+				<section class='component' id='scroll'>
+					<h1>图片滚动</h1>
+					<div class='m-example'>
+		        		<div class='scroll'>
+		        			<ul>
+		        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+		        			</ul>
+		        			<div id='pre'></div>
+		        			<div id='next'></div>
+		        		</div>
+		        		<div class='highlight'>
+				         	<pre>
+					         	<xmp>
+					         		<div class='scroll'>
+					        			<ul>
+					        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        				<li><div class='f-pr f-ib'><img src="../images/1.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        				<li><div class='f-pr f-ib'><img src="../images/2.jpg"><b class='icon-close2 wdu-delete-scroll'></b></div></li>
+					        			</ul>
+					        			<div id='pre'></div>
+					        			<div id='next'></div>
+					        		</div>
+					         	</xmp>
+	    						$('.scroll').startScroll({'per_num':3,'layer':true});
+					        </pre>
+					    </div>
+		        	</div>
+		        </section>
+
+		        <section class='component' id='globaltips'>
+					<h1>全局提示</h1>
+					<div class='m-example'>
+		        		<div class='wdm-success wdu-mgt30'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+		        		<div class='wdm-danger wdu-mgt30'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+		        		<div class='wdm-info wdu-mgt30'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+		        		<div class='wdm-warning wdu-mgt30'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
+
+		        		<div class='wdm-success wdu-cbg-success wdu-mgt30'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+		        		<div class='wdm-danger wdu-cbg-danger wdu-mgt30'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+		        		<div class='wdm-info wdu-cbg-info wdu-mgt30'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+		        		<div class='wdm-warning wdu-cbg-warning wdu-mgt30'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
+
+		        		<div class='highlight'>
+				         	<pre>
+					         	<xmp>
+					         		<div class='wdm-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+					        		<div class='wdm-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+					        		<div class='wdm-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+					        		<div class='wdm-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
+					        		<div class='wdm-success wdu-cbg-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
+					        		<div class='wdm-danger wdu-cbg-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
+					        		<div class='wdm-info wdu-cbg-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
+					        		<div class='wdm-warning wdu-cbg-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
+					         	</xmp>
+					        </pre>
+					    </div>
+		        	</div>
+		        </section>
+
+		        <section class='component' id='breads'>
+					<h1>面包屑导航</h1>
+					<div class='m-example'>
+		        		<ul class='wdm-breadcrumb'>
+		        			<li><a href="#">我是标题</a></li>
+		        			<li><a href="#">我是标题</a></li>
+		        			<li>我是标题</li>
+		        		</ul>
+		        		
+		        		<div class='highlight'>
+				         	<pre>
+					         	<xmp>
+					         		<ul class='wdm-breadcrumb'>
+					        			<li><a href="#">我是标题</a></li>
+					        			<li><a href="#">我是标题</a></li>
+					        			<li>我是标题</li>
+					        		</ul>
+					         	</xmp>
+					        </pre>
+					    </div>
+		        	</div>
+		        </section>
+
+		        <section class='component' id='forms'>
+					<h1>表单</h1>
+					<div class='m-example'>
+		        		<form onsubmit='return false;'>
+		        			<div class='wdm-form-item'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text' placeholder='请输入姓名'/>
+		        			</div>
+
+		        			<div class='wdm-form-item z-danger'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text'/>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'>填写信息有误</span></div>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text' disabled value='一台那些'/>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'></span></div>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text' disabled/>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'></span></div>
+		        			</div>
+		        			<div class='wdm-form-item z-warning'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text'/>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'>填写信息有误</span></div>
+		        			</div>
+		        			<div class='wdm-form-item z-success'>
+		        				<label class='wdu-form-label'>姓名：</label>
+		        				<input class='wdu-form-input' type='text'/>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'>填写信息有误</span></div>
+		        			</div>
+
+		        			<div class='wdm-form-item z-danger'>
+		        				<label class='wdu-form-label'>邮件列表：</label>
+		        				<textarea class='wdu-form-textarea'></textarea>
+		        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wd-form-tip-text'>填写信息有误</span></div>
+		        			</div>
+
+		        			<div class='wdm-form-item'>
+		        				<input class='wdu-form-input wdu-form-input-search' type='text'/>
+		        				<button class='wdu-btn wdu-btn-search'><b class='icon-search-reverse'></b></button>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<input class='wdu-form-input wdu-form-input-search' type='text' disabled/>
+		        				<button class='wdu-btn wdu-btn-search' disabled><b class='icon-search-reverse'></b></button>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<input class='wdu-form-input wdu-form-input-search' type='text'/>
+		        				<button class='wdu-btn-gray wdu-btn-search'><b class='icon-search'></b></button>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<input class='wdu-form-input wdu-form-input-search' type='text' disabled/>
+		        				<button class='wdu-btn-gray wdu-btn-search' disabled><b class='icon-search-reverse'></b></button>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<div class='wdm-file-item'>
+			        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
+			        				<div class='wd-progress' style='width:100%'></div>
+			        				<div class='wd-progress-text'>100%</div>
+		        				</div>
+		        				<label class='icon-file'><input type='file' class='f-dn'></label>
+		        			</div>
+		        			<div class='wdm-form-item'>
+		        				<div class='wdm-file-item'>
+			        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
+			        				<div class='wd-progress'></div>
+		        				</div>
+		        				<label class='icon-file-disabled'><input type='file' class='f-dn' disabled></label>
+		        			</div>
+		        		</form>
+		        		<div class='highlight'>
+				         	<pre>
+					         	<xmp>
+					         		<div class='wdm-form-item'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text' placeholder='请输入姓名'/>
+				        			</div>
+
+				        			<div class='wdm-form-item z-danger'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text'/>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text' disabled value='一台那些'/>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'></span></div>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text' disabled/>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'></span></div>
+				        			</div>
+				        			<div class='wdm-form-item z-warning'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text'/>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
+				        			</div>
+				        			<div class='wdm-form-item z-success'>
+				        				<label class='wdu-form-label'>姓名：</label>
+				        				<input class='wdu-form-input' type='text'/>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
+				        			</div>
+
+				        			<div class='wdm-form-item z-danger'>
+				        				<label class='wdu-form-label'>邮件列表：</label>
+				        				<textarea class='wdu-form-textarea'></textarea>
+				        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
+				        			</div>
+
+				        			<div class='wdm-form-item'>
+				        				<input class='wdu-form-input wdu-form-input-search' type='text'/>
+				        				<button class='wdu-btn wdu-btn-search'><b class='icon-search-white'></b></button>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<input class='wdu-form-input wdu-form-input-search' type='text' disabled/>
+				        				<button class='wdu-btn wdu-btn-search' disabled><b class='icon-search-white'></b></button>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<input class='wdu-form-input wdu-form-input-search' type='text'/>
+				        				<button class='wdu-btn-gray wdu-btn-search'><b class='icon-search'></b></button>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<input class='wdu-form-input wdu-form-input-search' type='text' disabled/>
+				        				<button class='wdu-btn-gray wdu-btn-search' disabled><b class='icon-search-white'></b></button>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<div class='wdm-file-item'>
+					        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
+					        				<div class='wdu-progress'></div>
+					        				<div class='wdu-progress-text'>100%</div>
+				        				</div>
+				        				<label class='icon-file'><input type='file' class='f-dn'></label>
+				        			</div>
+				        			<div class='wdm-form-item'>
+				        				<div class='wdm-file-item'>
+					        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
+					        				<div class='wdu-progress'></div>
+				        				</div>
+				        				<label class='icon-file-disabled'><input type='file' class='f-dn' disabled></label>
+				        			</div>
+					         	</xmp>
+					        </pre>
+					    </div>
+		        	</div>
+		        </section>
 	        </section>
-			
-			<section class='component' id='scroll'>
-				<h1>图片滚动</h1>
-				<div class='m-example'>
-	        		<div class='scroll'>
-	        			<ul>
-	        				<li><img src="../images/1.jpg"></li>
-	        				<li><img src="../images/2.jpg"></li>
-	        				<li><img src="../images/1.jpg"></li>
-	        				<li><img src="../images/2.jpg"></li>
-	        				<li><img src="../images/1.jpg"></li>
-	        				<li><img src="../images/2.jpg"></li>
-	        			</ul>
-	        			<div id='pre'></div>
-	        			<div id='next'></div>
-	        		</div>
-	        		<div class='highlight'>
-			         	<pre>
-				         	<xmp>
-				         		<div class='scroll'>
-				        			<ul>
-				        				<li><img src="../images/1.jpg"></li>
-				        				<li><img src="../images/2.jpg"></li>
-				        				<li><img src="../images/1.jpg"></li>
-				        				<li><img src="../images/2.jpg"></li>
-				        				<li><img src="../images/1.jpg"></li>
-				        				<li><img src="../images/2.jpg"></li>
-				        			</ul>
-				        			<div id='pre'></div>
-				        			<div id='next'></div>
-				        		</div>
-				         	</xmp>
-    						$('.scroll').startScroll({'per_num':3,'layer':true,'isContinue':true,'auto':true});
-				        </pre>
-				    </div>
-	        	</div>
-	        </section>
-
-	        <section class='component' id='globaltips'>
-				<h1>全局提示</h1>
-				<div class='m-example'>
-	        		<div class='wdm-success wdu-mgt30'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
-	        		<div class='wdm-danger wdu-mgt30'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
-	        		<div class='wdm-info wdu-mgt30'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
-	        		<div class='wdm-warning wdu-mgt30'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
-
-	        		<div class='wdm-success wdu-cbg-success wdu-mgt30'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
-	        		<div class='wdm-danger wdu-cbg-danger wdu-mgt30'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
-	        		<div class='wdm-info wdu-cbg-info wdu-mgt30'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
-	        		<div class='wdm-warning wdu-cbg-warning wdu-mgt30'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
-
-	        		<div class='highlight'>
-			         	<pre>
-				         	<xmp>
-				         		<div class='wdm-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
-				        		<div class='wdm-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
-				        		<div class='wdm-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
-				        		<div class='wdm-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
-				        		<div class='wdm-success wdu-cbg-success'><b class='icon-validate-success'></b>我是一条成功信息！ </div>
-				        		<div class='wdm-danger wdu-cbg-danger'><b class='icon-validate-danger'></b>我是一条失败信息！ </div>
-				        		<div class='wdm-info wdu-cbg-info'><b class='icon-validate-info'></b>我是一条提示信息！ </div>
-				        		<div class='wdm-warning wdu-cbg-warning'><b class='icon-validate-warning'></b>我是一条警告提示！ </div>
-				         	</xmp>
-				        </pre>
-				    </div>
-	        	</div>
-	        </section>
-
-	        <section class='component' id='breads'>
-				<h1>面包屑导航</h1>
-				<div class='m-example'>
-	        		<ul class='wdu-breadcrumb wdu-mgt30'>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li>我是标题</li>
-	        		</ul>
-	        		<ul class='wdu-breadcrumb2 wdu-mgt30'>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li>我是标题</li>
-	        		</ul>
-	        		<ul class='wdu-breadcrumb3 wdu-mgt30'>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li>我是标题</li>
-	        		</ul>
-	        		<ul class='wdu-breadcrumb4 wdu-mgt30'>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li><a href="#">我是标题</a></li>
-	        			<li>我是标题</li>
-	        		</ul>
-
-	        		<div class='highlight'>
-			         	<pre>
-				         	<xmp>
-				         		<ul class='wdu-breadcrumb wdu-mgt30'>
-				        			<li><a href="#">我是标题</a></li>
-				        			<li><a href="#">我是标题</a></li>
-				        			<li>我是标题</li>
-				        		</ul>
-				         	</xmp>
-				        </pre>
-				    </div>
-	        	</div>
-	        </section>
-
-	        <section class='component' id='forms'>
-				<h1>表单</h1>
-				<div class='m-example'>
-	        		<form onsubmit='return false;'>
-	        			<div class='wdm-form-item z-danger'>
-	        				<label class='wdu-form-label'>姓名：</label>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
-	        			</div>
-	        			<div class='wdm-form-item z-warning'>
-	        				<label class='wdu-form-label'>姓名：</label>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
-	        			</div>
-	        			<div class='wdm-form-item z-success'>
-	        				<label class='wdu-form-label'>姓名：</label>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
-	        			</div>
-
-	        			<div class='wdm-form-item z-danger'>
-	        				<label class='wdu-form-label'>邮件列表：</label>
-	        				<textarea class='wdu-form-textarea'></textarea>
-	        				<div class='wdm-form-tip'><b class='icon-tip'></b><span class='wdu-form-tip-text'>填写信息有误</span></div>
-	        			</div>
-
-	        			<div class='wdm-form-item'>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<button class='wdu-btn wdu-btn-search'><b class='icon-search-white'></b></button>
-	        			</div>
-	        			<div class='wdm-form-item'>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<button class='wdu-btn wdu-btn-search' disabled><b class='icon-search-white'></b></button>
-	        			</div>
-	        			<div class='wdm-form-item'>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<button class='wdu-btn-gray wdu-btn-search'><b class='icon-search'></b></button>
-	        			</div>
-	        			<div class='wdm-form-item'>
-	        				<input class='wdu-form-input' type='text'/>
-	        				<button class='wdu-btn-gray wdu-btn-search' disabled><b class='icon-search'></b></button>
-	        			</div>
-	        			<div class='wdm-form-item'>
-	        				<div class='wdm-file-item'>
-		        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
-		        				<div class='wdu-progress'></div>
-		        				<div class='wdu-progress-text'>100%</div>
-	        				</div>
-	        				<label class='icon-file'><input type='file' class='f-dn'></label>
-	        			</div>
-	        			<div class='wdm-form-item'>
-	        				<div class='wdm-file-item'>
-		        				<input class='wdu-form-input' type='text' placeholder='yixin.apk' disabled/>
-		        				<div class='wdu-progress'></div>
-	        				</div>
-	        				<label class='icon-file-disabled'><input type='file' class='f-dn' disabled></label>
-	        			</div>
-	        		</form>
-	        		<div class='highlight'>
-			         	<pre>
-				         	<xmp>
-				         		
-				         	</xmp>
-				        </pre>
-				    </div>
-	        	</div>
-	        </section>
-
-        </section>
+		</div>
 	</div>
+	<div class="wdg-ft">
+		<span>Powered by Netease QA &copy; 2013 - 2015 Netease QA</span>
+	</div>
+
 	
 	<div id='dialog' class='wdu-fs3 f-dn'>
-    	<div style='padding-left:32px;position:relative;line-height:24px;'>
-    	<b class='icon-tip' style='position:absolute;left:0'></b>
+    	<div style='padding-left:25px;position:relative;line-height:24px;'>
+    	<b class='icon-tip' style='position:absolute;left:0;margin-top:2px;'></b>
         <p> 删除该测试任务之后，您将无法收到相关信息，请确认！</p>
         </div>
     </div>
@@ -808,7 +954,7 @@
 		    $('#left,#right,#top,#down').wdPopover({trigger:'hover'});
 		    $('.aside-container').scrollFixed();
 		});
-    	$('#datepicker-example1').Zebra_DatePicker();
+    	$('#datepicker-example1').datetimepicker();
     	$('#dialogBtn').click(function(event) {
     		$('#dialog').wdDialog({
     			title:'测试',
@@ -831,16 +977,16 @@
     		});
     		
     	});
-    	$('.scroll').startScroll({'per_num':3,'layer':true,'isContinue':true,'auto':true});
+    	$('.scroll').startScroll({'per_num':3,'layer':true});
 
-		$('.wdm-form-textarea').keyup(function(event) {
-			/* Act on the event */
-			var str = $(this).val();
-			var lastcode = str[str.length-1];
-			if(lastcode==' '||lastcode==';'||lastcode==','||lastcode=='，'){
-				$('<span>').text(str).appendTo($(this));
-			}
-		});
+		// $('.wdm-form-textarea').keyup(function(event) {
+		// 	/* Act on the event */
+		// 	var str = $(this).val();
+		// 	var lastcode = str[str.length-1];
+		// 	if(lastcode==' '||lastcode==';'||lastcode==','||lastcode=='，'){
+		// 		$('<span>').text(str).appendTo($(this));
+		// 	}
+		// });
 
     </script>
 </body>

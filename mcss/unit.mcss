@@ -1,5 +1,4 @@
 /*icon小图标*/
-$path = 'icon.png';
 [class*=icon-]{background: url('#{$path}') -9999px -9999px no-repeat;}
 //查看
 .icon-eye-hover{$icon(0,-40px,17px,11px);}
@@ -48,16 +47,24 @@ $path = 'icon.png';
 .icon-download2-hover{$icon(-240px,-40px,13px,15px);}
 .icon-download2-active{$icon(-240px,-80px,13px,15px);}
 .icon-download2{$icon(-240px,0,13px,15px);
-	&:hover{@extend .icon-download-hover;}
-	&:active{@extend .icon-download-active;}
+	&:hover{@extend .icon-download2-hover;}
+	&:active{@extend .icon-download2-active;}
 }
 
 //分享
 .icon-share-hover{$icon(-280px,-40px,15px,15px);}
 .icon-share-active{$icon(-280px,-80px,15px,15px);}
 .icon-share{$icon(-280px,0,15px,15px);
-	&:hover{@extend .icon-download-hover;}
-	&:active{@extend .icon-download-active;}
+	&:hover{@extend .icon-share-hover;}
+	&:active{@extend .icon-share-active;}
+}
+
+//帮助
+.icon-help-hover{$icon(-500px,-40px,15px,15px);}
+.icon-help-active{$icon(-500px,-80px,15px,15px);}
+.icon-help{$icon(-500px,0,15px,15px);
+	&:hover{@extend .icon-help-hover;}
+	&:active{@extend .icon-help-active;}
 }
 
 //执行成功
@@ -79,15 +86,15 @@ $path = 'icon.png';
 .icon-smile{$icon(0,-160px,14px,14px);}
 .icon-smile-hover{$icon(-40px,-160px,14px,14px);}
 //单选框
-.icon-radio-check{$icon(0,-200px,14px,16px);}
-.icon-radio-checked{$icon(-20px,-200px,14px,16px);}
-.icon-radio-discheck{$icon(0,-220px,14px,16px);}
-.icon-radio-dischecked{$icon(-20px,-220px,14px,16px);}
+.icon-radio-check{$icon(0,-200px,13px,16px);}
+.icon-radio-checked{$icon(-20px,-200px,13px,16px);}
+.icon-radio-discheck{$icon(0,-220px,13px,16px);}
+.icon-radio-dischecked{$icon(-20px,-220px,13px,16px);}
 //多选框
-.icon-checkbox-check{$icon(-80px,-200px,14px,16px);}
-.icon-checkbox-checked{$icon(-100px,-200px,14px,16px);}
-.icon-checkbox-discheck{$icon(-100px,-220px,14px,16px);}
-.icon-checkbox-dischecked{$icon(-80px,-220px,14px,16px);}
+.icon-checkbox-check{$icon(-80px,-200px,13px,16px);}
+.icon-checkbox-checked{$icon(-100px,-200px,13px,16px);}
+.icon-checkbox-discheck{$icon(-100px,-220px,13px,16px);}
+.icon-checkbox-dischecked{$icon(-80px,-220px,13px,16px);}
 //上传文件图标
 .icon-file-hover{$icon(-80px,-260px,40px,32px);}
 .icon-file-active{$icon(-160px,-260px,40px,32px);}
@@ -105,13 +112,23 @@ $path = 'icon.png';
 //菜单箭头
 .icon-menu-down{$icon(-40px,-520px,9px,6px);}
 .icon-menu-up{$icon(-60px,-520px,9px,6px);}
-.icon-menu-right{$icon(-80px,-520px,6px,10px);}
+
+//面包屑箭头
+.icon-breadcrumb{$icon(-80px,-520px,6px,10px);}
+
+//小熊图标
+.icon-bear1{$icon(-2px,-560px,80px,99px);}
+.icon-bear2{$icon(-101px,-560px,67px,81px);}
+.icon-bear3{$icon(-180px,-560px,93px,108px);}
+.icon-bear4{$icon(-302px,-560px,103px,79px);}
+.icon-bear5{$icon(-421px,-560px,72px,80px);}
+.icon-bear6{$icon(-511px,-560px,68px,85px);}
 
 //提示
 .icon-tip{$icon(0,-700px,22px,22px);}
 
 //搜索放大镜
-.icon-search-white{$icon(-30px,-700px,14px,16px);}
+.icon-search-reverse{$icon(-30px,-700px,14px,16px);}
 .icon-search{$icon(-50px,-700px,14px,16px);}
 
 //关闭按钮
@@ -128,8 +145,14 @@ $path = 'icon.png';
 	&:hover{@extend .icon-close-dlg-hover;}
 	&:active{@extend .icon-close-dlg-active;}
 }
+
 .icon-error{$icon(-180px,-740px,5px,5px);}
 .icon-correct{$icon(-190px,-740px,9px,7px);}
+
+.icon-close-search-hover{$icon(-260px,-740px,14px,14px);}
+.icon-close-search{$icon(-230px,-740px,14px,14px);
+	&:hover{@extend .icon-close-search-hover;}
+}
 //上一张
 .icon-pre-hover{$icon(-80px,-780px,22px,38px);}
 .icon-pre-active{$icon(-160px,-780px,22px,38px);}
@@ -170,6 +193,7 @@ $path = 'icon.png';
 .icon-android{$icon(-20px,-880px,15px,16px);}
 .icon-mac{$icon(-40px,-880px,14px,16px);}
 .icon-phone{$icon(-60px,-880px,11px,17px);}
+.icon-phone-reverse{$icon(-80px,-880px,11px,17px);}
 
 //字体大小
 .wdu-fs0{font-size: $fs0;}
@@ -187,24 +211,67 @@ $path = 'icon.png';
 .wdu-cf-base{color:$cf-base;}//基本文字色
 .wdu-cf-secondary{color:$cf-secondary;}//次要的文字色
 .wdu-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
+.wdu-cf-link{color:$cf-link;}//链接文字色
 //状态背景色
 .wdu-cbg-success{background-color: $cbg-success;}
 .wdu-cbg-danger{background-color: $cbg-danger;}
 .wdu-cbg-info{background-color: $cbg-info;}
 .wdu-cbg-warning{background-color: $cbg-warning;}
 
+.wdu-mg5{margin: 5px;}
+.wdu-mgt5{margin-top: 5px;}
+.wdu-mgb5{margin-bottom: 5px;}
+.wdu-mgl5{margin-left: 5px;}
+.wdu-mgr5{margin-right: 5px;}
+.wdu-mg10{margin: 10px;}
 .wdu-mgt10{margin-top: 10px;}
 .wdu-mgb10{margin-bottom: 10px;}
 .wdu-mgl10{margin-left: 10px;}
 .wdu-mgr10{margin-right: 10px;}
-
+.wdu-mg20{margin: 20px;}
+.wdu-mgt20{margin-top: 20px;}
+.wdu-mgb20{margin-bottom: 20px;}
+.wdu-mgl20{margin-left: 20px;}
+.wdu-mgr20{margin-right: 20px;}
+.wdu-mg30{margin: 30px;}
 .wdu-mgt30{margin-top: 30px;}
 .wdu-mgb30{margin-bottom: 30px;}
 .wdu-mgl30{margin-left: 30px;}
 .wdu-mgr30{margin-right: 30px;}
+.wdu-mgt40{margin-top: 40px;}
+.wdu-mgb40{margin-bottom: 40px;}
+.wdu-mgl40{margin-left: 40px;}
+.wdu-mgr40{margin-right: 40px;}
+.wdu-mgt50{margin-top: 50px;}
+.wdu-mgb50{margin-bottom: 50px;}
+.wdu-mgl50{margin-left: 50px;}
+.wdu-mgr50{margin-right: 50px;}
 
+.wdu-pd5{padding: 5px;}
+.wdu-pdt5{padding-top: 5px;}
+.wdu-pdb5{padding-bottom: 5px;}
+.wdu-pdl5{padding-left: 5px;}
+.wdu-pdr5{padding-right: 5px;}
+.wdu-pd10{padding: 10px;}
+.wdu-pdt10{padding-top: 10px;}
+.wdu-pdb10{padding-bottom: 10px;}
+.wdu-pdl10{padding-left: 10px;}
+.wdu-pdr10{padding-right: 10px;}
+.wdu-pd20{padding: 20px;}
+.wdu-pdt20{padding-top: 20px;}
+.wdu-pdb20{padding-bottom: 20px;}
+.wdu-pdl20{padding-left: 20px;}
+.wdu-pdr20{padding-right: 20px;}
+
+.wdu-tt{line-height: 1;border-left: 2px solid $c-base;padding-left:5px;}
+
+//图片滚动左右按钮
+.wdu-pre-scroll,.wdu-next-scroll{background-image: url('#{$path}');position: absolute;top: 50%;transform: translateY(-50%);}
+.wdu-pre-scroll{left:12px;@extend .icon-pre;}
+.wdu-next-scroll{right:12px;@extend .icon-next;}
+.wdu-delete-scroll{position: absolute;top:-11px;right: -11px;}
 //按钮
-.wdu-btn,.wdu-btn-reverse,.wdu-btn-gray{
+.wdu-btn,.wdu-btn-reverse,.wdu-btn-reverse-gray,.wdu-btn-gray{
 	text-align: center;
 	border-radius: $btn-border-radius;
 }
@@ -212,8 +279,10 @@ $path = 'icon.png';
 	color:$btn-color;
 	border:1px solid $btn-cb;
 	background-color: $btn-cbg;
+	$transition:background-color .2s;
 	&:hover{
 		background-color: $btn-cbg-hover;
+		$transition:background-color .2s;
 	}
 	&:active{
 		background-color: $btn-cbg-active;
@@ -226,9 +295,11 @@ $path = 'icon.png';
 	color:$btn-color-reverse;
 	border: 1px solid $btn-cb-reverse;
 	background-color: $btn-cbg-reverse;
+	$transition:border-color .2s,color .2s;
 	&:hover{
 		border-color: $btn-cb-reverse-hover;
 		color: $btn-color-reverse-hover;
+		$transition:border-color .2s,color .2s;
 	}
 	&:active{
 		border-color: $btn-cb-reverse-active;
@@ -239,12 +310,33 @@ $path = 'icon.png';
 		color: $btn-color-reverse-disabled;
 	}
 }
+.wdu-btn-reverse-gray{
+	color:$btn-color-reverse-gray;
+	border: 1px solid $btn-cb-reverse-gray;
+	background-color: $btn-cbg-reverse-gray;
+	$transition:border-color .2,color .2s;
+	&:hover{
+		border-color: $btn-cb-reverse-gray-hover;
+		color: $btn-color-reverse-gray-hover;
+		$transition:border-color .2,color .2s;
+	}
+	&:active{
+		border-color: $btn-cb-reverse-gray-active;
+		color: $btn-color-reverse-gray-active;
+	}
+	&:disabled{
+		border-color: $btn-cb-reverse-gray-disabled;
+		color: $btn-color-reverse-gray-disabled;
+	}
+}
 .wdu-btn-gray{
 	color:$btn-color-gray;
 	border: 1px solid $btn-cb-gray;
 	background-color: $btn-cbg-gray;
+	$transition:background-color .2s;
 	&:hover{
 		background-color: $btn-cbg-gray-hover;
+		$transition:background-color .2s;
 	}
 	&:active{
 		background-color: $btn-cbg-gray-active;
@@ -258,19 +350,60 @@ $path = 'icon.png';
 	font-size: $btn-fs-lg;
 	line-height: $btn-line-height-lg;
 	padding: $btn-padding-lg;
+
 }
 .wdu-btn-md{
 	font-size: $btn-fs-md;
 	line-height: $btn-line-height-md;
 	padding: $btn-padding-md;
 }
-.wdu-btn-sm{
+/*.wdu-btn-sm{
 	font-size: $btn-fs-sm;
 	line-height: $btn-line-height-sm;
 	padding: $btn-padding-sm;
-}
+}*/
 .wdu-btn-dlg{
 	font-size: $btn-fs-dlg;
 	line-height: $btn-line-height-dlg;
 	padding: $btn-padding-dlg;
+}
+
+//表单
+.wdu-form-label{
+	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;text-align: right;
+}
+.wdu-form-text{
+	font-size: $input-fs;float:left;padding: 5px 0;height: $input-height; line-height: $input-height;text-align: left;
+}
+.wdu-form-input{
+	border: 1px solid $input-cb;
+	padding: $input-padding;
+	height: $input-height;
+	line-height: $input-height;
+	border-radius: $input-border-radius;
+	font-size: $input-fs;
+	float:left;
+	&:disabled{background-color: $input-cbg-disabled; color:$input-color-disabled;border: 1px solid $input-cb !important;}
+	&:hover{border: 1px solid $input-cb-hover;}
+
+}
+.wdu-form-input-search:disabled{background-color: transparent;}
+.wdu-form-textarea{
+	border: 1px solid $textarea-cb;
+	padding: $textarea-padding;
+	min-height: $textarea-height;
+	line-height: $textarea-height;
+	border-radius: $textarea-border-radius;
+	font-size: $textarea-fs;
+	float:left;
+}
+.wdu-btn-search{
+	float:left;
+	position: relative;
+	z-index: 2;
+	padding:7px 8px;
+	margin-left: -1px;
+	border-radius: 0 2px 2px 0;
+	.icon-search{display: block;}
+	.icon-search-white{display: block;}
 }

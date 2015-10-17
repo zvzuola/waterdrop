@@ -1,1 +1,9 @@
 /* grid */
+html{margin:0; padding:0; height:100%;}
+body{margin:0; padding:0; min-height:100%; position: relative; min-width: 1250px;background-color: #ffffff;}
+
+.wdg-hd{background-color:#242424;}
+.wdg-bd{padding-bottom:40px;}
+.wdg-ft{height: 40px;line-height: 40px;font-size: $fs2;text-align: center;background-color: $cbg-secondary;color:$cf-secondary;width:100%; position:absolute; bottom:0; left:0;}
+
+.wdg-doc{margin: 0 auto;width: 1200px;$clearfix();}

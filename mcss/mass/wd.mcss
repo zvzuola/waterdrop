@@ -102,6 +102,7 @@ $icon = ($x,$y,$width,$height){
     width:$width;
     height:$height;
     display: inline-block;
+    vertical-align: middle;
 }
 
 //多余文字隐藏

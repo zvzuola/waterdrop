@@ -1,4 +1,4 @@
-/*Globels------------------------------------------------------------------------------------------------------------------*/
+/*Globals------------------------------------------------------------------------------------------------------------------*/
 // 字体
 $ff-yahei = "Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 
@@ -9,13 +9,17 @@ $fs2 = 14px;
 $fs3 = 15px;
 $fs4 = 18px;
 
-//颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
+// 小图标图片路径
+$path = 'icon.png';
+
+
+// 颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
 $c-base = #37b1fc;								//主色
 $c-hover = #5fc1fd;
 $c-active = #34a8ef;
 $c-disabled = #afe0fe;
 
-//文字色
+// 文字色
 $cf-title = #333; 								//标题文字
 $cf-base = #666;								//绝大部分用的是这个颜色，重要文字信息
 $cf-secondary = #999;							//次要的文字色
@@ -24,21 +28,23 @@ $cf-link = #6a8ba6; 							//文字链接
 $cf-link-hover = #7faacd;
 $cf-link-active = #628099;
 
-//边框或线条色
+// 边框或线条色
 $cb-gray = #e5e5e5;								//90%   出现在二级内容的边框,分割线
 $cb-dark = #dbdbdb;								//86%   出现在一级标签，最高级内容的边框，分页等处
+$cb-darker = #ccc;
 $cb-light= #ebebeb;								//92%   出现在列表
 
-//背景色
+// 背景色
 $cbg-base = #ededed;							//基本背景色，一级标签，折叠面板
 $cbg-secondary = #f5f5f5;						//二级标签
-$cbg-third=#f7f7f7;								//三级标签
+$cbg-third = #f7f7f7;							//三级标签
+$cbg-white = #fff;
 $cbg-success = #e6f9ef;							//四种状态背景色
 $cbg-info = #edf6fc;
 $cbg-danger = #fff0f1;
 $cbg-warning = #fff5e5;
 
-//状态类的颜色
+// 状态类的颜色
 $cz-success = #53a6e6;							//成功
 $cz-info = #00c460;								//进行中，提示
 $cz-danger = #ff6d7a;							//失败
@@ -54,10 +60,10 @@ $tab-color = $cf-title;							//文字颜色
 $tab-color-current = $c-base;					//当前状态文字颜色
 $tab-color-hover = $tab-color-current;			//hover状态文字颜色
 $tab-color-disabled = $cf-disabled;				//disabled状态文字颜色
-$tab-cb-first = #ccc;							//一级标签边框色
+$tab-cb-first = $cb-dark;						//一级标签边框色
 $tab-cb-first2 = $cb-dark;
-$tab-cb-secondary = $cb-gray;					//二级标签边框色
-$tab-cb-third = $cb-light;						//三级标签边框色
+$tab-cb-secondary = $cb-dark;					//二级标签边框色
+$tab-cb-third = $cb-gray;						//三级标签边框色
 $tab-cb-top-current = $c-base;					//当前状态标签上边框色
 $tab-border-radius = 3px;						//圆角半径
 
@@ -73,22 +79,23 @@ $dropdown-cbg-hover = $c-base;
 $select-fs = $fs1;
 $select-color = $cf-base;
 $select-color-hover = #fff;
-$select-cb = #d9d9d9;
+$select-cb = $cb-gray;
+$select-cb-hover = $cb-dark;
 $select-cbg = #fff;
 $select-cbg-hover = $c-base;
 $select-border-radius = 2px;
 $select-box-shadow = 0 3px 6px 0 #ccc;
 $select-padding = 0 30px 0 10px;
 $select-height = 32px;
-$select-margin-top = 5px;
+$select-margin-top = 4px;
 
 //pagination
 $pagination-fs = $fs1;
-$pagination-color = $cf-base;
+$pagination-color = $cf-secondary;
 $pagination-color-current = #fff;
 $pagination-color-hover = $c-hover;
 $pagination-color-disabled = $cf-disabled;
-$pagination-cb = $cb-dark;
+$pagination-cb = $cb-gray;
 $pagination-cb-current = $c-base;
 $pagination-cb-hover = $c-hover;
 $pagination-cb-disabled = $cb-light;
@@ -103,12 +110,12 @@ $dlg-color = $cf-secondary;
 $dlg-cb = $cb-gray;
 $dlg-cbg = $cbg-secondary;
 $dlg-width = 335px;
-$dlg-shadow = 0px 0px 2px 1px #ccc;
-$dlg-radius = 2px;
+$dlg-shadow = 0px 0px 8px 3px $cb-darker;
+$dlg-radius = 4px;
 
 //table
 $table-fs = $fs1;
-$table-cb = $cb-gray;							//边框色
+$table-cb = $cb-light;							//边框色
 $table-cbg = transparent;						//表格背景色
 $table-cbg-hover =  #f2f4f5;
 $table-cell-padding = 0 10px;					//单元格padding
@@ -116,7 +123,6 @@ $table-cell-padding = 0 10px;					//单元格padding
 //button
 $btn-fs-lg = $fs3;
 $btn-fs-md = $fs2;
-$btn-fs-sm = $fs2;
 $btn-fs-dlg = $fs1;
 
 $btn-color = #fff;
@@ -124,6 +130,10 @@ $btn-color-reverse = $c-base;
 $btn-color-reverse-hover = $c-hover;
 $btn-color-reverse-active = $c-active;
 $btn-color-reverse-disabled = $c-disabled;
+$btn-color-reverse-gray = #8c8c8c;
+$btn-color-reverse-gray-hover = #a6a6a6;
+$btn-color-reverse-gray-active = #808080;
+$btn-color-reverse-gray-disabled = #424242;
 $btn-color-gray = $cf-base;
 $btn-color-gray-disabled = $cf-disabled;
 
@@ -132,6 +142,10 @@ $btn-cb-reverse = $btn-color-reverse;
 $btn-cb-reverse-hover = $c-hover;
 $btn-cb-reverse-active = $c-active;
 $btn-cb-reverse-disabled = $c-disabled;
+$btn-cb-reverse-gray = #8c8c8c;
+$btn-cb-reverse-gray-hover = #a6a6a6;
+$btn-cb-reverse-gray-active = #808080;
+$btn-cb-reverse-gray-disabled = #424242;
 $btn-cb-gray = transparent;
 
 $btn-cbg = $c-base;
@@ -143,25 +157,28 @@ $btn-cbg-gray-hover = #e5e5e5;
 $btn-cbg-gray-active = #ccc;
 $btn-cbg-gray-disabled = #e5e5e5;
 $btn-cbg-reverse = #fff;
+$btn-cbg-reverse-gray = transparent;
 
-$btn-line-height-lg = 1.57;
+$btn-line-height-lg = 1.6;
 $btn-line-height-md = 1.57;
-$btn-line-height-sm = 1.57;
 $btn-line-height-dlg = 1.7;
 
-$btn-padding-lg = 5px 21px;
+$btn-padding-lg = 4px 19px;
 $btn-padding-md = 4px 19px;
-$btn-padding-sm = 4px 19px;
-$btn-padding-dlg = 2px 14px;
+$btn-padding-dlg = 1px 13px;
 
 $btn-border-radius = 2px;
 
 //input
 $input-fs = $fs1;
-$input-cb = #d9d9d9;
+$input-color-disabled = $cf-secondary;
+$input-cb = $cb-gray;
+$input-cb-hover = $cb-dark;
+$input-cbg-disabled = $cbg-secondary;
 $input-border-radius = 2px;
 $input-height = 20px;
 $input-padding = 5px 10px;
+
 //textarea  默认情况下与input样式相同
 $textarea-fs = $input-fs;
 $textarea-cb = $input-cb;

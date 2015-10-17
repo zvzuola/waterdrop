@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     uglify: {
       "my_target": {
         "files": {
-          'dest/waterdrop.min.js': ['src/waterdrop.js', 'src/zebra_datepicker.src.js']
+          'dest/waterdrop.min.js': ['src/waterdrop.js', 'src/jquery.datetimepicker.js']
         }
       }
     }
