@@ -1,54 +1,29 @@
-h1{margin:30px 0 10px;}
-h3{margin:20px 0 10px;}
 xmp{white-space: pre-line;margin:10px 0;font-size: 14px;}
 pre{white-space: normal;}
-.m-icons li{display:inline-block;text-align: center;padding:60px 10px 0;width:75px;height:35px;vertical-align: top;position: relative;background-color: #E6F9EF;margin-bottom: 5px;}
+.m-intro{padding: 40px 0;}
+.m-intro h1{font-size: 32px;margin-bottom: 10px;}
+.m-intro p{font-size: 22px;margin-bottom: 10px;}
+.aside-container{width:260px;float: left;border-radius:5px;}
+.aside-container > ul > li > a {padding-left: 46px; font-size: 14px; border-left: 3px solid transparent; }
+.aside-container li a {line-height: 40px; height: 40px; display: block; padding-left: 60px; font-size: 14px; color: #5C6B76; }
+.aside-container li a:hover {color: #6EB4E0; }
+.main-container{float:right;width:910px;}
+.m-icons li{display:inline-block;text-align: center;padding:60px 5px 0;width:85px;height:35px;vertical-align: top;position: relative;background-color: #E6F9EF;margin-bottom: 5px;}
 .m-icons li span{position: absolute;text-align: center;height: 60px;line-height: 60px; top: 0;width: 100px; left: 0;}
 .m-icons li p{word-wrap: break-word;}
-.container{width:1200px;margin:10px auto 0;}
-.aside-container{width:260px;float: left;border-radius:5px;}
-.aside-container > ul > li > a {
-    padding-left: 46px;
-    font-size: 14px;
-    border-left: 3px solid transparent;
-}
-.aside-container li a {
-    line-height: 40px;
-    height: 40px;
-    display: block;
-    padding-left: 60px;
-    font-size: 14px;
-    color: #5C6B76;
-}
-.aside-container li a:hover {
-    color: #6EB4E0;
-}
-.main-container{float:right;width:910px;}
+
+.m-fonticons li{display: inline-block;background-color: #E6F9EF;margin-bottom: 5px;width:90px;height:90px;padding:5px;text-align: center;vertical-align: top;}
+.m-fonticons li span{display: block;}
+.m-fonticons li span:first-child {font-size: 36px; padding: 10px 0px; }
+.m-fonticons li:hover{background-color: #37B1FC;color:#fff;}
+
 .component{margin-bottom: 50px;}
-.component h1{font-size: 30px;}
-.component h3{font-size: 22px;}
+.component h1{font-size: 30px;margin:30px 0 10px;}
+.component h3{font-size: 22px;margin:20px 0 10px;}
 .component .u-desc{line-height: 24px; font-size: 16px; text-indent: 2em;margin-bottom: 20px;}
 .m-example{border-radius: 5px;border:1px solid #ccc;background-color: #fff;padding: 45px 15px 15px;position: relative;}
-.m-example:after{
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #959595;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    content: "实例：";
-
-}
-.highlight {
-    padding: 9px 14px;
-    margin-bottom: 14px;
-    background-color: #F7F7F9;
-    border: 1px solid #E1E1E8;
-    border-radius: 4px;
-    margin-top:20px;
-}
+.m-example:after{position: absolute; top: 15px; left: 15px; font-size: 12px; font-weight: 700; color: #959595; text-transform: uppercase; letter-spacing: 1px; content: "实例："; }
+.highlight {padding: 9px 14px; margin-bottom: 14px; background-color: #F7F7F9; border: 1px solid #E1E1E8; border-radius: 4px; margin-top:20px; }
 .scroll{width:870px;margin: 0 auto;}
 /*.scroll .icon-pre,.scroll .icon-next{position: absolute;top:50%;transform:translateY(-50%);}
 .scroll .icon-pre{left:12px;}

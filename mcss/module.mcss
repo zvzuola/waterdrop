@@ -515,37 +515,37 @@
 
 // 动画系列
 /*淡入*/
-.wd-fadein{$animation:fadein 2s;}
+.wda-fadein{$animation:fadein 2s;}
 @keyframes fadein{0%{opacity: 0;}100%{opacity: 1;}}
 /*向上淡入*/
-.wd-fadein-top{$animation:fadein-top 2s;}
+.wda-fadein-top{$animation:fadein-top 2s;}
 @keyframes fadein-top{0%{opacity: 0;$transform:translateY(50px);}100%{opacity: 1;$transform:translateY(0px);}}
 /*向下淡入*/
-.wd-fadein-bottom{$animation:fadein-bottom 2s;}
+.wda-fadein-bottom{$animation:fadein-bottom 2s;}
 @keyframes fadein-bottom{0%{opacity: 0;$transform:translateY(-50px);}100%{opacity: 1;$transform:translateY(0px);}}
 /*向左淡入*/
-.wd-fadein-left{$animation:fadein-left 2s;}
+.wda-fadein-left{$animation:fadein-left 2s;}
 @keyframes fadein-left{0%{opacity: 0;$transform:translateX(50px);}100%{opacity: 1;$transform:translateY(0px);}}
 /*向右淡入*/
-.wd-fadein-right{$animation:fadein-right 2s;}
+.wda-fadein-right{$animation:fadein-right 2s;}
 @keyframes fadein-right{0%{opacity: 0;$transform:translateX(-50px);}100%{opacity: 1;$transform:translateY(0px);}}
 /*淡出*/
-.wd-fadeout{$animation:fadeout 2s;}
+.wda-fadeout{$animation:fadeout 2s;}
 @keyframes fadeout{0%{opacity: 1;}100%{opacity: 0;}}
 /*向上淡出*/
-.wd-fadeout-top{$animation:fadeout-top 2s;}
+.wda-fadeout-top{$animation:fadeout-top 2s;}
 @keyframes fadeout-top{0%{opacity: 1;$transform:translateY(0px);}100%{opacity: 0;$transform:translateY(50px);}}
 /*向下淡出*/
-.wd-fadeout-bottom{$animation:fadeout-bottom 2s;}
+.wda-fadeout-bottom{$animation:fadeout-bottom 2s;}
 @keyframes fadeout-bottom{0%{opacity: 1;$transform:translateY(0px);}100%{opacity: 0;$transform:translateY(-50px);}}
 /*向左淡出*/
-.wd-fadeout-left{$animation:fadeout-left 2s;}
+.wda-fadeout-left{$animation:fadeout-left 2s;}
 @keyframes fadeout-left{0%{opacity: 1;$transform:translateX(0px);}100%{opacity: 0;$transform:translateY(50px);}}
 /*向右淡出*/
-.wd-fadeout-right{$animation:fadeout-right 2s;}
+.wda-fadeout-right{$animation:fadeout-right 2s;}
 @keyframes fadeout-right{0%{opacity: 1;$transform:translateX(0px);}100%{opacity: 0;$transform:translateY(-50px);}}
 
-.wd-grow-show{$animation:grow-show .5s ease 0s;}
+.wda-grow-show{$animation:grow-show .5s ease 0s;}
 @keyframes grow-show{0%{$transform: scale(0,0);}100%{$transform: scale(1,1);}}
-.wd-grow-hide{$animation:grow-hide .5s ease 0s;}
+.wda-grow-hide{$animation:grow-hide .5s ease 0s;}
 @keyframes grow-hide{0%{$transform: scale(1,1);}100%{$transform: scale(0,0);}}

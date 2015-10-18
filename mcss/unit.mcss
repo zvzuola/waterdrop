@@ -185,8 +185,8 @@
 .icon-next2-hover{$icon(-200px,-830px,23px,38px);}
 .icon-next2-active{$icon(-270px,-830px,23px,38px);}
 .icon-next2{$icon(-130px,-830px,23px,38px);
-	&:hover{@extend .icon-pre2-hover;}
-	&:active{@extend .icon-pre2-active;}
+	&:hover{@extend .icon-next2-hover;}
+	&:active{@extend .icon-next2-active;}
 }
 
 .icon-win{$icon(0,-880px,13px,15px);}
