@@ -1,7 +1,8 @@
 //小提示框
 ;(function(){
     var defaults = {
-        trigger : 'click'
+        trigger : 'click',
+        isFixed : false
     }
     var popovers = [];
     function popover(element,options){
@@ -9,7 +10,7 @@
         this.$element = $(element);
         popovers.push(this.$element);
         this.options = $.extend({},defaults, options);
-
+        this.isFixed = this.options.isFixed;
         this.init();
         var self = this;
         $(window).resize(function() {
@@ -55,89 +56,100 @@
             }
         },
         setPosition: function(){
-            if (this.$element.parent().css('position') == 'static') {
-                this.$element.parent().css('position','relative');
-            }
-            var width = this.$target.outerWidth(true);
-            //如果是下拉式按钮
-            if(this.$target.hasClass('wd-dropdown-menu')){
-                var targetBorderPaddingWidth = parseInt(this.$target.css('padding-left'))
-                                                + parseInt(this.$target.css('padding-right'))
-                                                + parseInt(this.$target.css('border-left-width'))
-                                                + parseInt(this.$target.css('border-right-width'));
-                this.$target.css('min-width',this.$element.outerWidth()-targetBorderPaddingWidth);
-                width = this.$target.outerWidth(true);
-            }
-            var height = this.$target.outerHeight(true),
-                elementWidth = this.$element.outerWidth(true),
-                elementHeight = this.$element.outerHeight(true),
-                elementPositionTop = this.$element.position().top,
-                elementPositionLeft = this.$element.position().left,
-                top = elementHeight + elementPositionTop,
-                left = elementPositionLeft - (width - elementWidth)/2;
-                
-            if(this.$target.hasClass('wd-dropdown-menu'))//如果是下拉式按钮
-                left = elementPositionLeft;
-            if(this.$target.hasClass('wdm-popover-bottom')){
-                // 如果超出左边界
-                if(this.$element.offset().left < (width - elementWidth)/2){
+                if (this.$element.parent().css('position') == 'static') {
+                    this.$element.parent().css('position','relative');
+                }
+                var width = this.$target.outerWidth(true);
+                //如果是下拉式按钮
+                if(this.$target.hasClass('wd-dropdown-menu')){
+                    var targetBorderPaddingWidth = parseInt(this.$target.css('padding-left'))
+                                                    + parseInt(this.$target.css('padding-right'))
+                                                    + parseInt(this.$target.css('border-left-width'))
+                                                    + parseInt(this.$target.css('border-right-width'));
+                    this.$target.css('min-width',this.$element.outerWidth()-targetBorderPaddingWidth);
+                    width = this.$target.outerWidth(true);
+                }
+                var height = this.$target.outerHeight(true),
+                    elementWidth = this.$element.outerWidth(true),
+                    elementHeight = this.$element.outerHeight(true),
+                    elementPositionTop,
+                    elementPositionLeft;
+
+                if(this.isFixed){
+                    this.$target.css('position','fixed');
+                    elementPositionTop = this.$element.offset().top;
+                    elementPositionLeft = this.$element.offset().left;
+                }else{
+                    elementPositionTop = this.$element.position().top;
+                    elementPositionLeft = this.$element.position().left;
+                }
+
+                var top = elementHeight + elementPositionTop,
+                    left = elementPositionLeft - (width - elementWidth)/2;
+                    
+                if(this.$target.hasClass('wd-dropdown-menu'))//如果是下拉式按钮
                     left = elementPositionLeft;
-                    this.$target.find('.wd-popover-arrow').css('left',elementWidth/2);
+                if(this.$target.hasClass('wdm-popover-bottom')){
+                    // 如果超出左边界
+                    if(this.$element.offset().left < (width - elementWidth)/2){
+                        left = elementPositionLeft;
+                        this.$target.find('.wd-popover-arrow').css('left',elementWidth/2);
+                    }
+                    // 如果超出右边界
+                    if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
+                        left = elementPositionLeft - (width - elementWidth);
+                        this.$target.find('.wd-popover-arrow').css('left',width - elementWidth/2);
+                    }
                 }
-                // 如果超出右边界
-                if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
-                    left = elementPositionLeft - (width - elementWidth);
-                    this.$target.find('.wd-popover-arrow').css('left',width - elementWidth/2);
-                }
-            }
 
-            if(this.$target.hasClass('wdm-popover-top')){
-                top = elementPositionTop - height;
-                // 如果超出左边界
-                if(this.$element.offset().left < (width - elementWidth)/2){
-                    left = elementPositionLeft;
-                    this.$target.find('.wd-popover-arrow').css('left',elementWidth/2);
+                if(this.$target.hasClass('wdm-popover-top')){
+                    top = elementPositionTop - height;
+                    // 如果超出左边界
+                    if(this.$element.offset().left < (width - elementWidth)/2){
+                        left = elementPositionLeft;
+                        this.$target.find('.wd-popover-arrow').css('left',elementWidth/2);
+                    }
+                    // 如果超出右边界
+                    if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
+                        left = elementPositionLeft - (width - elementWidth);
+                        this.$target.find('.wd-popover-arrow').css('left',width - elementWidth/2);
+                    }
                 }
-                // 如果超出右边界
-                if($(document).width() - this.$element.offset().left < (width + elementWidth)/2){
-                    left = elementPositionLeft - (width - elementWidth);
-                    this.$target.find('.wd-popover-arrow').css('left',width - elementWidth/2);
-                }
-            }
 
-            if(this.$target.hasClass('wdm-popover-left')){
-                left = elementPositionLeft - width;
-                top = elementPositionTop - (height - elementHeight)/2;
-                // 如果超出上边界
-                if(this.$element.offset().top < (height - elementHeight)/2){
-                    top = elementPositionTop;
-                    this.$target.find('.wd-popover-arrow').css('top',elementHeight/2);
+                if(this.$target.hasClass('wdm-popover-left')){
+                    left = elementPositionLeft - width;
+                    top = elementPositionTop - (height - elementHeight)/2;
+                    // 如果超出上边界
+                    if(this.$element.offset().top < (height - elementHeight)/2){
+                        top = elementPositionTop;
+                        this.$target.find('.wd-popover-arrow').css('top',elementHeight/2);
+                    }
+                    // 如果超出下边界
+                    if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
+                        top = elementPositionTop - (height - elementHeight);
+                        this.$target.find('.wd-popover-arrow').css('top',height - elementHeight/2);
+                    }
                 }
-                // 如果超出下边界
-                if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
-                    top = elementPositionTop - (height - elementHeight);
-                    this.$target.find('.wd-popover-arrow').css('top',height - elementHeight/2);
+                if(this.$target.hasClass('wdm-popover-right')){
+                    left = elementPositionLeft + elementWidth;
+                    top = elementPositionTop - (height - elementHeight)/2;
+                    
+                    // 如果超出上边界
+                    if(this.$element.offset().top < (height - elementHeight)/2){
+                        top = elementPositionTop;
+                        this.$target.find('.wd-popover-arrow').css('top',elementHeight/2);
+                    }
+                    // 如果超出下边界
+                    if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
+                        top = elementPositionTop - (height - elementHeight);
+                        this.$target.find('.wd-popover-arrow').css('top',height - elementHeight/2);
+                    }
                 }
-            }
-            if(this.$target.hasClass('wdm-popover-right')){
-                left = elementPositionLeft + elementWidth;
-                top = elementPositionTop - (height - elementHeight)/2;
-                // 如果超出上边界
-                if(this.$element.offset().top < (height - elementHeight)/2){
-                    top = elementPositionTop;
-                    this.$target.find('.wd-popover-arrow').css('top',elementHeight/2);
-                }
-                // 如果超出下边界
-                if($(document).height() - this.$element.offset().top < (height + elementHeight)/2){
-                    top = elementPositionTop - (height - elementHeight);
-                    this.$target.find('.wd-popover-arrow').css('top',height - elementHeight/2);
-                }
-            }
 
-            this.$target.css({
-                "top": top,
-                "left": left
-            });
+                this.$target.css({
+                    "top": top,
+                    "left": left
+                });
         },
         elementClickHandler: function(e) {
             if (e) {
@@ -393,11 +405,11 @@
                 if(settings.layer){
                     _this.on('click.layer','li img',function(){
                         $('body').addClass('f-oh');
-                        var tempParent = $(this).closest('.wd-scroll-ul');
+                        var tempParent = $(this).closest('.wd-scroll-ul'),
                             tempIndex=$(this).closest('li').index(),
                             mask=$("<div class='wdm-dlg wdm-dlg-layer'><table class='wd-dlgtable'><tr><td class='wd-dlgtd'></td></tr></table></div>"),
                             li=_this.find('ul').html(),
-                            ul=$("<ul class='f-cb'></ul>").append(li)
+                            ul=$("<ul class='f-cb'></ul>").append(li),
                             layerdiv=$("<div></div>",{id:'dlgScroll'}).css({'width':bannerWidth+140,'margin':'0 auto'});
 
                         ul.find('li').each(function(){
@@ -421,10 +433,13 @@
                         $('.wdm-dlg-layer').on('click',function(e){
                             var e=e||window.event;
                             var src=e.target||e.srcElement;
-                            if(src.id=='layerNextBtn'||src.id=='layerPreBtn'||src.className.indexOf('wdu-btn-reverse-gray') != -1||src.className.indexOf('icon-close2') != -1){
-                                if(src.className.indexOf('icon-close2') != -1){
-                                    tempParent.find('li').eq(delLiIndex).find('.icon-close2').trigger('click');
-                                }
+                            // if(src.id=='layerNextBtn'||src.id=='layerPreBtn'||src.className.indexOf('wdu-btn-reverse-gray') != -1||src.className.indexOf('icon-close2') != -1){
+                            //     if(src.className.indexOf('icon-close2') != -1){
+                            //         tempParent.find('li').eq(delLiIndex).find('.icon-close2').trigger('click');
+                            //     }
+                            //     return false;
+                            // }
+                            if(src.id=='layerNextBtn'||src.id=='layerPreBtn'||src.className.indexOf('wdu-btn-reverse-gray') != -1){
                                 return false;
                             }
                             else{
@@ -509,13 +524,28 @@
             var top = self.offset().top;
             function wdScroll(){
                 if($(window).scrollTop() >= top){
-                    self.attr('style', 'position:fixed;top:3px');
+                    self.addClass('wdu-fixed-top');
+
                 }else{
-                    self.attr('style', '');
+                    self.removeClass('wdu-fixed-top');
                 }
             }
             $(window).scroll(function(event) {
                 wdScroll();
+            });
+        },
+        backTop:function(){
+            var self = this;
+            $(self).hide();
+            $(self).click(function(event) {
+                $('body,html').animate({scrollTop: 0 }, 500); 
+            });
+            $(window).scroll(function(event) {
+                if($(window).scrollTop() >= 100){
+                    $(self).fadeIn();
+                }else{
+                    $(self).fadeOut();
+                }
             });
         }
     });
@@ -572,7 +602,7 @@
               return ! $sel.is($(e));
             });
             $(targets).removeClass('wd-open').find('ul').hide();
-            if($(document).height() - $sel.offset().top < $sel.find('ul').outerHeight())
+            if($(document).height() - $sel.offset().top < $sel.find('ul').outerHeight(true)+45)
                 $sel.find('ul').addClass('wd-select-top');
             else
                 $sel.find('ul').removeClass('wd-select-top');
@@ -706,3 +736,239 @@ var validateFun = function(obj){
         return this.obj.find('.error').length ? false : true;
     }
 }
+
+//图片滚动
+;(function($){
+    $.fn.extend({
+        wdScroll:function(options){
+            return this.each(function(){
+                var defaults ={
+                    speed: 500, //动画速度
+                    during: 5000, //时间间隔
+                    auto: false, //自动滚动
+                    isContinue:false,//是否连续滚动
+                    perNum:2,//每页显示个数
+                    index:0,
+                    width:220,
+                    height:334,
+                    liMarginRight:20,
+                    layer:true
+                }
+                
+                var timer;
+                var settings = $.extend({},defaults,options);
+                var _this = $(this);
+                var ul = $('ul',_this);
+                var li = $('li',ul);
+                var img = $('img',li);
+                var index = settings.index;
+                var liNum = li.size();
+                var ulWidth = settings.width * liNum + settings.liMarginRight * liNum;
+
+                var oPosition = {}; //触点位置
+                var startX = 0, startY = 0; //触摸开始时手势横纵坐标 
+                var temPos; //滚动元素当前位置
+
+                var preBtn,nextBtn;
+                
+                function init(){
+                    li.addClass('f-fl f-pr').width(settings.width).height(settings.height).css('margin-right',settings.liMarginRight);
+                    ul.css({'left': -index*li.outerWidth(true),'position':'absolute',width:ulWidth});
+                    if (isMobile()) {
+                        mobileSettings();
+                        bindTochuEvent();
+                    }else{
+                        _this.width(settings.width*settings.perNum + settings.liMarginRight*(settings.perNum - 1)).height(settings.height).css({'position':'relative','overflow':'hidden','margin':'0 auto'});
+                    }
+
+                    //添加左右按钮
+                    preBtn = $('<div></div>',{click: _leftClickFunc}).addClass('wdu-pre-scroll').appendTo(_this);
+                    nextBtn = $('<div></div>',{click: _rightClickFunc}).addClass('wdu-next-scroll').appendTo(_this);
+
+                    if(!settings.isContinue && index == liNum - settings.perNum){
+                        nextBtn.hide();
+                    }
+                    if(!settings.isContinue && index == 0){
+                        preBtn.hide();
+                    }
+
+                    // 如果当前没有截图，隐藏展示区域
+                    if(liNum == 0){
+                        _this.addClass('f-dn');
+                    }else{
+                        _this.removeClass('f-dn');
+                    }
+                    if(settings.auto){
+                        timer = setInterval(slide, settings.during);
+                    }
+                    if(settings.layer){
+                        _layer();
+                    }
+                }
+                function _layer(){
+                    _this.on('click.layer','li img',function(){
+                        $('body').addClass('f-oh');
+                        // var imgCopy = $(this).clone().appendTo($('body')),
+                        //     imgWidth = imgCopy.width(),
+                        //     imgHeight = imgCopy.height();
+                        // imgCopy.remove();
+                        var imgHeight = 590,
+                            imgWidth = 330;
+                        var tempIndex=$(this).closest('li').index(),
+                            mask=$("<div class='wdm-dlg wdm-dlg-layer'><table class='wd-dlgtable'><tr><td class='wd-dlgtd'></td></tr></table></div>"),
+                            li=_this.find('ul').html(),
+                            ul=$("<ul class='f-cb'></ul>").append(li),
+                            layerdiv=$("<div></div>");
+                            
+                        ul.find('li').each(function(){
+                            var imgSrc = $(this).find('img').width(imgWidth).height(imgHeight).attr('src');
+                            var props = {
+                                click:function(){
+                                    window.open (imgSrc);
+                                },
+                                class:'wdu-btn-reverse-gray wdu-btn-md',
+                                text: '下载截图'
+                            }
+                            var btnLoad = $("<div class='wdu-mgt20 f-tac'></div>").append($("<button></button>",props));
+                            $(this).addClass('f-tac').append(btnLoad);
+                        });
+                        layerdiv.append(ul);
+                        mask.find('.wd-dlgtd').append(layerdiv);
+                        $('body').append(mask);
+                        layerdiv.wdScroll({perNum:1,index:tempIndex,layer:false,width:imgWidth+150,height: imgHeight+60,liMarginRight: 0});
+                        mask.on('click',function(e){
+                            var e=e||window.event;
+                            var src=e.target||e.srcElement;
+                            if(src.className.indexOf('wdu-next-scroll') > -1 || src.className.indexOf('wdu-pre-scroll') > -1 ||src.className.indexOf('wdu-btn-reverse-gray') > -1){
+                                return false;
+                            }
+                            else{
+                                $(this).remove();
+                                $('body').removeClass('f-oh');
+                            }
+                        });
+                    });
+                }
+                function mobileSettings(){
+                    li.width(_this.width()/settings.perNum);
+                    var scale = li.width() / settings.width;
+                    settings.width = li.width();
+                    img.width(li.width()-20);
+                    ul.width(li.width() * liNum);
+                    li.height(settings.height * scale);
+                    _this.width('100%').height(settings.height * scale).css({'position':'relative','overflow':'hidden','margin':'0 auto'});
+                }
+                function slide(direc){
+                    if(direc == 'pre'){
+                        index--;
+                    }else{
+                        index++;
+                    }
+                    if(index > liNum - settings.perNum){
+                        index = 0;
+                    }
+                    if(index < 0){
+                        index = liNum-settings.perNum;
+                    }
+                    if(!settings.isContinue && index == liNum - settings.perNum){
+                        nextBtn.fadeOut();
+                    }else{
+                        nextBtn.fadeIn();
+                    }
+                    if(!settings.isContinue && index == 0){
+                        preBtn.fadeOut();
+                    }else{
+                        preBtn.fadeIn();
+                    }
+                    // _this.find("ul").stop().animate({left: -index*(settings.width+settings.liMarginRight)}, settings.speed);
+                    _this.find("ul").stop().animate({left: -index*li.outerWidth(true)}, settings.speed);
+
+                }
+                function _pause(){
+                    clearInterval(timer);
+                }
+                function _continue(){
+                    if(settings.auto){
+                        timer = setInterval(slide, settings.during);
+                    }
+                }
+                function _leftClickFunc(){
+                    _pause();
+                    slide('pre');
+                    _continue();
+                }
+                function _rightClickFunc(){
+                    _pause();
+                    slide();
+                    _continue();
+                }
+
+                //绑定触摸事件
+                function bindTochuEvent(){
+                    ul.get(0).addEventListener('touchstart', touchStartFunc, false);
+                    ul.get(0).addEventListener('touchmove', touchMoveFunc, false);
+                    ul.get(0).addEventListener('touchend', touchEndFunc, false);
+                }
+                //获取触点位置
+                function touchPos(e){
+                    var touches = e.changedTouches, l = touches.length, touch, tagX, tagY;
+                    for (var i = 0; i < l; i++) {
+                        touch = touches[i];
+                        tagX = touch.clientX;
+                        tagY = touch.clientY;
+                    }
+                    oPosition.x = tagX;
+                    oPosition.y = tagY;
+                    return oPosition;
+                }
+                //触摸开始
+                function touchStartFunc(e){
+                    clearInterval(timer);
+                    touchPos(e);
+                    startX = oPosition.x;
+                    startY = oPosition.y;
+                    temPos = ul.position().left;
+                }
+                //触摸移动 
+                function touchMoveFunc(e){
+                    touchPos(e);
+                    var moveX = oPosition.x - startX;
+                    var moveY = oPosition.y - startY;
+                    //表示横向滑动
+                    if (Math.abs(moveY) < Math.abs(moveX)) {
+                        e.preventDefault();
+                        ul.css({
+                            left: temPos + moveX
+                        });
+                    }
+                }
+                //触摸结束
+                function touchEndFunc(e){
+                    touchPos(e);
+                    var moveX = oPosition.x - startX;
+                    var moveY = oPosition.y - startY;
+                    if (Math.abs(moveY) < Math.abs(moveX)) {
+                        if (moveX > 0) {
+                            slide('pre');
+                        }
+                        else {
+                            slide();
+                        }
+                    }
+                }
+                //判断是否是移动设备
+                function isMobile(){
+                    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.indexOf('iPhone') != -1 || navigator.userAgent.indexOf('iPod') != -1 || navigator.userAgent.indexOf('iPad') != -1) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+                
+                init();
+                return this;
+            });
+        }
+    });
+})(jQuery);

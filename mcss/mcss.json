@@ -2,7 +2,6 @@
   "input": "./waterdrop.mcss",  
   "output": "../css",
   "format": 3,
-  "watch": true,
   "variables": {
   	"config": "0"
   }

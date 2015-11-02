@@ -132,16 +132,16 @@
 .icon-search{$icon(-50px,-700px,14px,16px);}
 
 //关闭按钮
-.icon-close-hover{$icon(-40px,-740px,27px,27px);}
-.icon-close-active{$icon(-80px,-740px,27px,27px);}
-.icon-close{$icon(0,-740px,27px,27px);
+.icon-close-hover{$icon(-40px,-740px,27px,27px);cursor: pointer;}
+.icon-close-active{$icon(-80px,-740px,27px,27px);cursor: pointer;}
+.icon-close{$icon(0,-740px,27px,27px);cursor: pointer;
 	&:hover{@extend .icon-close-hover;}
 	&:active{@extend .icon-close-active;}
 }
 //弹框关闭按钮
-.icon-close-dlg-hover{$icon(-140px,-740px,10px,10px);}
-.icon-close-dlg-active{$icon(-160px,-740px,10px,10px);}
-.icon-close-dlg{$icon(-120px,-740px,10px,10px);
+.icon-close-dlg-hover{$icon(-140px,-740px,10px,10px);cursor: pointer;}
+.icon-close-dlg-active{$icon(-160px,-740px,10px,10px);cursor: pointer;}
+.icon-close-dlg{$icon(-120px,-740px,10px,10px);cursor: pointer;
 	&:hover{@extend .icon-close-dlg-hover;}
 	&:active{@extend .icon-close-dlg-active;}
 }
@@ -203,20 +203,25 @@
 .wdu-fs4{font-size: $fs4;}
 
 //颜色变量,文字颜色cf-,边框颜色cb-,背景色cbg-,状态色cz-
-.wdu-c-base{color:$c-base;}//主色
-.wdu-c-hover{color:$c-hover;};
-.wdu-c-active{color:$c-active;}
-.wdu-c-disabled{color:$c-disabled;}
+.wdu-c-base{color: $c-base;}//主色
+.wdu-c-hover{color: $c-hover;};
+.wdu-c-active{color: $c-active;}
+.wdu-c-disabled{color: $c-disabled;}
 //文字色
-.wdu-cf-base{color:$cf-base;}//基本文字色
-.wdu-cf-secondary{color:$cf-secondary;}//次要的文字色
-.wdu-cf-disabled{color:$cf-disabled;}//状态为不可选时的文字颜色
-.wdu-cf-link{color:$cf-link;}//链接文字色
+.wdu-cf-base{color: $cf-base;}//基本文字色
+.wdu-cf-secondary{color: $cf-secondary;}//次要的文字色
+.wdu-cf-disabled{color: $cf-disabled;}//状态为不可选时的文字颜色
+.wdu-cf-link{color: $cf-link;}//链接文字色
+.wdu-cf-success{color: $cz-success;}
+.wdu-cf-danger{color: $cz-danger;}
+.wdu-cf-info{color: $cz-info;}
+.wdu-cf-warning{color: $cz-warning;}
 //状态背景色
 .wdu-cbg-success{background-color: $cbg-success;}
 .wdu-cbg-danger{background-color: $cbg-danger;}
 .wdu-cbg-info{background-color: $cbg-info;}
 .wdu-cbg-warning{background-color: $cbg-warning;}
+.wdu-cbg-white{background-color: #fff;}
 
 .wdu-mg5{margin: 5px;}
 .wdu-mgt5{margin-top: 5px;}
@@ -262,9 +267,14 @@
 .wdu-pdb20{padding-bottom: 20px;}
 .wdu-pdl20{padding-left: 20px;}
 .wdu-pdr20{padding-right: 20px;}
+.wdu-pd30{padding: 30px;}
+.wdu-pdt30{padding-top: 30px;}
+.wdu-pdb30{padding-bottom: 30px;}
+.wdu-pdl30{padding-left: 30px;}
+.wdu-pdr30{padding-right: 30px;}
 
 .wdu-tt{line-height: 1;border-left: 2px solid $c-base;padding-left:5px;}
-
+.wdu-fixed-top{position:fixed !important;z-index:100;top:0;}
 //图片滚动左右按钮
 .wdu-pre-scroll,.wdu-next-scroll{background-image: url('#{$path}');position: absolute;top: 50%;transform: translateY(-50%);}
 .wdu-pre-scroll{left:12px;@extend .icon-pre;}
@@ -276,7 +286,7 @@
 	border-radius: $btn-border-radius;
 }
 .wdu-btn{
-	color:$btn-color;
+	color:$btn-cf;
 	border:1px solid $btn-cb;
 	background-color: $btn-cbg;
 	$transition:background-color .2s;
@@ -291,46 +301,67 @@
 		background-color: $btn-cbg-disabled;
 	}
 }
+a.wdu-btn{
+	@extend .wdu-btn;
+	display: inline-block;
+	&.z-dis{background-color: $btn-cbg-disabled;}
+}
 .wdu-btn-reverse{
-	color:$btn-color-reverse;
+	color:$btn-cf-reverse;
 	border: 1px solid $btn-cb-reverse;
 	background-color: $btn-cbg-reverse;
 	$transition:border-color .2s,color .2s;
 	&:hover{
 		border-color: $btn-cb-reverse-hover;
-		color: $btn-color-reverse-hover;
+		color: $btn-cf-reverse-hover;
 		$transition:border-color .2s,color .2s;
 	}
 	&:active{
 		border-color: $btn-cb-reverse-active;
-		color: $btn-color-reverse-active;
+		color: $btn-cf-reverse-active;
 	}
 	&:disabled{
 		border-color: $btn-cb-reverse-disabled;
-		color: $btn-color-reverse-disabled;
+		color: $btn-cf-reverse-disabled;
+	}
+}
+a.wdu-btn-reverse{
+	@extend .wdu-btn-reverse;
+	display: inline-block;
+	&.z-dis{
+		border-color: $btn-cb-reverse-disabled;
+		color: $btn-cf-reverse-disabled;
 	}
 }
 .wdu-btn-reverse-gray{
-	color:$btn-color-reverse-gray;
+	color:$btn-cf-reverse-gray;
 	border: 1px solid $btn-cb-reverse-gray;
 	background-color: $btn-cbg-reverse-gray;
 	$transition:border-color .2,color .2s;
 	&:hover{
 		border-color: $btn-cb-reverse-gray-hover;
-		color: $btn-color-reverse-gray-hover;
+		color: $btn-cf-reverse-gray-hover;
 		$transition:border-color .2,color .2s;
 	}
 	&:active{
 		border-color: $btn-cb-reverse-gray-active;
-		color: $btn-color-reverse-gray-active;
+		color: $btn-cf-reverse-gray-active;
 	}
 	&:disabled{
 		border-color: $btn-cb-reverse-gray-disabled;
-		color: $btn-color-reverse-gray-disabled;
+		color: $btn-cf-reverse-gray-disabled;
+	}
+}
+a.wdu-btn-reverse-gray{
+	@extend .wdu-btn-reverse-gray;
+	display: inline-block;
+	&.z-dis{
+		border-color: $btn-cb-reverse-gray-disabled;
+		color: $btn-cf-reverse-gray-disabled;
 	}
 }
 .wdu-btn-gray{
-	color:$btn-color-gray;
+	color:$btn-cf-gray;
 	border: 1px solid $btn-cb-gray;
 	background-color: $btn-cbg-gray;
 	$transition:background-color .2s;
@@ -343,7 +374,15 @@
 	}
 	&:disabled{
 		background-color: $btn-cbg-gray-disabled;
-		color:$btn-color-gray-disabled;
+		color:$btn-cf-gray-disabled;
+	}
+}
+a.wdu-btn-gray{
+	@extend .wdu-btn-gray;
+	display: inline-block;
+	&.z-dis{
+		background-color: $btn-cbg-gray-disabled;
+		color:$btn-cf-gray-disabled;
 	}
 }
 .wdu-btn-lg{
@@ -370,10 +409,10 @@
 
 //表单
 .wdu-form-label{
-	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;text-align: right;
+	font-size: $input-fs;float:left;padding: $input-padding;height: $input-height; line-height: $input-height;text-align: right;border: 1px solid transparent;
 }
 .wdu-form-text{
-	font-size: $input-fs;float:left;padding: 5px 0;height: $input-height; line-height: $input-height;text-align: left;
+	font-size: $input-fs;float:left;padding: 5px 0;height: $input-height; line-height: $input-height;text-align: left;border: 1px solid transparent;
 }
 .wdu-form-input{
 	border: 1px solid $input-cb;
@@ -383,7 +422,7 @@
 	border-radius: $input-border-radius;
 	font-size: $input-fs;
 	float:left;
-	&:disabled{background-color: $input-cbg-disabled; color:$input-color-disabled;border: 1px solid $input-cb !important;}
+	&:disabled{background-color: $input-cbg-disabled; color:$input-cf-disabled;border: 1px solid $input-cb !important;}
 	&:hover{border: 1px solid $input-cb-hover;}
 
 }
@@ -396,6 +435,8 @@
 	border-radius: $textarea-border-radius;
 	font-size: $textarea-fs;
 	float:left;
+	&:disabled{background-color: $textarea-cbg-disabled; color:$textarea-cf-disabled;border: 1px solid $textarea-cb !important;}
+	&:hover{border: 1px solid $textarea-cb-hover;}
 }
 .wdu-btn-search{
 	float:left;

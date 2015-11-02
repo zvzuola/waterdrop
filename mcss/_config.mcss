@@ -56,10 +56,10 @@ $tab-fs-first = $fs3;							//一级标签文字大小
 $tab-fs-first2 = $fs2;							
 $tab-fs-secondary = $fs2; 						//二级标签文字大小
 $tab-fs-third = $fs1; 							//三级标签文字大小
-$tab-color = $cf-title;							//文字颜色
-$tab-color-current = $c-base;					//当前状态文字颜色
-$tab-color-hover = $tab-color-current;			//hover状态文字颜色
-$tab-color-disabled = $cf-disabled;				//disabled状态文字颜色
+$tab-cf = $cf-title;							//文字颜色
+$tab-cf-current = $c-base;					//当前状态文字颜色
+$tab-cf-hover = $tab-cf-current;			//hover状态文字颜色
+$tab-cf-disabled = $cf-disabled;				//disabled状态文字颜色
 $tab-cb-first = $cb-dark;						//一级标签边框色
 $tab-cb-first2 = $cb-dark;
 $tab-cb-secondary = $cb-dark;					//二级标签边框色
@@ -69,16 +69,16 @@ $tab-border-radius = 3px;						//圆角半径
 
 //dropdown
 $dropdown-fs = $fs1;
-$dropdown-color = $cf-title;
-$dropdown-color-hover = #fff;
+$dropdown-cf = $cf-title;
+$dropdown-cf-hover = #fff;
 $dropdown-cb = $cb-gray;
 $dropdown-cbg = $cbg-secondary;
 $dropdown-cbg-hover = $c-base;
 
 //select-dropdown
 $select-fs = $fs1;
-$select-color = $cf-base;
-$select-color-hover = #fff;
+$select-cf = $cf-base;
+$select-cf-hover = #fff;
 $select-cb = $cb-gray;
 $select-cb-hover = $cb-dark;
 $select-cbg = #fff;
@@ -91,10 +91,10 @@ $select-margin-top = 4px;
 
 //pagination
 $pagination-fs = $fs1;
-$pagination-color = $cf-secondary;
-$pagination-color-current = #fff;
-$pagination-color-hover = $c-hover;
-$pagination-color-disabled = $cf-disabled;
+$pagination-cf = $cf-secondary;
+$pagination-cf-current = #fff;
+$pagination-cf-hover = $c-hover;
+$pagination-cf-disabled = $cf-disabled;
 $pagination-cb = $cb-gray;
 $pagination-cb-current = $c-base;
 $pagination-cb-hover = $c-hover;
@@ -106,7 +106,7 @@ $pagination-cbg-current = $c-base;
 $popover-cb = $cb-dark;
 
 //dialog
-$dlg-color = $cf-secondary;
+$dlg-cf = $cf-secondary;
 $dlg-cb = $cb-gray;
 $dlg-cbg = $cbg-secondary;
 $dlg-width = 335px;
@@ -125,20 +125,20 @@ $btn-fs-lg = $fs3;
 $btn-fs-md = $fs2;
 $btn-fs-dlg = $fs1;
 
-$btn-color = #fff;
-$btn-color-reverse = $c-base;
-$btn-color-reverse-hover = $c-hover;
-$btn-color-reverse-active = $c-active;
-$btn-color-reverse-disabled = $c-disabled;
-$btn-color-reverse-gray = #8c8c8c;
-$btn-color-reverse-gray-hover = #a6a6a6;
-$btn-color-reverse-gray-active = #808080;
-$btn-color-reverse-gray-disabled = #424242;
-$btn-color-gray = $cf-base;
-$btn-color-gray-disabled = $cf-disabled;
+$btn-cf = #fff;
+$btn-cf-reverse = $c-base;
+$btn-cf-reverse-hover = $c-hover;
+$btn-cf-reverse-active = $c-active;
+$btn-cf-reverse-disabled = $c-disabled;
+$btn-cf-reverse-gray = #8c8c8c;
+$btn-cf-reverse-gray-hover = #a6a6a6;
+$btn-cf-reverse-gray-active = #808080;
+$btn-cf-reverse-gray-disabled = #424242;
+$btn-cf-gray = $cf-base;
+$btn-cf-gray-disabled = $cf-disabled;
 
 $btn-cb = transparent;
-$btn-cb-reverse = $btn-color-reverse;
+$btn-cb-reverse = $btn-cf-reverse;
 $btn-cb-reverse-hover = $c-hover;
 $btn-cb-reverse-active = $c-active;
 $btn-cb-reverse-disabled = $c-disabled;
@@ -160,7 +160,7 @@ $btn-cbg-reverse = #fff;
 $btn-cbg-reverse-gray = transparent;
 
 $btn-line-height-lg = 1.6;
-$btn-line-height-md = 1.57;
+$btn-line-height-md = 22px;
 $btn-line-height-dlg = 1.7;
 
 $btn-padding-lg = 4px 19px;
@@ -171,7 +171,7 @@ $btn-border-radius = 2px;
 
 //input
 $input-fs = $fs1;
-$input-color-disabled = $cf-secondary;
+$input-cf-disabled = $cf-secondary;
 $input-cb = $cb-gray;
 $input-cb-hover = $cb-dark;
 $input-cbg-disabled = $cbg-secondary;
@@ -181,7 +181,10 @@ $input-padding = 5px 10px;
 
 //textarea  默认情况下与input样式相同
 $textarea-fs = $input-fs;
+$textarea-cf-disabled = $input-cf-disabled;
 $textarea-cb = $input-cb;
+$textarea-cb-hover = $input-cb-hover;
+$textarea-cbg-disabled = $input-cbg-disabled;
 $textarea-border-radius = $input-border-radius;
 $textarea-height = $input-height;
 $textarea-padding = $input-padding;

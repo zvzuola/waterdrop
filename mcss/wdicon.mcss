@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'wdicon';
-  src: url('font/wdicon.eot?47570161');
-  src: url('font/wdicon.eot?47570161#iefix') format('embedded-opentype'),
-       url('font/wdicon.woff?47570161') format('woff'),
-       url('font/wdicon.ttf?47570161') format('truetype'),
-       url('font/wdicon.svg?47570161#wdicon') format('svg');
+  src: url('../demo/font/wdicon.eot?47570161');
+  src: url('../demo/font/wdicon.eot?47570161#iefix') format('embedded-opentype'),
+       url('../demo/font/wdicon.woff?47570161') format('woff'),
+       url('../demo/font/wdicon.ttf?47570161') format('truetype'),
+       url('../demo/font/wdicon.svg?47570161#wdicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }

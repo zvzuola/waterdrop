@@ -1,12 +1,9 @@
 @import "mass/index";
-@if($config == 0) {
-	@abstract '_config.mcss';
-} @else{
-	@abstract '_config2.mcss';
-}
+@abstract '_config.mcss';
 @import "base.mcss";
 @import "function.mcss";
 @import "grid.mcss";
 @import "unit.mcss";
 @import "module.mcss";
 @import "date.mcss";
+@import "wdicon.mcss";
